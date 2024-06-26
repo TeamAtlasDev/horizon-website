@@ -8,7 +8,10 @@
   align-items: center;
   height: 100vh; /* Full viewport height */
   text-align: center;
+  padding: 0 2rem; /* Add padding to ensure content doesn't stick to edges */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
+
 
 
 .header-title {
@@ -51,7 +54,10 @@
 
 .documentationSection {
   text-align: center;
+  margin: 0 auto; /* Center horizontally */
   margin-bottom: 3rem; /* Add margin between Documentation section and Call to Action */
+  width: 100%; /* Ensure it takes full width */
+  max-width: 1200px; /* Optionally set a max-width */
 }
 
 .documentationTitle {
@@ -74,6 +80,17 @@
   flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
+.documentationContainer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Space between boxes */
+  overflow-x: auto; /* Enable horizontal scrolling if necessary */
+  padding-bottom: 1rem; /* Add padding to ensure space at the bottom */
+  padding-top: 2rem; /* Add padding at the top to provide space for hover effect */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  width: 100%; /* Ensure it takes full width */
+}
+
 .documentationBox {
   background-color: var(--ifm-background-color);
   border: 1px solid #ffffff;
@@ -83,8 +100,8 @@
   text-align: left;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
   color: #ffffff;
-  width: 400px; /* Set width for desktop */
-  max-width: 100%; /* Ensure responsiveness */
+  width: calc(33.33% - 2rem); /* Adjust width for three boxes in one row */
+  max-width: 400px; /* Ensure responsiveness */
   flex-shrink: 0;
   margin-bottom: 2rem; /* Add margin between boxes */
   display: flex;
@@ -123,44 +140,21 @@
   margin-top: auto; /* Push link to the bottom */
 }
 
-/* Adjust space between sections */
-.callToActionBox {
-  margin-top: 2rem; /* Increase margin between Documentation and Call to Action */
-}
-
-.documentationBox:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
-}
-
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .documentationContainer {
-    flex-direction: column; /* Stack boxes vertically */
-    align-items: center; /* Center items vertically */
-    padding-top: 0; /* Remove top padding */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-  }
-
   .documentationBox {
-    width: calc(100% - 2rem); /* Full width minus padding */
+    width: calc(50% - 2rem); /* Two boxes in one row on tablet */
     margin-bottom: 1rem; /* Reduce margin between boxes on tablet */
   }
 }
 
 @media (max-width: 768px) {
-  .documentationContainer {
-    flex-direction: column; /* Stack boxes vertically */
-    align-items: center; /* Center items vertically */
-    padding-top: 0; /* Remove top padding */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-  }
-
   .documentationBox {
-    width: calc(100% - 2rem); /* Full width minus padding */
+    width: calc(100% - 2rem); /* Full width minus padding on mobile */
     margin-bottom: 1rem; /* Reduce margin between boxes on mobile */
   }
 }
+
 
 .newFeatureImage {
   height: 55px; /* Increased height of the badge */
