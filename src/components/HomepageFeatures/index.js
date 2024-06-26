@@ -120,6 +120,7 @@ import Developer from '@site/static/img/developer.png';
 import Alex from '@site/static/img/alex.png';
 import curious from '@site/static/img/curious.png';
 import michael from '@site/static/img/michael.png';
+import john from '@site/static/img/john.png';
 
 function CallToAction() {
   return (
@@ -151,7 +152,9 @@ function SpecialThanks() {
     { name: 'Fyber', role: 'Head Developer', image: Developer },
     { name: 'Alexander', role: 'Server Administrator', image: Alex },
     { name: 'CuriousAnalyst', role: 'Graphics Designer', image: curious },
+    { name: 'JohnPapath', role: 'Developer & Tester', image: john },
     { name: 'Michael', role: 'Developer & Tester', image: michael },
+
   ];
 
   return (
