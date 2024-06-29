@@ -15,7 +15,7 @@ Navigate to the menu and select the category where you need help. If this sectio
 This documentation is currently under development. We'll continue to add more information in the future!
 :::
 
-# 💡 Suggestions & Ideas
+## 💡 Suggestions & Ideas
 
 Feel free to leave your ideas and suggestions for future documentation updates in our [Support Server](https://suppport.teamatlas.dev). We value every suggestion from our beloved Horizon users and will carefully consider each one.
 
