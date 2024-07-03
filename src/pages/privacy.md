@@ -32,3 +32,5 @@ Your privacy is important to us. This Privacy Policy outlines how we collect, us
 
 ## Notice 
 By using the Application, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service and Privacy Policy. If you do not agree with any part of these terms, please do not use the Application. If you have any questions or concerns, please contact us at info@teamatlas.dev
+
+![Atlas Banner](https://github.com/atlasfyber/atlas-images/blob/main/atlas_header_website.png?raw=true)
