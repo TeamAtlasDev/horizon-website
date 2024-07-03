@@ -9,7 +9,7 @@ Learn how to contribute to Horizon, get support, and find useful information to 
 You can invite Horizon to your Discord community or friends' server by [clicking here](https://invite.horizonbot.xyz). This will redirect you to Discord where you can select the server you want to add the bot to. Please make sure to check our [Terms of Service](https://horizonbot.xyz/terms) and [Privacy Policy](https://horizonbot.xyz/privacy) before continuing.
 
 ## How can I get support?
-The Support Team of Atlas & Horizon is more than glad to assist you with Horizon. To get support, please join our Support Server. Alternatively, you can email us at info@teamatlas.dev
+The Support Team of Atlas & Horizon is more than glad to assist you with Horizon. To get support, please join our Support Server. Alternatively, you can email us at hello@horizonbot.xyz
 
 :::note
 Responses via email may take up to **7 business days**. For quicker assistance, especially depending on your needs, we recommend contacting us via Discord if possible and appropriate.
