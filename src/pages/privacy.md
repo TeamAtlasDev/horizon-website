@@ -1,7 +1,7 @@
 ---
 id: privacy-policy
 title: Terms of Service
-description: Terms of Service for Horizon Application by Atlas
+description: Privacy Policy for Horizon Application by Atlas
 ---
 
 # Privacy Policy
