@@ -27,11 +27,6 @@ The Horizon API aggregates data from 6 different API providers, efficiently mana
 
 Horizon then checks the database for new data and delivers it through commands and automations to all servers with these features enabled. This makes Horizon one of the best choices for up-to-date astronomy and space event information for your Discord Server!
 
-
-**How Horizon gets up to date data?**
-
-![UpToDateData Image](https://github.com/atlasfyber/atlas-images/blob/main/horizon-api-howitworks.png?raw=true)
-
 # How can I support Horizon?
 
 You can support the small team behind Horizon by donating on [Patreon](https://donate.teamatlas.dev), receiving nothing in return but our heartfelt gratitude. Alternatively, you can help for free by recommending Horizon to other community owners or voting for us on [top.gg](https://top.gg/bot/1183177251316047983) to aid Horizon's growth.
