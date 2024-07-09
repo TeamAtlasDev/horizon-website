@@ -30,7 +30,7 @@ Horizon then checks the database for new data and delivers it through commands a
 
 **How Horizon gets up to date data?**
 
-![UpToDateData Image](https://github.com/atlasfyber/atlas-images/blob/main/horizon-transp-info.png?raw=true)
+![UpToDateData Image](https://github.com/atlasfyber/atlas-images/blob/main/horizon-api-howitworks.png?raw=true)
 
 # How can I support Horizon?
 
