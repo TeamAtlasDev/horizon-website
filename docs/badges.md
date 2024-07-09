@@ -13,6 +13,8 @@ Horizon Badges, is a new way to recognize and reward servers that use our applic
 
 ## How can I get them?
 
+![Badges](https://github.com/atlasfyber/atlas-images/blob/main/horizon-badges-info.png?raw=true)
+
 ### Gold Badges
 - **Verified Badge:** Server is part of Atlas Team, the team that developers the Horizon. Not many servers have this badge.
 - **Partner Badge:** Server is part of Atlas Partnership Program. Partners usually use Horizon for their needs for free, unlocking Plus features and special partnership perks.
@@ -24,8 +26,6 @@ Horizon Badges, is a new way to recognize and reward servers that use our applic
 ### Bronze Badges
 - **Early Badge:** This badge is granted to the first 200 servers that invited Horizon. Only limited-time servers have this badge and it will not be obtainable after the this 200 servers limit.
 - **Member Badge:** The server has invited Horizon, and members can use the bot. How lovely!
-
-![Badges](https://github.com/atlasfyber/atlas-images/blob/main/horizon-badges-info.png?raw=true)
 
 :::note
 You can review all your server badges to your Server Settings by using the command `/settings`
