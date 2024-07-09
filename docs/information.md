@@ -1,6 +1,8 @@
 ---
 title: Horizon Information
 description: Learn how to contribute to Horizon, get support, and find useful information to optimize your Discord astronomy experience.
+image: https://github.com/atlasfyber/atlas-images/blob/main/horizon-docs.jpg?raw=true
+keywords: [welcome, information, docs, horizon, discordbot, space, astronomy, documentation, invite, info]
 sidebar_position: 2
 ---
 # Information
