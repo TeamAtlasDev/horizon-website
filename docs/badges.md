@@ -21,7 +21,7 @@ Horizon Badges, is a new way to recognize and reward servers that use our applic
 - **Tester Badge:** Server has granted permissions for early access commands also known as BETA program, how cute. This badge is on the client server owner's side, meaning it's available to all servers associated with the server owner's account.
 ### Silver Badges
 - **Plus+ Badge:** Server is subscribed to Horizon Plus. A monthly subscription that helps developers continue developing the Horizon project and unlocks cool features for the server.
-- **Automations Badge:** Server loves to stay up to date. It has at least one automation enabled, configured using the command /automations and /settings.
+- **Automations Badge:** Server loves to stay up to date. It has at least one automation enabled, configured using the command `/automations` and `/settings`.
 - **Feedbacker Badge:** Server submitted their feedback about their experience with Horizon in the first public feedback submission via the bot and was rewarded with this cool badge. This badge is on the client server owner's side, meaning it's available to all servers associated with the server owner's account.
 ### Bronze Badges
 - **Early Badge:** This badge is granted to the first 200 servers that invited Horizon. Only limited-time servers have this badge and it will not be obtainable after the this 200 servers limit.
