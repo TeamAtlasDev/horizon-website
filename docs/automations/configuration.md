@@ -1,6 +1,8 @@
 ---
 title: Horizon Configuration
 description: Discover how to efficiently configure Horizon's automations and access command information through Horizon Settings.
+image: https://github.com/atlasfyber/atlas-images/blob/main/horizon-docs.jpg?raw=true
+keywords: [configuration, horizon, discordbot, automations, space, astronomy, settings]
 sidebar_position: 3
 ---
 
