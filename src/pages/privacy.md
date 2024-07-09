@@ -1,7 +1,7 @@
 ---
 id: privacy-policy
 title: Terms of Service
-description: Privacy Policy for Horizon Application by Atlas
+description: Discover how we handle your information with our Privacy Policy for the Horizon Application by Atlas. Understand our commitment to protecting your data and privacy.
 ---
 
 # Privacy Policy
@@ -69,3 +69,5 @@ The Application or messages distributed by our Application may contain links to 
 ## Contact Us
 
 By using the Application, you acknowledge that you have read, understood, and agreed to be bound by this Privacy Policy. If you do not agree with any part of these terms, please do not use the Application. If you have any questions or concerns, please contact us at info@teamatlas.dev.
+
+Atlas is not a registered company but a team of individuals and developers of Horizon, owning the domains teamatlas.dev and horizonbot.xyz. We are not associated with any registered entity under the name "Atlas." Any use of our services, such as the Horizon Application, is subject to our Terms of Service & Privacy Policy. Please note that while we strive to provide a reliable and enjoyable experience, Atlas does not claim ownership of any names, brands, or intellectual properties beyond those explicitly mentioned. Therefore, actions related to our services should not be construed as affecting any other entities. For any questions or concerns, please contact us at info@teamatlas.dev.
