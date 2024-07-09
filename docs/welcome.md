@@ -1,4 +1,6 @@
 ---
+title: Horizon Documentation
+description: Explore comprehensive documentation containing all the essential information about Horizon's application and its commands.
 sidebar_position: 1
 ---
 
