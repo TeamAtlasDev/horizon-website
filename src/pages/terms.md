@@ -1,60 +1,44 @@
 ---
 id: terms-of-service
 title: Terms of Service
-description: Terms of Service for Horizon Astronomy Application by Atlas
+description: Explore our Terms of Service for the Horizon Application by Atlas. Learn about your rights, responsibilities, and usage guidelines when using our services.
 ---
 
 # Terms of Service
+Welcome to Horizon Astronomy Application by Atlas ("Application")! By using our application, you agree to comply with the following terms and conditions ("Terms of Service"). Please read them carefully. The terms "you" and "your" refer to all individuals or entities using the Application. The terms "we," "us," "our," refer to Atlas, and "Application" refers to our Horizon Application itself.
 
-Welcome to Horizon Astronomy Application by Atlas ("Application")! By using our application, you agree to comply with the following terms and conditions ("Terms of Service"). Please read them carefully.
+We may update these Terms of Service from time to time. Changes in our Terms of Service will be effective immediately. By using our Application, you consent to the collection, use, and transfer of your information in accordance with these Terms of Service. If you do not agree with these Terms of Service, please do not use our Application.
 
-## 1. Application Usage
+## Application Usage
+By adding the Horizon Astronomy Application to your Discord server, you agree to abide by Discord's Terms of Service and Community Guidelines. You agree not to use the Application for any illegal or unauthorized purpose and must not violate any laws in your jurisdiction while using the Application. We reserve the right to modify or discontinue, temporarily or permanently, the Application (or any part thereof) with or without notice at any time.
 
-1.1. By adding the Application to your Discord server, you agree to abide by Discord's Terms of Service and Community Guidelines.
+## User Conduct and Responsibility
+You agree to use the Application in compliance with all applicable laws, regulations, and third-party agreements. Any activity that disrupts or interferes with the proper functioning of the Application or its associated services is prohibited. Unauthorized attempts to access, tamper with, or use non-public areas of the Application or its systems are not allowed. You agree not to transmit any viruses, worms, or other malicious code through the Application. 
 
-1.2. You agree not to use the Application for any illegal or unauthorized purpose. You must not violate any laws in your jurisdiction while using the Application.
+**WE ARE NOT LIABLE FOR ANY DAMAGES OR LOSSES RESULTING FROM YOUR USE OF THE APPLICATION, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES. WE ARE NOT RESPONSIBLE FOR ANY CONTENT TRANSMITTED THROUGH THE APPLICATION, AND YOU ARE SOLELY RESPONSIBLE FOR ANY CONTENT YOU SHARE WHILE USING THE APPLICATION.**
 
-1.3. We reserve the right to modify or discontinue, temporarily or permanently, the Application (or any part thereof) with or without notice at any time.
+## Intellectual Property and Branding
+You agree to use any Application branding assets provided by the Atlas Team in compliance with all applicable laws, regulations, and third-party agreements. Modification or alteration of the Application logos or branding in any way that may misrepresent the original intent or disrupt the visual integrity is prohibited. You must not use the Application logos or branding in a manner that may suggest endorsement, affiliation, or sponsorship without prior written consent from the Atlas Team. Reproduction, distribution, or display of the Application logos or branding without proper attribution to the Atlas Team is not allowed. Some emojis or icons in Horizon commands may have been taken from the website Flaticon, and we do not take any credit for these.
 
-## 2. Limitation of Liability
+## Termination
+We reserve the right to suspend or terminate your access to the Application at any time, with or without cause, and without notice. Upon termination, all licenses and rights granted to you by these Terms of Service will immediately cease.
 
-2.1. We are not liable for any damages or losses resulting from your use of the Application. This includes but is not limited to direct, indirect, incidental, or consequential damages.
+## Changes to Terms of Service
+We reserve the right to update these Terms of Service at any time. Any changes will be effective immediately upon posting on this page. By continuing to use the Application after any modifications to the Terms of Service, you agree to be bound by such modifications.
 
-2.2. We are not responsible for any content transmitted through the Application. You are solely responsible for any content you share while using the Bot.
+## Disclaimer of Warranties
+Your use of the Application is at your own risk. The Horizon Astronomy Application is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We make no warranties, express or implied, regarding the Application, its content, or any services or goods provided through the Application, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Application will be uninterrupted, timely, secure, or error-free. We do not warrant the accuracy or completeness of any information provided through the Application.
 
-## 3. User Conduct
+## Limitation of Liability
+In no event will we or our team and partners be liable for any damages whatsoever arising out of or related to your use or inability to use the Application. This includes any direct, indirect, incidental, consequential, special, exemplary, punitive, or other indirect damages, even if we have been advised of the possibility of such damages.
 
-3.1. You agree to use the Application in compliance with all applicable laws, regulations, and third-party agreements.
 
-3.2. You agree not to engage in any activity that disrupts or interferes with the proper functioning of the Application or its associated services.
+**Miscellaneous**
+The opinions and recommendations contained in the Application are not necessarily those of Atlas nor endorsed by Atlas. Any reliance on opinions or recommendations offered through the Application is done at your own risk. Any disputes relating to these Terms of Service, the Application, and any goods or services offered by Atlas are governed by and interpreted in accordance with the laws of Ireland, without regard to any conflict of laws provisions. You agree to submit to the exclusive jurisdiction of the courts of Ireland for any litigation arising out of or relating to your use of the Application.
 
-3.3. You agree not to attempt to access, tamper with, or use non-public areas of the Application or its systems without authorization.
+These Terms of Service constitute the entire agreement between you and Atlas with respect to the Application and supersede all prior communications, promises, and proposals, whether oral, written, or electronic, between you and Atlas. If any part of these Terms of Service is determined by a court to be invalid or unenforceable, it will not impact any other provision, all of which will remain in full force and effect. Our failure to enforce any portion of these Terms of Service is not a waiver of such portion. The proprietary rights, disclaimer of warranties, representations made by you, indemnities, and limitations of liability shall survive the termination of these Terms of Service. We reserve the right to take down or terminate the Application at any time without notice. 
 
-3.4. You agree not to transmit any viruses, worms, or other malicious code through the Application.
+## Contact Us
+By using the Application, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use the Application. If you have any questions or concerns, please contact us at info@teamatlas.dev.
 
-## 4. Brand Usage and Compliance
-
-4.1. You agree to use any Application branding assets provided by the Atlas Team in compliance with all applicable laws, regulations, and third-party agreements.
-
-4.2. You agree not to modify or alter the Application logos or branding in any way that may misrepresent the original intent or disrupt the visual integrity.
-
-4.3. You agree not to use the Application logos or branding in any manner that may suggest endorsement, affiliation, or sponsorship without prior written consent from the Atlas Team.
-
-4.4. You agree not to reproduce, distribute, or display the Application logos or branding without proper attribution to the Atlas Team.
-
-4.5. You agree not to use the Application logos or branding in a manner that may tarnish or damage the reputation of the Atlas Team or its associated products and services.
-
-4.6. Some emojis or icons in Horizon commands may have been taken from Flaticon. We do not take any credit for this.
-
-## 5. Termination
-
-5.1. We reserve the right to suspend or terminate your access to the Application at any time, with or without cause, and without notice.
-
-5.2. Upon termination, all licenses and rights granted to you by these Terms of Service will immediately cease.
-
-## 6. Changes to Terms of Service
-
-6.1. We reserve the right to update these Terms of Service at any time. Any changes will be effective immediately upon posting on this page.
-
-## Notice
-By using the Application, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service and Privacy Policy. If you do not agree with any part of these terms, please do not use the Application. If you have any questions or concerns, please contact us at info@teamatlas.dev.
+Atlas is not a registered company but a team of individuals and developers of Horizon, owning the domains teamatlas.dev and horizonbot.xyz. We are not associated with any registered entity under the name "Atlas." Any use of our services, such as the Horizon Application, is subject to our Terms of Service. Please note that while we strive to provide a reliable and enjoyable experience, Atlas does not claim ownership of any names, brands, or intellectual properties beyond those explicitly mentioned. Therefore, actions related to our services should not be construed as affecting any other entities. For any questions or concerns, please contact us at info@teamatlas.dev.
