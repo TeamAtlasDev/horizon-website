@@ -1,4 +1,6 @@
 ---
+title: Horizon Information
+description: Learn how to contribute to Horizon, get support, and find useful information to optimize your Discord astronomy experience.
 sidebar_position: 2
 ---
 # Information
