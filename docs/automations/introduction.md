@@ -1,4 +1,6 @@
 ---
+title: Horizon Introduction
+description: Learn how Automations in Horizon streamline notifications and explore the basics of Horizon's API for integration and enhanced functionality.
 sidebar_position: 1
 ---
 
