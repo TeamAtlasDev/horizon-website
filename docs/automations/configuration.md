@@ -1,4 +1,6 @@
 ---
+title: Horizon Configuration
+description: Discover how to efficiently configure Horizon's automations and access command information through Horizon Settings.
 sidebar_position: 3
 ---
 
