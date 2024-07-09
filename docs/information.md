@@ -28,11 +28,9 @@ The Horizon API aggregates data from 6 different API providers, efficiently mana
 Horizon then checks the database for new data and delivers it through commands and automations to all servers with these features enabled. This makes Horizon one of the best choices for up-to-date astronomy and space event information for your Discord Server!
 
 
-**UP-TO-DATE DATA TO HORIZON:**
-```
-API Providers => Horizon API (FETCH) => Horizon API Database (SAVE) =>
-Horizon APP (GET) => Horizon APP Database (SAVE) => Automations (SEND) && Commands Data (UPDATE)
-```
+**How Horizon gets up to date data?**
+
+![UpToDateData Image](https://github.com/atlasfyber/atlas-images/blob/main/horizon-howitworks.jpg?raw=true)
 
 # How can I support Horizon?
 
