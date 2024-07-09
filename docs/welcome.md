@@ -2,6 +2,7 @@
 title: Horizon Documentation
 description: Explore comprehensive documentation containing all the essential information about Horizon's application and its commands.
 image: https://github.com/atlasfyber/atlas-images/blob/main/horizon-docs.jpg?raw=true
+keywords: [welcome, docs, horizon, discordbot, space, astronomy, documentation]
 sidebar_position: 1
 ---
 
