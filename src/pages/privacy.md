@@ -6,29 +6,66 @@ description: Privacy Policy for Horizon Application by Atlas
 
 # Privacy Policy
 
-Welcome to **Horizon Application by Atlas** ("Application")! By using our Application, you agree to comply with the following privacy policy ("Privacy Policy"). Please read them carefully.
+This is our "Privacy Policy" which sets out the policy governing our use of information you provide in connection with the Horizon Application by Atlas ("Application"). The terms "you" and "your" refer to all individuals or entities using the Application. The terms "we," "us," "our," refer to Atlas and "Application" refers to our Horizon Application itself.
 
-Your privacy is important to us. This Privacy Policy outlines how we collect, use, and safeguard your information when you use our Application.
+We may update this Privacy Policy from time to time. Changes in our Privacy Policy will be effective immediately. By using our Application, you consent to the collection, use, and transfer of your information in accordance with this Privacy Policy. If you do not agree to this Privacy Policy, please do not use our Application.
 
-## 1. Data Collection and Usage
+## Privacy Statement
 
-1.1. We do not save any sensitive data outside of Discord. The only data we save is collected upon executing commands and when you perfoming actions to your server using Horizon, these logs include your user ID and guild ID for statistics purposes and for error logging. This data helps us improve the Application and provide a better experience for you.
+We respect the privacy of your information. We provide this explanation about our information practices as a demonstration of our commitment to protecting your privacy. This policy describes the types of information we may collect from you or that you may provide when using the Horizon Application and our practices for collecting, using, maintaining, protecting, and disclosing that information.
 
-1.2. We may log the settings you set up using the `/settings` command. None of this data is sensitive or dangerous to share. It is solely for your convenience, allowing you to customize your experience with the Application.
+This policy applies to information we collect:
 
-1.3. The Application saves messages that you set upon editing the automated notifications for each guild and each notification. 
+### Via the Horizon Application:
 
-1.4. The Application detects, using the Discord API, the device (computer, mobile) you are logged into to provide you with the corresponding interface for certain commands. This information is not stored anywhere. You can disable this tracking using the `/preferences` command, but you will have to select your device manually.
+- When you interact directly with the Application by executing commands or performing actions on your server (e.g., using the `/settings` command).
+- When you set up or edit automated notifications for each guild and each notification.
+- When the Application detects the device (computer, mobile) you are logged into for providing the corresponding interface for certain commands.
 
-## 2. Data Removal
+### It does not apply to information collected by:
 
-2.1. `/settings` data will be removed after 3 days if the Application leaves the server. If the Application is not re-invited within this timeframe, all data, including automation settings and messages, will be deleted. Users will have to re-configure them upon the Application's re-invitation.
+- Us offline or through any other means, including on any other website operated by Atlas or any third party.
+- Any third party, including through any application or content (including advertising) that may link to or be accessible from or on the Application.
 
-2.2. If the Application rejoins the server before the end of the 2-day timeframe, this deletion process will be cancelled, and the user's data will remain intact.
+Please read this policy carefully to understand our policies and practices regarding your information and how we treat it. If you do not agree with our policies and practices, your choice is not to use our Application. By accessing or using the Application, you agree to this Privacy Policy. This policy may change from time to time (see Changes to Our Privacy Policy). Your continued use of the Application after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.
 
-2.3. To remove data, you can use the `/settings` command or contact us directly. Additionally, if you remove the Application from your server for 2 or more days, it will also trigger the deletion process.
+## The Information We Collect and How We Collect It
 
-2.4. Statistics data collected, including commands executed, successful executions, and automations posted in the server visible to server administrators with the command `/settings` will be deleted after 7 days when the Application leaves the server. If the Application is not re-invited within this timeframe, all statistics visible to the server owners will be deleted. Horizon may retain a minimal package of statistics data to improve their systems. For data deletion requests regarding this information, please contact us.
+### Personally Identifiable Information
 
-## Notice 
-By using the Application, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service and Privacy Policy. If you do not agree with any part of these terms, please do not use the Application. If you have any questions or concerns, please contact us at info@teamatlas.dev
+We collect personally identifiable information from individuals through interactions with the Application. This information is necessary to make our features work and helps us provide a better user experience for all users.
+
+The information we collect when you use a Horizon Application commands includes:
+
+- Your Discord user ID (for example: `491002268401926145`).
+- Your guild ID (for example: `675991746856878082`).
+- The command you used including any arguments (for example: `/help`).
+- The date and time at which you used the command.
+- The device you are logged into (computer, mobile), which is detected but not stored, to provide the corresponding interface for certain commands.
+
+We also collect logs for error logging and statistical purposes, including:
+
+- Commands executed.
+- Successful executions.
+- Automations posted in the server.
+
+To respect your server's privacy, we NEVER collect any content of other messages, only commands and interactions with the Application in dedicated channels chosen by your admins.
+
+Server admins can limit and choose the channels where the Application will collect this information by restricting the bot to specific Discord channels. This will only allow the Application to collect this data in those channels and will make it physically impossible for the Application to collect this data through any other channels in that server.
+
+## Data Removal
+
+We are committed to ensuring your data is handled responsibly and have clear processes for data removal.
+
+- Data from the `/settings` command will be removed after 3 days if the Application leaves the server. If the Application is not re-invited within this timeframe, all data, including automation settings and messages, will be deleted. Users will have to re-configure them upon the Application's re-invitation.
+- If the Application rejoins the server before the end of the 3-day timeframe, this deletion process will be canceled, and the user's data will remain intact.
+- To remove data, you can use the `/settings` command or contact us directly. Additionally, if you remove the Application from your server for 3 or more days, it will also trigger the deletion process.
+- Statistics data collected, including commands executed, successful executions, and automations posted in the server visible to server administrators with the command `/settings` will be deleted after 7 days when the Application leaves the server. If the Application is not re-invited within this timeframe, all statistics visible to the server owners will be deleted. Horizon may retain a minimal package of statistics data to improve their systems. For data deletion requests regarding this information, please contact us at info@teamatlas.dev or hello@horizonbot.xyz.
+
+## Third-Party Websites
+
+The Application or messages distributed by our Application may contain links to third-party websites. These linked websites are not under our control, and we are not responsible for the privacy practices or the contents of any such linked website or any link contained in any linked website. We provide such links only as a convenience, and the inclusion of a link on the website does not imply endorsement of the linked website by Atlas. If you provide any personal data through any such third-party website, your transaction will occur on the third party’s website (not this website) and the personal data you provide will be collected by and controlled by the privacy policy of that third party. We recommend that you familiarize yourself with the privacy policies and practices of any third parties. **PLEASE NOTE THAT THIS PRIVACY POLICY DOES NOT ADDRESS THE PRIVACY OR INFORMATION PRACTICES OF ANY THIRD PARTIES.**
+
+## Contact Us
+
+By using the Application, you acknowledge that you have read, understood, and agreed to be bound by this Privacy Policy. If you do not agree with any part of these terms, please do not use the Application. If you have any questions or concerns, please contact us at info@teamatlas.dev.
