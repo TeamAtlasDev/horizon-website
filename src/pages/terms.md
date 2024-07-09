@@ -32,10 +32,6 @@ Your use of the Application is at your own risk. The Horizon Astronomy Applicati
 ## Limitation of Liability
 In no event will we or our team and partners be liable for any damages whatsoever arising out of or related to your use or inability to use the Application. This includes any direct, indirect, incidental, consequential, special, exemplary, punitive, or other indirect damages, even if we have been advised of the possibility of such damages.
 
-
-**Miscellaneous**
-The opinions and recommendations contained in the Application are not necessarily those of Atlas nor endorsed by Atlas. Any reliance on opinions or recommendations offered through the Application is done at your own risk. Any disputes relating to these Terms of Service, the Application, and any goods or services offered by Atlas are governed by and interpreted in accordance with the laws of Ireland, without regard to any conflict of laws provisions. You agree to submit to the exclusive jurisdiction of the courts of Ireland for any litigation arising out of or relating to your use of the Application.
-
 These Terms of Service constitute the entire agreement between you and Atlas with respect to the Application and supersede all prior communications, promises, and proposals, whether oral, written, or electronic, between you and Atlas. If any part of these Terms of Service is determined by a court to be invalid or unenforceable, it will not impact any other provision, all of which will remain in full force and effect. Our failure to enforce any portion of these Terms of Service is not a waiver of such portion. The proprietary rights, disclaimer of warranties, representations made by you, indemnities, and limitations of liability shall survive the termination of these Terms of Service. We reserve the right to take down or terminate the Application at any time without notice. 
 
 ## Contact Us
