@@ -1,6 +1,8 @@
 ---
 title: Horizon Introduction
 description: Learn how Automations in Horizon streamline notifications and explore the basics of Horizon's API for integration and enhanced functionality.
+image: https://github.com/atlasfyber/atlas-images/blob/main/horizon-docs.jpg?raw=true
+keywords: [introduction, horizon, discordbot, automations, space, astronomy, settings]
 sidebar_position: 1
 ---
 
