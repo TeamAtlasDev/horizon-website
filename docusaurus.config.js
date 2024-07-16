@@ -134,7 +134,7 @@ const config = {
             {
               label: 'Website Policy',
               to: '/web-policy',
-            },
+            }, 
           ],
         },
         // New category added to the left
