@@ -1,7 +1,7 @@
 ---
 id: privacy-policy
 title: Terms of Service
-description: Discover how we handle your information with our Privacy Policy for the Horizon Application by Atlas. Understand our commitment to protecting your data and privacy.
+description: Discover how we handle your information with our Privacy Policy for Horizon by Atlas.
 ---
 
 # Privacy Policy
