@@ -1,3 +1,5 @@
+
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -82,11 +84,6 @@ function Documentation({ title, subtitle, description, link }) {
   return (
     <div className={clsx(styles.documentationSection)}>
       <div className="text--center">
-        <Heading as="h3" className={styles.documentationTitle}>
-          Documentation
-          <img src={NewImage} alt="New Feature" className={styles.newFeatureImage} />
-        </Heading>
-        <p className={styles.documentationCategory}>Learn more about Horizon's features and setup.</p>
       </div>
       <div className={clsx('documentationContainer', styles.documentationContainer)}>
         {DocumentationList.map((props, idx) => (
@@ -96,7 +93,6 @@ function Documentation({ title, subtitle, description, link }) {
     </div>
   );
 }
-
 
 function DocumentationBox({ title, subtitle, description, link }) {
   return (
@@ -175,8 +171,38 @@ function SpecialThanks() {
   );
 }
 
+function NewsArticles() {
+  const [articles, setArticles] = useState([]);
 
+  useEffect(() => {
+    fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=3&news_site_exclude=SpaceNews')
+      .then(response => response.json())
+      .then(data => setArticles(data.results));
+  }, []);
 
+  return (
+    <div className={styles.newsSection}>
+      <div className="text--center">
+        <h3 className={styles.newsTitle}>Latest News</h3>
+        <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
+      </div>
+      <div className={`newsContainer ${styles.newsContainer}`}>
+        {articles.map((article, idx) => (
+          <div key={idx} className={styles.articleBox}>
+            <div className={styles.imageContainer}>
+              <img src={article.image_url} alt={article.title} className={styles.articleImage} />
+            </div>
+            <div className={styles.articleContent}>
+              <h4 className={styles.articleTitle}>{article.title}</h4>
+              <p className={styles.articleDescription}>{article.summary}</p>
+              <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.articleLink}>Learn More</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function HomepageFeatures() {
   return (
@@ -186,6 +212,9 @@ export default function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+        <div className="row">
+          <NewsArticles />
         </div>
         <div className="row">
           <Documentation />
