@@ -1,7 +1,7 @@
 ---
 id: terms-of-service
 title: Terms of Service
-description: Explore our Terms of Service for the Horizon Application by Atlas. Learn about your rights, responsibilities, and usage guidelines when using our services.
+description: Explore our Terms of Service for Horizon by Atlas. Learn about your rights, and usage guidelines when using our services.
 ---
 
 # Terms of Service
