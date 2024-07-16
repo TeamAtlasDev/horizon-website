@@ -131,6 +131,10 @@ const config = {
               label: 'Privacy Policy',
               to: '/privacy',
             },
+            {
+              label: 'Website Policy',
+              to: '/web-policy',
+            },
           ],
         },
         // New category added to the left
@@ -140,10 +144,10 @@ const config = {
             {
               html: `
               <a href="https://top.gg/bot/1183177251316047983">
-                <img src="https://top.gg/api/widget/upvotes/1183177251316047983.svg">
+                <img src="https://top.gg/api/widget/upvotes/1183177251316047983.svg" alt="Stats">
               </a> <br>
               <a href="https://top.gg/bot/1183177251316047983">
-                  <img src="https://top.gg/api/widget/owner/1183177251316047983.svg">
+                <img src="https://top.gg/api/widget/owner/1183177251316047983.svg" alt="Owner">
               </a>
               `,
             },
@@ -156,7 +160,10 @@ const config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    
   },
 };
+
+
 
 export default config;
