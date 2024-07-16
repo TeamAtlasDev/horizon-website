@@ -213,15 +213,14 @@ function NewsArticles() {
         <div className="text--center">
           {visibleArticles === 3 ? (
             <>
-              <button className={styles.showMoreButton} onClick={showMoreArticles}>Show More</button>
+              <button className={styles.showMoreButton} onClick={showMoreArticles}>More Artiles</button>
             </>
           ) : (
             <>
-            <button className={styles.showMoreButton} onClick={showLessArticles}>Show Less</button>
+            <button className={styles.showMoreButton} onClick={showLessArticles}>Less Articles</button>
             <p className={styles.showMoreText}>
                 Want to see more? Add Horizon! <br />
-                <a href="https://spaceflightnewsapi.net" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Data Credits</a> <br></br>
-                <a href="https://horizonbot.xyz/web-policy" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Website Policy</a>
+                <a href="https://spaceflightnewsapi.net" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Data Credits</a> • <a href="https://horizonbot.xyz/web-policy" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Website Policy</a>
             </p>
             </>
           )}
