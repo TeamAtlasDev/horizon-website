@@ -21,6 +21,133 @@
 /* Container holding articles */
 .newsContainer {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Space between articles */
+  padding: 0 1rem; /* Add padding on the sides */
+}
+
+/* Styles for each article box */
+.articleBox {
+  background-color: var(--ifm-background-color);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure image covers the full width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  height: 100%; /* Ensure all article boxes are the same height */
+  display: flex;
+  flex-direction: column; /* Ensure content stacks properly */
+}
+
+.articleBox:hover {
+  transform: translateY(-10px); /* Move article up slightly on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+}
+
+.imageContainer {
+  width: 100%;
+  height: 300px; /* Fixed image height */
+  overflow: hidden; /* Ensure image covers the full width */
+}
+
+.articleImage {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Cover the container with the image */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.articleImage:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.articleContent {
+  padding: 1.5rem;
+  flex: 1; /* Ensure content area expands to fill articleBox */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space evenly between elements */
+}
+
+.articleTitle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Smaller font size for the title */
+  color: #ffffff;
+}
+
+.articleDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.articleLink {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.articleLink:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .newsContainer {
+    grid-template-columns: 1fr; /* Display articles in a single column on smaller screens */
+    gap: 2rem; /* Maintain gap between articles */
+    padding: 0; /* Remove padding on the sides */
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 100%; /* Ensure container does not exceed viewport width */
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .articleBox {
+    height: auto; /* Auto height for responsiveness */
+  }
+}
+
+/* Show more / Show less buttons */
+.showMoreButton,
+.showLessButton {
+  background-color: #007bff; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.showMoreButton:hover,
+.showLessButton:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+/* General section styling */
+.newsSection {
+  text-align: center;
+  margin: 0 auto 3rem; /* Center horizontally and add bottom margin */
+  width: 100%; /* Ensure full width */
+  max-width: 1200px; /* Optional max-width */
+}
+
+.newsTitle {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem; /* Space below the News title */
+}
+
+.newsCategory {
+  font-size: 1.2rem; /* Font size for the category/subtitle */
+  color: #999999; /* Subtitle color */
+  margin-bottom: 1.5rem; /* Space below the subtitle */
+}
+
+/* Container holding articles */
+.newsContainer {
+  display: grid;
   gap: 2rem; /* Space between articles */
   padding: 0 1rem; /* Add padding on the sides */
 }
@@ -278,4 +405,41 @@
 
 .contributorImage {
   animation: pulse 2s infinite; /* Apply pulse effect */
+}
+
+/* Show more / Show less buttons */
+.showMoreButton,
+.showLessButton {
+  background-color: #007bff; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.showMoreButton:hover,
+.showLessButton:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+
+
+.showMoreText {
+  color: #999999; /* Gray color */
+  font-size: 0.9rem; /* Smaller font size */
+  margin-top: 0.5rem; /* Space above the text */
+  margin-bottom: 1rem; /* Space below the text */
+}
+
+.showMoreLink {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.showMoreLink:hover {
+  color: #0056b3; /* Darker blue on hover */
 }
