@@ -164,12 +164,11 @@ function NewsArticles() {
           <h3 className={styles.newsTitle}>Latest News</h3>
           <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
-        <div className={`newsContainer ${styles.newsContainer}`}>
-          <div className={styles.articleBox}>
-            <p>Loading data, please wait...</p>
+          <div className={styles.loadingText}>
+            <h4>🕝 Preparing some things for you..</h4>
+            <p>We're loading the content now. Depending on your connection and device. <br></br>This may take a moment. Please be patient.</p>
           </div>
         </div>
-      </div>
     );
   }
 
@@ -180,16 +179,12 @@ function NewsArticles() {
           <h3 className={styles.newsTitle}>Latest News</h3>
           <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
-        <div className={`newsContainer ${styles.newsContainer}`}>
-          <div className={styles.articleBox}>
-            <h4 className={styles.articleTitle}>Oooops..</h4>
-            <p className={styles.articleDescription}>We encountered issues while loading your data.</p>
-            <div className={styles.errorBox}>
-              <div className={styles.errorMessage}>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></div>
-            </div>
+          <div className={styles.errorText}>
+            <h4>⚠️ Something went wrong..</h4>
+            <p>We encountered issues while loading Horizon news data, please try again later.</p>
+            <p>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></p>
           </div>
         </div>
-      </div>
     );
   }
 
@@ -231,6 +226,7 @@ function NewsArticles() {
     </div>
   );
 }
+
 
 
 
