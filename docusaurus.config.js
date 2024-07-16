@@ -115,7 +115,7 @@ const config = {
               href: 'https://support.horizonbot.xyz',
             },
             {
-              label: 'Twitter',
+              label: 'X (Twitter)',
               href: 'https://x.horizonbot.xyz',
             },
           ],
