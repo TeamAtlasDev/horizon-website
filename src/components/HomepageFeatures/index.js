@@ -128,9 +128,10 @@ function NewsArticles() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true); // Track loading state
   const [error, setError] = useState(false); // Track error state
+  const [visibleArticles, setVisibleArticles] = useState(3); // Number of articles initially visible
 
   useEffect(() => {
-    fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=3&news_site_exclude=SpaceNews')
+    fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=6&news_site_exclude=SpaceNews') // Fetch 6 articles initially
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch');
@@ -147,6 +148,14 @@ function NewsArticles() {
         setLoading(false); // Mark loading as complete
       });
   }, []);
+
+  const showMoreArticles = () => {
+    setVisibleArticles(prev => prev + 3); // Show 4 more articles
+  };
+
+  const showLessArticles = () => {
+    setVisibleArticles(3); // Show back the initial 3 articles
+  };
 
   if (loading) {
     return (
@@ -187,7 +196,7 @@ function NewsArticles() {
         <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
       </div>
       <div className={`newsContainer ${styles.newsContainer}`}>
-        {articles.map((article, idx) => (
+        {articles.slice(0, visibleArticles).map((article, idx) => (
           <div key={idx} className={styles.articleBox}>
             <div className={styles.imageContainer}>
               <img src={article.image_url} alt={article.title} className={styles.articleImage} />
@@ -200,9 +209,28 @@ function NewsArticles() {
           </div>
         ))}
       </div>
+      {visibleArticles <= articles.length && (
+        <div className="text--center">
+          {visibleArticles === 3 ? (
+            <>
+              <button className={styles.showMoreButton} onClick={showMoreArticles}>Show More</button>
+            </>
+          ) : (
+            <>
+            <button className={styles.showMoreButton} onClick={showLessArticles}>Show Less</button>
+            <p className={styles.showMoreText}>
+                Want to see more? Add Horizon! <br />
+                <a href="https://spaceflightnewsapi.net" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Data Credits</a> <br></br>
+                <a href="https://horizonbot.xyz/web-policy" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Website Policy</a>
+            </p>
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 }
+
 
 
 export default function HomepageFeatures() {
