@@ -1,3 +1,107 @@
+/* General section styling */
+.newsSection {
+  text-align: center;
+  margin: 0 auto 3rem; /* Center horizontally and add bottom margin */
+  width: 100%; /* Ensure full width */
+  max-width: 1200px; /* Optional max-width */
+}
+
+.newsTitle {
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem; /* Space below the News title */
+}
+
+.newsCategory {
+  font-size: 1.2rem; /* Font size for the category/subtitle */
+  color: #999999; /* Subtitle color */
+  margin-bottom: 1.5rem; /* Space below the subtitle */
+}
+
+/* Container holding articles */
+.newsContainer {
+  display: grid;
+  gap: 2rem; /* Space between articles */
+  padding: 0 1rem; /* Add padding on the sides */
+}
+
+/* Styles for each article box */
+.articleBox {
+  background-color: var(--ifm-background-color);
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden; /* Ensure image covers the full width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.articleBox:hover {
+  transform: translateY(-10px); /* Move article up slightly on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+}
+
+.imageContainer {
+  width: 100%;
+  height: 300px; /* Increased image height */
+  overflow: hidden; /* Ensure image covers the full width */
+}
+
+.articleImage {
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  object-fit: cover; /* Cover the container with the image */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.articleImage:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.articleContent {
+  padding: 1.5rem;
+}
+
+.articleTitle {
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Smaller font size for the title */
+  color: #ffffff;
+}
+
+.articleDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.articleLink {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.articleLink:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .newsContainer {
+    grid-template-columns: 1fr; /* Display articles in a single column on smaller screens */
+    gap: 2rem; /* Maintain gap between articles */
+    padding: 0; /* Remove padding on the sides */
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 100%; /* Ensure container does not exceed viewport width */
+    text-align: center; /* Center align text for smaller screens */
+  }
+}
+
+.articleBox {
+  border-radius: 10px; /* Restore border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Restore box shadow */
+  margin: 0 auto; /* Center the box horizontally */
+  max-width: calc(100% - 2rem); /* Ensure box doesn't exceed container width */
+  padding: 0; /* Remove internal padding */
+}
+
 /* Updated header styling */
 .header {
   background-color: var(--ifm-background-color); /* Replace with your background color */
@@ -11,8 +115,6 @@
   padding: 0 2rem; /* Add padding to ensure content doesn't stick to edges */
   box-sizing: border-box; /* Include padding in the width calculation */
 }
-
-
 
 .header-title {
   font-size: 3rem; /* Adjust font size as needed */
@@ -50,111 +152,6 @@
 .featureSvg:hover {
   transform: scale(1.1); /* Zoom in slightly on hover */
 }
-
-
-.documentationSection {
-  text-align: center;
-  margin: 0 auto; /* Center horizontally */
-  margin-bottom: 3rem; /* Add margin between Documentation section and Call to Action */
-  width: 100%; /* Ensure it takes full width */
-  max-width: 1200px; /* Optionally set a max-width */
-}
-
-.documentationTitle {
-  margin-bottom: 1rem; /* Space below the Documentation title */
-}
-
-.documentationCategory {
-  font-size: 1.2rem; /* Font size for the category/subtitle */
-  color: #999999; /* Subtitle color */
-  margin-bottom: 1.5rem; /* Space below the subtitle */
-}
-
-.documentationContainer {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; /* Space between boxes */
-  overflow-x: auto; /* Enable horizontal scrolling if necessary */
-  padding-bottom: 1rem; /* Add padding to ensure space at the bottom */
-  padding-top: 2rem; /* Add padding at the top to provide space for hover effect */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-}
-
-.documentationContainer {
-  display: flex;
-  justify-content: center;
-  gap: 2rem; /* Space between boxes */
-  overflow-x: auto; /* Enable horizontal scrolling if necessary */
-  padding-bottom: 1rem; /* Add padding to ensure space at the bottom */
-  padding-top: 2rem; /* Add padding at the top to provide space for hover effect */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  width: 100%; /* Ensure it takes full width */
-}
-
-.documentationBox {
-  background-color: var(--ifm-background-color);
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  color: #ffffff;
-  width: calc(33.33% - 2rem); /* Adjust width for three boxes in one row */
-  max-width: 400px; /* Ensure responsiveness */
-  flex-shrink: 0;
-  margin-bottom: 2rem; /* Add margin between boxes */
-  display: flex;
-  flex-direction: column;
-}
-
-.documentationBox:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
-}
-
-.documentationBox h4 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  color: #ffffff;
-}
-
-.documentationBox .documentationSubtitle {
-  margin-top: -0.5rem; /* Adjust spacing between title and subtitle */
-  font-size: 1.2rem;
-  color: #cccccc; /* Subtitle color */
-}
-
-.documentationBox p {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #ffffff;
-  flex: 1; /* Ensure text takes up remaining space */
-}
-
-.documentationBox a {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  align-self: flex-end; /* Align link to the end of the box */
-  margin-top: auto; /* Push link to the bottom */
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .documentationBox {
-    width: calc(50% - 2rem); /* Two boxes in one row on tablet */
-    margin-bottom: 1rem; /* Reduce margin between boxes on tablet */
-  }
-}
-
-@media (max-width: 768px) {
-  .documentationBox {
-    width: calc(100% - 2rem); /* Full width minus padding on mobile */
-    margin-bottom: 1rem; /* Reduce margin between boxes on mobile */
-  }
-}
-
 
 .newFeatureImage {
   height: 55px; /* Increased height of the badge */
@@ -270,29 +267,6 @@
   }
 }
 
-.contributorBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 150px;
-}
-
-.contributorImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-  .contributorsContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -304,114 +278,4 @@
 
 .contributorImage {
   animation: pulse 2s infinite; /* Apply pulse effect */
-}
-
-
-
-
-
-
-/* General section styling */
-.newsSection {
-  text-align: center;
-  margin: 0 auto 3rem; /* Center horizontally and add bottom margin */
-  width: 100%; /* Ensure full width */
-  max-width: 1200px; /* Optional max-width */
-}
-
-.newsTitle {
-  margin-bottom: 1rem; /* Space below the News title */
-}
-
-.newsCategory {
-  font-size: 1.2rem; /* Font size for the category/subtitle */
-  color: #999999; /* Subtitle color */
-  margin-bottom: 1.5rem; /* Space below the subtitle */
-}
-
-/* Container holding articles */
-.newsContainer {
-  display: grid;
-  gap: 2rem; /* Space between articles */
-  padding: 0 1rem; /* Add padding on the sides */
-}
-
-/* Styles for each article box */
-.articleBox {
-  background-color: var(--ifm-background-color);
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  overflow: hidden; /* Ensure image covers the full width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.imageContainer {
-  width: 100%;
-  height: 200px; /* Fixed height for image */
-  overflow: hidden; /* Ensure image covers the full width */
-}
-
-.articleImage {
-  width: 100%; /* Full width of the container */
-  height: 100%; /* Full height of the container */
-  object-fit: cover; /* Cover the container with the image */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-.articleImage:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.articleContent {
-  padding: 1.5rem;
-}
-
-.articleTitle {
-  margin-bottom: 1rem;
-  font-size: 1.5rem; /* Smaller font size for the title */
-  color: #ffffff;
-}
-
-.articleDescription {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #ffffff;
-}
-
-.articleLink {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.articleLink:hover {
-  color: #0056b3;
-}
-
-@media (max-width: 768px) {
-  .newsContainer {
-    grid-template-columns: 1fr; /* Display articles in a single column on smaller screens */
-    gap: 2rem; /* Maintain gap between articles */
-    padding: 0; /* Remove padding on the sides */
-    margin: 0 auto; /* Center the container horizontally */
-    max-width: 100%; /* Ensure container does not exceed viewport width */
-  }
-
-  .articleBox {
-    border-radius: 10px; /* Restore border-radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Restore box shadow */
-    margin: 0 auto; /* Center the box horizontally */
-    max-width: calc(100% - 2rem); /* Ensure box doesn't exceed container width */
-    padding: 0; /* Remove internal padding */
-  }
-
-  .imageContainer {
-    height: 300px; /* Increase image height for a more header-like appearance */
-    margin: 0; /* Remove margin to ensure image touches container edges */
-  }
-
-  .articleImage {
-    height: 100%; /* Ensure image covers full height of container */
-  }
 }
