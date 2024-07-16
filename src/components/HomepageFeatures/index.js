@@ -126,12 +126,59 @@ function SpecialThanks() {
 
 function NewsArticles() {
   const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true); // Track loading state
+  const [error, setError] = useState(false); // Track error state
 
   useEffect(() => {
     fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=3&news_site_exclude=SpaceNews')
-      .then(response => response.json())
-      .then(data => setArticles(data.results));
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setArticles(data.results);
+        setLoading(false); // Mark loading as complete
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setError(true); // Set error state
+        setLoading(false); // Mark loading as complete
+      });
   }, []);
+
+  if (loading) {
+    return (
+      <div className={styles.newsSection}>
+        <div className="text--center">
+          <h3 className={styles.newsTitle}>Latest News</h3>
+          <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
+        </div>
+        <div className={`newsContainer ${styles.newsContainer}`}>
+          <div className={styles.articleBox}>
+            <p>Loading data, please wait...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.newsSection}>
+        <div className="text--center">
+          <h3 className={styles.newsTitle}>Latest News</h3>
+          <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
+        </div>
+        <div className={`newsContainer ${styles.newsContainer}`}>
+          <div className={styles.articleBox}>
+            <p>We encountered issues while loading your data. Please try again later. If the problem persists, contact us at info@teamatlas.dev</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.newsSection}>
