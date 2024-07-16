@@ -370,23 +370,18 @@
   color: #0056b3; /* Darker blue on hover */
 }
 
-.errorBox {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 100%; /* Ensure it takes full height of parent */
+/* styles.module.css */
+
+.errorText {
+  text-align: center; /* Center align the text */
+  margin-top: 1rem; /* Add some top margin for spacing */
+  color: #999999; /* Dark red text color */
+  padding: 0 1rem; /* Add padding left and right */
 }
 
-.errorMessage {
-  background-color: #161516; /* Red background color */
-  color: #ffffff; /* Dark red text color */
-  border: 1px solid #e9041b00; /* Red border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 1rem; /* Padding inside the error box */
-  width: 100%; /* Full width */
-  max-width: 100%; /* Max width */
-  text-align: center; /* Center text */
-  animation: fadeIn 0.5s ease-in-out; /* Optional: Fade-in animation */
-  margin-top: 1rem; /* Margin top for spacing */
-  box-sizing: border-box; /* Ensure padding and border are included in width calculation */
+.loadingText {
+  text-align: center; /* Center align the text */
+  margin-top: 1rem; /* Add some top margin for spacing */
+  color: #cbcfcf; /* Dark red text color */
+  padding: 0 1rem; /* Add padding left and right */
 }
