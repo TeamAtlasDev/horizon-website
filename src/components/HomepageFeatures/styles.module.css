@@ -21,15 +21,15 @@
 /* Container holding articles */
 .newsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-  gap: 2rem; /* Space between articles */
+  grid-template-columns: repeat(3, 1fr); /* Ensure three columns */
+  gap: 1.3rem; /* Space between articles */
   padding: 0 1rem; /* Add padding on the sides */
 }
 
 /* Styles for each article box */
 .articleBox {
   background-color: var(--ifm-background-color);
-  border: 1px solid #ffffff;
+  border: 1px solid #8d8989ea;
   border-radius: 10px;
   overflow: hidden; /* Ensure image covers the full width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -37,11 +37,17 @@
   height: 100%; /* Ensure all article boxes are the same height */
   display: flex;
   flex-direction: column; /* Ensure content stacks properly */
+  max-width: 100%; /* Ensure box doesn't exceed container width */
+  position: relative; /* Position relative for child elements */
 }
 
 .articleBox:hover {
   transform: translateY(-10px); /* Move article up slightly on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
+}
+
+.articleBox:hover .articleImage {
+  transform: scale(1.05); /* Zoom image on hover */
 }
 
 .imageContainer {
@@ -55,10 +61,6 @@
   height: 100%; /* Full height of the container */
   object-fit: cover; /* Cover the container with the image */
   transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-.articleImage:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .articleContent {
@@ -91,13 +93,19 @@
   color: #0056b3;
 }
 
+@media (max-width: 1024px) {
+  .newsContainer {
+    grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .newsContainer {
-    grid-template-columns: 1fr; /* Display articles in a single column on smaller screens */
+    grid-template-columns: 1fr; /* Single column on smaller screens */
     gap: 2rem; /* Maintain gap between articles */
-    padding: 0; /* Remove padding on the sides */
+    padding: 0 1rem; /* Add padding on the sides */
     margin: 0 auto; /* Center the container horizontally */
-    max-width: 100%; /* Ensure container does not exceed viewport width */
+    max-width: 90%; /* Ensure container does not exceed viewport width */
     text-align: center; /* Center align text for smaller screens */
   }
 
@@ -123,110 +131,6 @@
 .showMoreButton:hover,
 .showLessButton:hover {
   background-color: #0056b3; /* Darker background color on hover */
-}
-
-/* General section styling */
-.newsSection {
-  text-align: center;
-  margin: 0 auto 3rem; /* Center horizontally and add bottom margin */
-  width: 100%; /* Ensure full width */
-  max-width: 1200px; /* Optional max-width */
-}
-
-.newsTitle {
-  align-items: center;
-  text-align: center;
-  margin-bottom: 1rem; /* Space below the News title */
-}
-
-.newsCategory {
-  font-size: 1.2rem; /* Font size for the category/subtitle */
-  color: #999999; /* Subtitle color */
-  margin-bottom: 1.5rem; /* Space below the subtitle */
-}
-
-/* Container holding articles */
-.newsContainer {
-  display: grid;
-  gap: 2rem; /* Space between articles */
-  padding: 0 1rem; /* Add padding on the sides */
-}
-
-/* Styles for each article box */
-.articleBox {
-  background-color: var(--ifm-background-color);
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  overflow: hidden; /* Ensure image covers the full width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-.articleBox:hover {
-  transform: translateY(-10px); /* Move article up slightly on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
-}
-
-.imageContainer {
-  width: 100%;
-  height: 300px; /* Increased image height */
-  overflow: hidden; /* Ensure image covers the full width */
-}
-
-.articleImage {
-  width: 100%; /* Full width of the container */
-  height: 100%; /* Full height of the container */
-  object-fit: cover; /* Cover the container with the image */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-.articleImage:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.articleContent {
-  padding: 1.5rem;
-}
-
-.articleTitle {
-  margin-bottom: 1rem;
-  font-size: 1.5rem; /* Smaller font size for the title */
-  color: #ffffff;
-}
-
-.articleDescription {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #ffffff;
-}
-
-.articleLink {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.articleLink:hover {
-  color: #0056b3;
-}
-
-@media (max-width: 768px) {
-  .newsContainer {
-    grid-template-columns: 1fr; /* Display articles in a single column on smaller screens */
-    gap: 2rem; /* Maintain gap between articles */
-    padding: 0; /* Remove padding on the sides */
-    margin: 0 auto; /* Center the container horizontally */
-    max-width: 100%; /* Ensure container does not exceed viewport width */
-    text-align: center; /* Center align text for smaller screens */
-  }
-}
-
-.articleBox {
-  border-radius: 10px; /* Restore border-radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Restore box shadow */
-  margin: 0 auto; /* Center the box horizontally */
-  max-width: calc(100% - 2rem); /* Ensure box doesn't exceed container width */
-  padding: 0; /* Remove internal padding */
 }
 
 /* Updated header styling */
@@ -388,8 +292,24 @@
 }
 
 @media (max-width: 768px) {
+  .callToActionBox {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .specialThanksTitle {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
   .contributorsContainer {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .contributorsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
   }
 }
@@ -410,7 +330,7 @@
 /* Show more / Show less buttons */
 .showMoreButton,
 .showLessButton {
-  background-color: #007bff; /* Button background color */
+  background-color: #1c1e1ffa; /* Button background color */
   color: #ffffff; /* Button text color */
   border: none;
   padding: 0.75rem 1.5rem;
@@ -420,19 +340,18 @@
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-  background-color: #007bff; /* Initial background color */
-  border-color: #007bff; /* Initial border color */
+  background-color: #121213ef; /* Initial background color */
+  border-color: #007bff00; /* Initial border color */
 }
 
 .showMoreButton:hover,
 .showLessButton:hover {
-  background-color: #0056b3; /* Darker background color on hover */
+  background-color: #0057b300; /* Darker background color on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #0056b3; /* Darker background color */
-  border-color: #0056b3; /* Darker border color */
+  background-color: #0057b300; /* Darker background color */
+  border-color: #0057b300; /* Darker border color */
   transform: scale(1.05); /* Optional: Scale up button slightly */
 }
-
 
 .showMoreText {
   color: #999999; /* Gray color */
