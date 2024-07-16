@@ -126,12 +126,12 @@ function SpecialThanks() {
 
 function NewsArticles() {
   const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true); // Track loading state
-  const [error, setError] = useState(false); // Track error state
-  const [visibleArticles, setVisibleArticles] = useState(3); // Number of articles initially visible
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [visibleArticles, setVisibleArticles] = useState(3);
 
   useEffect(() => {
-    fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=6&news_site_exclude=SpaceNews') // Fetch 6 articles initially
+    fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=6&news_site_exclude=SpaceNews')
       .then(response => {
         if (!response.ok) {
           throw new Error('Failed to fetch');
@@ -140,21 +140,21 @@ function NewsArticles() {
       })
       .then(data => {
         setArticles(data.results);
-        setLoading(false); // Mark loading as complete
+        setLoading(false);
       })
       .catch(error => {
         console.error('Error fetching data:', error);
-        setError(true); // Set error state
-        setLoading(false); // Mark loading as complete
+        setError(true);
+        setLoading(false);
       });
   }, []);
 
   const showMoreArticles = () => {
-    setVisibleArticles(prev => prev + 3); // Show 4 more articles
+    setVisibleArticles(prev => prev + 3);
   };
 
   const showLessArticles = () => {
-    setVisibleArticles(3); // Show back the initial 3 articles
+    setVisibleArticles(3);
   };
 
   if (loading) {
@@ -182,7 +182,11 @@ function NewsArticles() {
         </div>
         <div className={`newsContainer ${styles.newsContainer}`}>
           <div className={styles.articleBox}>
-            <p>We encountered issues while loading your data. Please try again later. If the problem persists, contact us at info@teamatlas.dev</p>
+            <h4 className={styles.articleTitle}>Oooops..</h4>
+            <p className={styles.articleDescription}>We encountered issues while loading your data.</p>
+            <div className={styles.errorBox}>
+              <div className={styles.errorMessage}>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></div>
+            </div>
           </div>
         </div>
       </div>
@@ -212,16 +216,14 @@ function NewsArticles() {
       {visibleArticles <= articles.length && (
         <div className="text--center">
           {visibleArticles === 3 ? (
-            <>
-              <button className={styles.showMoreButton} onClick={showMoreArticles}>More Artiles</button>
-            </>
+            <button className={styles.showMoreButton} onClick={showMoreArticles}>More Articles</button>
           ) : (
             <>
-            <button className={styles.showMoreButton} onClick={showLessArticles}>Less Articles</button>
-            <p className={styles.showMoreText}>
+              <button className={styles.showMoreButton} onClick={showLessArticles}>Less Articles</button>
+              <p className={styles.showMoreText}>
                 Want to see more? Add Horizon! <br />
                 <a href="https://spaceflightnewsapi.net" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Data Credits</a> • <a href="https://horizonbot.xyz/web-policy" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Website Policy</a>
-            </p>
+              </p>
             </>
           )}
         </div>
