@@ -44,26 +44,6 @@ const FeatureList = [
   },
 ];
 
-const DocumentationList = [
-  {
-    title: 'Welcome to Horizon',
-    subtitle: 'Explore Horizon and its features.',
-    description: 'Get started with Horizon. Learn about its features, how to use it, and much more.',
-    link: '/docs/information',
-  },
-  {
-    title: 'Horizon Automations',
-    subtitle: 'Setup notifications for next space launches and events.',
-    description: 'Learn how Automations in Horizon streamline notifications and explore the basics of Horizon\'s API.',
-    link: '/docs/automations/introduction',
-  },
-  {
-    title: 'Horizon Settings',
-    subtitle: 'Manage and customize your server settings and notifications.',
-    description: 'Discover how to efficiently customize Horizon\'s automations and manage your server through Horizon Settings.',
-    link: '/docs/automations/configuration',
-  },
-];
 
 function Feature({ image, title, description }) {
   return (
@@ -79,33 +59,6 @@ function Feature({ image, title, description }) {
   );
 }
 
-import NewImage from '@site/static/img/new.png';
-function Documentation({ title, subtitle, description, link }) {
-  return (
-    <div className={clsx(styles.documentationSection)}>
-      <div className="text--center">
-      </div>
-      <div className={clsx('documentationContainer', styles.documentationContainer)}>
-        {DocumentationList.map((props, idx) => (
-          <DocumentationBox key={idx} {...props} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function DocumentationBox({ title, subtitle, description, link }) {
-  return (
-    <div className={clsx(styles.documentationBox)}>
-      <Heading as="h4">{title}</Heading>
-      <p className={styles.documentationSubtitle}>{subtitle}</p>
-      <p>{description}</p>
-      <a className={styles.docLink} href={link}>
-        Read more
-      </a>
-    </div>
-  );
-}
 
 // Import star SVG images
 import StarLeftBottom from '@site/static/img/star.png';
@@ -204,6 +157,7 @@ function NewsArticles() {
   );
 }
 
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
@@ -215,9 +169,6 @@ export default function HomepageFeatures() {
         </div>
         <div className="row">
           <NewsArticles />
-        </div>
-        <div className="row">
-          <Documentation />
         </div>
         <div className="row">
           <CallToAction />
