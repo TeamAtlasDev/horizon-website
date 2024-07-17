@@ -186,7 +186,7 @@ function NewsArticles() {
         </div>
         <div className={styles.errorText}>
           <h4>⚠️ Something went wrong..</h4>
-          <p>We encountered issues while loading Horizon news data, please try again later.</p>
+          <p>We encountered issues while loading Horizon data, please try again later.</p>
           <p>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></p>
         </div>
       </div>
@@ -299,7 +299,7 @@ function ExploreThinkLearn() {
         </div>
         <div className={styles.errorText}>
           <h4>⚠️ Something went wrong..</h4>
-          <p>We encountered issues while loading blog data, please try again later.</p>
+          <p>We encountered issues while loading Horizon data, please try again later.</p>
           <p>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></p>
         </div>
       </div>
