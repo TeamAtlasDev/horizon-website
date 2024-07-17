@@ -410,6 +410,12 @@
   
 }
 
+.blogDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #727171;
+}
+
 .blogGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -467,6 +473,11 @@
 
 .blogLink:hover {
   text-decoration: underline;
+}
+
+.DescshowMore {
+  color: #02264d;
+  cursor: pointer;
 }
 
 
