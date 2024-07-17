@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
@@ -58,7 +57,6 @@ function Feature({ image, title, description }) {
     </div>
   );
 }
-
 
 // Import star SVG images
 import StarLeftBottom from '@site/static/img/star.png';
@@ -162,11 +160,11 @@ function NewsArticles() {
       <div className={styles.newsSection}>
         <div className="text--center">
           <h3 className={styles.newsTitle}>Latest News</h3>
-          <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
+          <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
           <div className={styles.loadingText}>
             <h4>🕝 Preparing some things for you..</h4>
-            <p>We're loading the news content, please wait. <br></br>Depending on your connection and device, this may take a moment.</p>
+            <p>We're loading the content now. Depending on your connection and device. <br></br>This may take a moment. Please be patient.</p>
           </div>
         </div>
     );
@@ -177,7 +175,7 @@ function NewsArticles() {
       <div className={styles.newsSection}>
         <div className="text--center">
           <h3 className={styles.newsTitle}>Latest News</h3>
-          <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
+          <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
           <div className={styles.errorText}>
             <h4>⚠️ Something went wrong..</h4>
@@ -192,7 +190,7 @@ function NewsArticles() {
     <div className={styles.newsSection}>
       <div className="text--center">
         <h3 className={styles.newsTitle}>Latest News</h3>
-        <p className={styles.newsCategory}>Stay updated with the latest news in spaceflight.</p>
+        <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
       </div>
       <div className={`newsContainer ${styles.newsContainer}`}>
         {articles.slice(0, visibleArticles).map((article, idx) => (
@@ -223,32 +221,128 @@ function NewsArticles() {
           )}
         </div>
       )}
+      <ExploreThinkLearn />
     </div>
   );
 }
 
+function ExploreThinkLearn() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  const [visibleBlogs, setVisibleBlogs] = useState(2);
 
+  useEffect(() => {
+    fetch('https://api.spaceflightnewsapi.net/v4/blogs/?limit=6')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to fetch');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setBlogs(data.results);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setError(true);
+        setLoading(false);
+      });
+  }, []);
 
+  const handleShowMore = () => {
+    setVisibleBlogs(visibleBlogs + 4);
+  };
 
-export default function HomepageFeatures() {
-  return (
-    <section className={styles.features}>
-      <div className={clsx('header', 'container')}>
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+  const handleShowLess = () => {
+    setVisibleBlogs(2);
+  };
+
+  if (loading) {
+    return (
+      <div className={styles.blogSection}>
+        <div className="text--center">
+          <h3 className={styles.blogTitle}>Explore, Think, Learn</h3>
+          <p className={styles.blogCategory}>Delve into thought-provoking blogs about space and astronomy.</p>
         </div>
-        <div className="row">
-          <NewsArticles />
-        </div>
-        <div className="row">
-          <CallToAction />
-        </div>
-        <div className="row">
-          <SpecialThanks />
+        <div className={styles.loadingText}>
+          <h4>🕝 Preparing some things for you..</h4>
+          <p>We're loading the content now. Depending on your connection and device. <br></br>This may take a moment. Please be patient.</p>
         </div>
       </div>
-    </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className={styles.blogSection}>
+        <div className="text--center">
+          <h3 className={styles.blogTitle}>Explore, Think, Learn</h3>
+          <p className={styles.blogCategory}>Delve into thought-provoking blogs about space and astronomy.</p>
+        </div>
+        <div className={styles.errorText}>
+          <h4>⚠️ Something went wrong..</h4>
+          <p>We encountered issues while loading blog data, please try again later.</p>
+          <p>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className={styles.blogSection}>
+      <div className="text--center">
+        <h3 className={styles.blogTitle}>Explore, Think, Learn</h3>
+        <p className={styles.blogCategory}>Delve into thought-provoking blogs about space and astronomy.</p>
+      </div>
+      <div className={`blogContainer ${styles.blogContainer}`}>
+        <div className={styles.blogGrid}>
+          {blogs.slice(0, visibleBlogs).map((blog, idx) => (
+            <div key={idx} className={styles.blogBox}>
+              <div className={styles.imageContainer}>
+                <img src={blog.image_url} alt={blog.title} className={styles.blogImage} />
+              </div>
+              <div className={styles.blogContent}>
+  <h4 className={styles.blogTitle}>{blog.title}</h4>
+  <p className={styles.blogDescription}>{blog.summary}</p>
+  <a href={blog.url} target="_blank" rel="noopener noreferrer" className={styles.blogLink}>Learn More</a>
+</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {visibleBlogs < blogs.length && (
+        <button onClick={handleShowMore} className={styles.showMoreButton}>More Blogs</button>
+      )}
+      {visibleBlogs > 2 && (
+        <>
+          <button className={styles.showMoreButton} onClick={handleShowLess}>Less Blogs</button>
+          <p className={styles.showMoreText}>
+            Want to see more? Add Horizon! <br />
+            <a href="https://spaceflightnewsapi.net" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Data Credits</a> • <a href="https://horizonbot.xyz/web-policy" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Website Policy</a>
+          </p>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <div className="container">
+      <main>
+        <div className="container">
+          <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
+          <NewsArticles />
+          <CallToAction />
+          <SpecialThanks />
+        </div>
+      </main>
+    </div>
   );
 }
