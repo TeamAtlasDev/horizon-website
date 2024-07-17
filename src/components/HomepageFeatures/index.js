@@ -127,6 +127,7 @@ function NewsArticles() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [visibleArticles, setVisibleArticles] = useState(3);
+  const [expandedSummaries, setExpandedSummaries] = useState([]);
 
   useEffect(() => {
     fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=6&news_site_exclude=SpaceNews')
@@ -155,6 +156,12 @@ function NewsArticles() {
     setVisibleArticles(3);
   };
 
+  const showFullSummary = (index) => {
+    if (!expandedSummaries.includes(index)) {
+      setExpandedSummaries([...expandedSummaries, index]);
+    }
+  };
+
   if (loading) {
     return (
       <div className={styles.newsSection}>
@@ -162,11 +169,11 @@ function NewsArticles() {
           <h3 className={styles.newsTitle}>Latest News</h3>
           <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
-          <div className={styles.loadingText}>
-            <h4>🕝 Preparing some things for you..</h4>
-            <p>We're loading the content now. Depending on your connection and device. <br></br>This may take a moment. Please be patient.</p>
-          </div>
+        <div className={styles.loadingText}>
+          <h4>🕝 Preparing some things for you..</h4>
+          <p>We're loading the content now. Depending on your connection and device. <br></br>This may take a moment. Please be patient.</p>
         </div>
+      </div>
     );
   }
 
@@ -177,12 +184,12 @@ function NewsArticles() {
           <h3 className={styles.newsTitle}>Latest News</h3>
           <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
-          <div className={styles.errorText}>
-            <h4>⚠️ Something went wrong..</h4>
-            <p>We encountered issues while loading Horizon news data, please try again later.</p>
-            <p>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></p>
-          </div>
+        <div className={styles.errorText}>
+          <h4>⚠️ Something went wrong..</h4>
+          <p>We encountered issues while loading Horizon news data, please try again later.</p>
+          <p>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></p>
         </div>
+      </div>
     );
   }
 
@@ -200,7 +207,16 @@ function NewsArticles() {
             </div>
             <div className={styles.articleContent}>
               <h4 className={styles.articleTitle}>{article.title}</h4>
-              <p className={styles.articleDescription}>{article.summary}</p>
+              <p className={styles.articleDescription}>
+                {expandedSummaries.includes(idx) ? article.summary : (
+                  <>
+                    {`${article.summary.substring(0, 180)}... `}
+                    <span className={styles.showMoreLink} onClick={() => showFullSummary(idx)}>
+                      show more
+                    </span>
+                  </>
+                )}
+              </p>
               <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.articleLink}>Learn More</a>
             </div>
           </div>
@@ -209,10 +225,10 @@ function NewsArticles() {
       {visibleArticles <= articles.length && (
         <div className="text--center">
           {visibleArticles === 3 ? (
-            <button className={styles.showMoreButton} onClick={showMoreArticles}>More Articles</button>
+            <button className={`${styles.showMoreButton} ${styles.blueButton}`} onClick={showMoreArticles}>More Articles</button>
           ) : (
             <>
-              <button className={styles.showMoreButton} onClick={showLessArticles}>Less Articles</button>
+              <button className={`${styles.showMoreButton} ${styles.blueButton}`} onClick={showLessArticles}>Less Articles</button>
               <p className={styles.showMoreText}>
                 Want to see more? Add Horizon! <br />
                 <a href="https://spaceflightnewsapi.net" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Data Credits</a> • <a href="https://horizonbot.xyz/web-policy" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Website Policy</a>
