@@ -166,7 +166,7 @@ function NewsArticles() {
     return (
       <div className={styles.newsSection}>
         <div className="text--center">
-          <h3 className={styles.newsTitle}>Latest News</h3>
+          <h3 className={styles.newsTitle}>Latest Horizon News</h3>
           <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
         <div className={styles.loadingText}>
@@ -181,7 +181,7 @@ function NewsArticles() {
     return (
       <div className={styles.newsSection}>
         <div className="text--center">
-          <h3 className={styles.newsTitle}>Latest News</h3>
+          <h3 className={styles.newsTitle}>Latest Horizon News</h3>
           <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
         </div>
         <div className={styles.errorText}>
@@ -196,7 +196,7 @@ function NewsArticles() {
   return (
     <div className={styles.newsSection}>
       <div className="text--center">
-        <h3 className={styles.newsTitle}>Latest News</h3>
+        <h3 className={styles.newsTitle}>Latest Horizon News</h3>
         <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
       </div>
       <div className={`newsContainer ${styles.newsContainer}`}>
@@ -279,7 +279,7 @@ function ExploreThinkLearn() {
     return (
       <div className={styles.blogSection}>
         <div className="text--center">
-          <h3 className={styles.blogTitle}>Explore, Think, Learn</h3>
+          <h3 className={styles.blogTitle}>Explore & Learn with Horizon</h3>
           <p className={styles.blogCategory}>Delve into thought-provoking blogs about space and astronomy.</p>
         </div>
         <div className={styles.loadingText}>
@@ -294,7 +294,7 @@ function ExploreThinkLearn() {
     return (
       <div className={styles.blogSection}>
         <div className="text--center">
-          <h3 className={styles.blogTitle}>Explore, Think, Learn</h3>
+          <h3 className={styles.blogTitle}>Explore & Learn with Horizon</h3>
           <p className={styles.blogCategory}>Delve into thought-provoking blogs about space and astronomy.</p>
         </div>
         <div className={styles.errorText}>
@@ -309,7 +309,7 @@ function ExploreThinkLearn() {
   return (
     <div className={styles.blogSection}>
       <div className="text--center">
-        <h3 className={styles.blogTitle}>Explore, Think, Learn</h3>
+        <h3 className={styles.blogTitle}>Explore & Learn with Horizon</h3>
         <p className={styles.blogCategory}>Delve into thought-provoking blogs about space and astronomy.</p>
       </div>
       <div className={`blogContainer ${styles.blogContainer}`}>
