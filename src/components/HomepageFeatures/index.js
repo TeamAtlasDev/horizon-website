@@ -166,7 +166,7 @@ function NewsArticles() {
         </div>
           <div className={styles.loadingText}>
             <h4>🕝 Preparing some things for you..</h4>
-            <p>We're loading the content now. Depending on your connection and device. <br></br>This may take a moment. Please be patient.</p>
+            <p>We're loading the content now. <br> </br> Depending on your connection and device, this may take a moment.</p>
           </div>
         </div>
     );
