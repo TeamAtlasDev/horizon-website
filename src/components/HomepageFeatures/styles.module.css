@@ -1,4 +1,5 @@
 /* General section styling */
+
 .newsSection {
   text-align: center;
   margin: 0 auto 3rem; /* Center horizontally and add bottom margin */
@@ -102,17 +103,32 @@
 @media (max-width: 768px) {
   .newsContainer {
     grid-template-columns: 1fr; /* Single column on smaller screens */
-    gap: 2rem; /* Maintain gap between articles */
-    padding: 0 1rem; /* Add padding on the sides */
+    gap: 1.5rem; /* Increase the gap between articles */
+    padding: 0 0.5rem; /* Reduce padding on the sides */
     margin: 0 auto; /* Center the container horizontally */
-    max-width: 90%; /* Ensure container does not exceed viewport width */
-    text-align: center; /* Center align text for smaller screens */
   }
 
   .articleBox {
-    height: auto; /* Auto height for responsiveness */
+    margin: 0 0.5rem; /* Reduce horizontal margin */
+    width: calc(100% - 1rem); /* Increase the width of the boxes */
+    box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
   }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .articleBox {
+    margin: 0 auto; /* Center the boxes when there are two columns */
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .articleBox {
+    margin: 0 auto; /* Center the boxes when there are two columns */
+    width: calc(100% - 3rem);
+  }
+}
+
 
 /* Show more / Show less buttons */
 .showMoreButton,
