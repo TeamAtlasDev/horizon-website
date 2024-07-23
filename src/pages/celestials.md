@@ -64,7 +64,7 @@ Use RA and Dec to guide your telescope accurately. It’s like a cosmic GPS but 
 :::
 
 1. Use RA and Dec to guide your telescope.
-2. **Plan your stargazing session based on when and where these celestial bodies will be visible. No one likes missing a good star show!
+2. Plan your stargazing session based on when and where these celestial bodies will be visible. No one likes missing a good star show!
 3. Record your observations. Who knows? You might discover something new, like a new hobby or even a comet!
 
 ### Astrological Analysis
@@ -74,7 +74,7 @@ Use the coordinates to place planets in your astrological charts and interpret t
 :::
 
 1. Use the coordinates to place planets in your astrological charts. Ever wondered why you’re feeling all those vibes? The stars have answers.
-2. **Interpret these positions based on astrological principles. Is Mercury in retrograde again? Time to blame it for your lost keys.
+2. Interpret these positions based on astrological principles. Is Mercury in retrograde again? Time to blame it for your lost keys.
 3. Combine this data with other astrological elements for a full reading. It’s like getting a cosmic weather forecast for your soul.
 
 ### Educational Purposes
