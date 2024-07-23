@@ -204,7 +204,6 @@ Using astrological software can help automate the process of chart creation and 
    RA(Mars) = 3 hours + (59 minutes / 60) + (51.3 seconds / 3600) 
              = 3 + 0.98333 + 0.01425 
              = 3.99758 hours
-
 2. Enter RA (3.99758 hours) and Dec (+19° 50' 26.2") into the software.
 3. Generate the astrological chart.
 4. Analyze and interpret the chart for astrological insights.
