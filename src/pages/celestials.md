@@ -2,7 +2,7 @@
 id: celestials
 title: How to Use Celestial Coordinates Provided by the Horizon
 description: Learn how to use celestial coordinates provided by the Horizon for plotting star charts, determining visibility, aligning telescopes, and analyzing astronomical data.
-image: https://github.com/atlasfyber/atlas-images/blob/main/horizon-badges.jpg?raw=true
+image: https://raw.githubusercontent.com/AtlasDevGroup/horizon-website/main/static/img/header.jpg
 keywords: [celestials, horizon, stars, earth, telescope, astronomy]
 ---
 
