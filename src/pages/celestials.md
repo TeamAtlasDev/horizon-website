@@ -91,13 +91,6 @@ Turn your backyard into a mini planetarium and impress your friends with your co
 
 ## Example Calculation and Usage
 
-**Example Data Provided:**
-- **Sun:** RA = 8h 13m 34.2s, Dec = +19° 53' 40"
-- **Mercury:** RA = 9h 59m 8.5s, Dec = +11° 2' 31.1"
-- **Venus:** RA = 9h 9m 53s, Dec = +17° 49' 9"
-- **Mars:** RA = 3h 59m 51.3s, Dec = +19° 50' 26.2"
-- **Jupiter:** RA = 4h 46m 6.8s, Dec = +21° 38' 40.7"
-
 ### Conversion Example
 
 **Example Data Provided:**
