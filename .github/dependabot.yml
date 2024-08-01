@@ -7,14 +7,14 @@ version: 2
 updates:
   - package-ecosystem: "npm" # See documentation for possible values
     directory: "/" # Location of package manifests
-    assignees:
-      - "atlasfyber"
     schedule:
       interval: "weekly"
+    assignees:
+      - "atlasfyber"
 
   - package-ecosystem: "github-actions"
-    directory: "/"
-    assignees:
-      - "atlasfyber"
+    directory: "/" # Location of the GitHub Actions workflows
     schedule:
       interval: "weekly"
+    assignees:
+      - "atlasfyber"
