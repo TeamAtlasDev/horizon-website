@@ -11,11 +11,11 @@ Hey there, space enthusiast! Welcome to the official Horizon documentation. Here
 
 ## How to Invite Horizon
 
-Want to bring Horizon into your server? It's easier than spotting the Moon on a clear night! Just [click here](https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot&permissions=YOUR_PERMISSIONS) to be redirected to Discord. Pick the server you want to add Horizon to, and voilà! Just make sure to check out our [Terms of Service](https://yourlink.com/tos) and [Privacy Policy](https://yourlink.com/privacy) before blasting off.
+Want to bring Horizon into your server? It's easier than spotting the Moon on a clear night! Just [click here](https://invite.horizonbot.xyz) to be redirected to Discord. Pick the server you want to add Horizon to, and voilà! Just make sure to check out our [Terms of Service](https://horizonbot.xyz/terms) and [Privacy Policy](https://horizonbot.xyz/privacy) before blasting off.
 
 ## Getting Support
 
-Stuck in a black hole and need some help? The Atlas & Horizon Support Team is ready to beam you up! For assistance, hop into our [Support Server](https://discord.gg/YOUR_SUPPORT_SERVER_LINK) or shoot us an email at hello@horizonbot.xyz.
+Stuck in a black hole and need some help? The Atlas & Horizon Support Team is ready to beam you up! For assistance, hop into our [Support Server](https://support.teamatlas.dev) or shoot us an email at hello@horizonbot.xyz.
 
 :::note
 Email responses may take up to 7 business days. For faster-than-light assistance, especially if you need immediate help, we recommend reaching out via Discord.
@@ -29,7 +29,7 @@ The Horizon API aggregates data from six different providers, handling rate limi
 
 ## Supporting Horizon
 
-Feeling generous? You can support the Horizon team by donating on [Patreon](https://www.patreon.com/yourpatreon). Your donations help keep the cosmic wheels turning, and we appreciate every bit of support! If you're short on space credits, you can still help out for free by recommending Horizon to other community owners or voting for us on [top.gg](https://top.gg/bot/YOUR_BOT_ID).
+Feeling generous? You can support the Horizon team by donating on [Patreon](https://www.patreon.com/atlasteam). Your donations help keep the cosmic wheels turning, and we appreciate every bit of support! If you're short on space credits, you can still help out for free by recommending Horizon to other community owners or voting for us on [top.gg](https://top.gg/bot/1183177251316047983).
 
 :::tip
 You can vote for Horizon on top.gg every 12 hours. Votes reset at the end of each month, so keep those votes coming to help us reach new galaxies!
@@ -40,7 +40,7 @@ You can vote for Horizon on top.gg every 12 hours. Votes reset at the end of eac
 We know privacy is as important as knowing the next meteor shower. Horizon only collects data for statistical analysis and error logging purposes. We're not interested in your personal data – pinky promise.
 
 :::info
-For more details on how Horizon uses your data and how you can get it deleted, please visit our [Privacy Policy](https://yourlink.com/privacy).
+For more details on how Horizon uses your data and how you can get it deleted, please visit our [Privacy Policy](https://horizonbot.xyz/privacy).
 :::
 
 So there you have it, space cadet! You're all set to launch Horizon into your Discord server and start exploring the universe. Happy stargazing!
