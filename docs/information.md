@@ -5,39 +5,42 @@ image: https://github.com/atlasfyber/atlas-images/blob/main/horizon-docs.jpg?raw
 keywords: [welcome, information, docs, horizon, discordbot, space, astronomy, documentation, invite, info]
 sidebar_position: 2
 ---
-# Information
-Learn how to contribute to Horizon, get support, and find useful information to optimize your Discord astronomy experience.
+# Horizon Documentation
 
-## How to Invite Horizon?
+Hey there, space enthusiast! Welcome to the official Horizon documentation. Here you'll learn how to invite our awesome bot to your server, get the support you need, and optimize your stargazing experience on Discord. Let's shoot for the stars!
 
-You can invite Horizon to your Discord community or friends' server by [clicking here](https://invite.horizonbot.xyz). This will redirect you to Discord where you can select the server you want to add the bot to. Please make sure to check our [Terms of Service](https://horizonbot.xyz/terms) and [Privacy Policy](https://horizonbot.xyz/privacy) before continuing.
+## How to Invite Horizon
 
-## How can I get support?
-The Support Team of Atlas & Horizon is more than glad to assist you with Horizon. To get support, please join our Support Server. Alternatively, you can email us at hello@horizonbot.xyz
+Want to bring Horizon into your server? It's easier than spotting the Moon on a clear night! Just [click here](https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&scope=bot&permissions=YOUR_PERMISSIONS) to be redirected to Discord. Pick the server you want to add Horizon to, and voilà! Just make sure to check out our [Terms of Service](https://yourlink.com/tos) and [Privacy Policy](https://yourlink.com/privacy) before blasting off.
 
-:::note
-Responses via email may take up to **7 business days**. For quicker assistance, especially depending on your needs, we recommend contacting us via Discord if possible and appropriate.
-:::
+## Getting Support
 
-## How Horizon works?
-
-Horizon is hosted on Atlas Servers, managed by a dedicated team of friends and developers. It uses the Horizon API, an exclusive private API by Atlas Developers connected to a Mongo Database.
-
-The Horizon API aggregates data from 6 different API providers, efficiently managing rate limits and updating the database with new data every few minutes.
-
-Horizon then checks the database for new data and delivers it through commands and automations to all servers with these features enabled. This makes Horizon one of the best choices for up-to-date astronomy and space event information for your Discord Server!
-
-# How can I support Horizon?
-
-You can support the small team behind Horizon by donating on [Patreon](https://donate.teamatlas.dev), receiving nothing in return but our heartfelt gratitude. Alternatively, you can help for free by recommending Horizon to other community owners or voting for us on [top.gg](https://top.gg/bot/1183177251316047983) to aid Horizon's growth.
+Stuck in a black hole and need some help? The Atlas & Horizon Support Team is ready to beam you up! For assistance, hop into our [Support Server](https://discord.gg/YOUR_SUPPORT_SERVER_LINK) or shoot us an email at hello@horizonbot.xyz.
 
 :::note
-You can vote for Horizon on top.gg every 12 hours, votes will be reset at the end of the month, and start counting again from zero.
+Email responses may take up to 7 business days. For faster-than-light assistance, especially if you need immediate help, we recommend reaching out via Discord.
 :::
 
-## How Horizon collects my data?
-Only data that Horizon collects is for statistical analysis and error logging purposes. We do not want your data, and we do not collect it for any other use.
+## How Horizon Works
+
+Curious about the magic behind Horizon? Our bot is hosted on Atlas Servers and managed by a team of developers and friends who love space as much as you do. Horizon runs on the exclusive Horizon API, developed by Atlas Developers, and is connected to a MongoDB database.
+
+The Horizon API aggregates data from six different providers, handling rate limits like a pro and updating the database with fresh info every few minutes. Horizon checks for new data and delivers it through commands and automations to all servers with these features enabled. It's like having your own personal astronomer in your Discord server, always ready with the latest space news!
+
+## Supporting Horizon
+
+Feeling generous? You can support the Horizon team by donating on [Patreon](https://www.patreon.com/yourpatreon). Your donations help keep the cosmic wheels turning, and we appreciate every bit of support! If you're short on space credits, you can still help out for free by recommending Horizon to other community owners or voting for us on [top.gg](https://top.gg/bot/YOUR_BOT_ID).
+
+:::tip
+You can vote for Horizon on top.gg every 12 hours. Votes reset at the end of each month, so keep those votes coming to help us reach new galaxies!
+:::
+
+## Data Collection
+
+We know privacy is as important as knowing the next meteor shower. Horizon only collects data for statistical analysis and error logging purposes. We're not interested in your personal data – pinky promise.
 
 :::info
-For detailed information on how Horizon uses your data, including the deletion process, please visit our [Privacy Policy](https://horizonbot.xyz/privacy).
+For more details on how Horizon uses your data and how you can get it deleted, please visit our [Privacy Policy](https://yourlink.com/privacy).
 :::
+
+So there you have it, space cadet! You're all set to launch Horizon into your Discord server and start exploring the universe. Happy stargazing!
