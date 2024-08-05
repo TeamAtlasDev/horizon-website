@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Welcome to the ultimate guide for all things Horizon! Here, you'll find everything you need to know about our bot and its commands. Whether you're a newbie or a seasoned stargazer, we've got you covered.
 
-## 👋 Welcome to Horizon Documentation
+## Welcome to Horizon Documentation
 
 New to Horizon? Need a bit of help? You've landed in the right spot! Even rocket scientists had to start somewhere, so it's totally okay not to know everything right away.
 
@@ -20,7 +20,7 @@ To get started, just navigate through the menu and pick the category that suits 
 This documentation is currently under development. We're adding new information all the time, so stay tuned!
 :::
 
-## 💡 Suggestions & Ideas
+## Suggestions & Ideas
 
 Got a brilliant idea for improving Horizon or this documentation? We want to hear from you! Drop your suggestions in our [Support Server](https://support.teamatlas.dev). We value every piece of feedback from our awesome users and carefully consider each one.
 
