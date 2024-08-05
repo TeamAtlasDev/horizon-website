@@ -37,15 +37,6 @@ Example: `/automations action:Enable Function function:APOD Automation channel:#
 
 Disabling an automation is just as easy. Use the command `/automations` and select the function you want to disable with the `Disable Function` option. The `channel` option is not required and can be ignored. You can also disable automations using the `/settings` command and navigating to the selected automation.
 
-:::info
-The same five automations are available:
-- **Articles:** Announces all the latest news.
-- **Blogs:** Travel through the universe with engaging blogs.
-- **Reports:** Get the latest ISS reports from the astronauts' orbiting home.
-- **Next Launches:** Stay informed about upcoming space launches.
-- **Next Events:** Learn about significant space events visible to everyone.
-:::
-
 :::note
 Example: `/automations action:Disable Function function:APOD Automation`
 :::
