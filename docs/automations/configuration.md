@@ -75,7 +75,7 @@ You can configure Horizon's appearance on your server, including:
 - **Review Your Horizon Badges:** See all the badges your server has earned.
 
 :::warning
-Currently, the Horizon Permissions Manager does not support granting access to specific roles for specific commands. This limitation is intentional to maintain simplicity for the average user and ensure a well-structured system. However, this functionality may be considered for future updates.
+Currently, Horizon Permissions Manager does not support granting access to specific roles for specific commands but Discord does, [learn more here!](https://discord.com/blog/slash-commands-permissions-discord-apps-bots)
 :::
 
 ## Final Tips
@@ -85,7 +85,3 @@ Currently, the Horizon Permissions Manager does not support granting access to s
 - Share your feedback to help us make Horizon even better!
 
 Now go forth and customize your Horizon experience to perfection! Happy configuring!
-
-:::warning
-Currently, Horizon Permissions Manager does not support granting access to specific roles for specific commands but Discord does, [learn more here!](https://discord.com/blog/slash-commands-permissions-discord-apps-bots)
-:::
