@@ -15,6 +15,6 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/" # Location of the GitHub Actions workflows
     schedule:
-      interval: "weekly"
+      interval: "daily"
     assignees:
       - "atlasfyber"
