@@ -2,10 +2,14 @@ fyber:
   name: Atlas Fyber
   title: Head Developer of Horizon & Part of Atlas Team
   image_url: https://avatars.githubusercontent.com/u/78761344?v=4
+  socials:
+    github: atlasfyber
 
 horizon:
   name: Horizon
   title: Astronomy Discord APP
   image_url: https://cdn.discordapp.com/avatars/1183177251316047983/d3a699ec71bb0cd10718a61010a9fdc2.webp?size=4096
+  socials:
+    x: AtlasHorizonAPP
 
 
