@@ -61,7 +61,7 @@ const config = {
     announcementBar: {
       id: 'support_us',
       content:
-        'Check out the official Horizon APP <a target="_blank" rel="noopener noreferrer" href="https://discord.com/application-directory/1183177251316047983">Discord Discovery</a> Page',
+        'Check out the official Horizon APP <a target="_blank" rel="noopener noreferrer" href="https://discord.com/application-directory/1183177251316047983">Discord Discovery</a> page and join our <a target="_blank" rel="noopener noreferrer" href="https://support.teamatlas.dev">Support Server</a>',
       backgroundColor: '#272728',
       textColor: '#fafbfc',
       isCloseable: true,
