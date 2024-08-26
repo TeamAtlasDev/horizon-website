@@ -8,8 +8,6 @@ import Heading from '@theme/Heading';
 import styles from './index.module.css';
 import appBadgeImage from '@site/static/img/appbadge.png';
 import discordLogo from '@site/static/img/discord.png'; // Import the Discord logo image
-import astronaut1 from '@site/static/img/sparkles.png'; // Import astronaut image 1
-import astronaut2 from '@site/static/img/sparkles.png'; // Import astronaut image 2
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -37,15 +35,15 @@ function HomepageHeader() {
       <div className="hero-content-container">
         <div className="hero-content">
           <div className={styles.hero__title}>
-          <Heading as="h1" className={clsx(styles.hero__title_text, styles.responsiveTitle)}>
-                Welcome to Horizon{' '}
-                <img src={appBadgeImage} alt="Horizon Badge" className={styles.hero__badge} />
+            <Heading as="h1" className={clsx(styles.hero__title_text, styles.responsiveTitle, styles.titleAnimation)}>
+              Welcome to Horizon{' '}
+              <img src={appBadgeImage} alt="Horizon Badge" className={styles.hero__badge} />
             </Heading>
           </div>
-          <p className={styles.hero__subtitle}>{siteConfig.tagline}</p>
+          <p className={clsx(styles.hero__subtitle, styles.subtitleAnimation)}>{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
-              className={clsx('button', 'button--secondary', 'button--lg', styles.buttonZoom)}
+              className={clsx('button', 'button--secondary', 'button--lg', styles.buttonZoom, styles.buttonAnimation)}
               href="https://invite.horizonbot.xyz"
             >
               <img
@@ -58,22 +56,6 @@ function HomepageHeader() {
           </div>
         </div>
       </div>
-
-      {/* Astronaut images (only show on larger desktop screens) */}
-      {isDesktop && (
-        <>
-          <img
-            src={astronaut1}
-            alt="Astronaut"
-            className={styles.astronaut1}
-          />
-          <img
-            src={astronaut2}
-            alt="Astronaut 2"
-            className={styles.astronaut2}
-          />
-        </>
-      )}
     </header>
   );
 }
