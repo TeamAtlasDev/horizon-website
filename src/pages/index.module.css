@@ -1,3 +1,4 @@
+/* General Styles */
 .heroBanner {
   text-align: center;
   padding: 0;
@@ -21,7 +22,6 @@
   min-height: 100vh; /* Ensure header covers the entire viewport height */
 }
 
-/* Ensure there's no gap or margin between the header and the main content */
 .hero-content-container {
   position: relative;
   z-index: 1;
@@ -33,14 +33,17 @@ main {
   padding-top: 0; /* Remove any top padding to ensure smooth transition */
 }
 
-
-.discordLogo {
-  height: 22px; /* Adjust the height as needed */
-  margin-bottom: -3.5px; /* Adjust the margin to move it down */
-  margin-right: 5px; /* Adjust the margin to create space between image and text */
+/* Button Styles */
+.buttonZoom {
+  transition: transform 0.2s ease-in-out; /* Ensure smooth scaling */
 }
 
+/* Button Hover Animation */
+.buttonZoom:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
 
+/* Hero Content Styles */
 .hero-content {
   text-align: center;
   color: #fff; 
@@ -64,6 +67,7 @@ main {
   align-items: center;
 }
 
+/* Badge Styles */
 .hero__badge {
   height: 60px;
   margin-left: 10px;
@@ -71,7 +75,7 @@ main {
   margin-bottom: -10px; /* Adjust this value to move the image down */
 }
 
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 600px) {
   .hero__title_text {
     font-size: 1.5rem; /* Adjust font size for mobile */
@@ -84,61 +88,38 @@ main {
   }
 }
 
-
 .hero__subtitle {
   color: #fff;
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
-.buttons {
-  margin-top: 1rem;
-}
-
-.buttonZoom {
-  transition: transform 0.2s ease-in-out;
-}
-
-.buttonZoom:hover {
-  transform: scale(1.1);
-}
-
-/* Keyframes for up and down animation */
-@keyframes astronautUpAndDown {
-  0%, 100% {
+/* Animation for Title, Subtitle, and Button */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(-10px); /* Adjust distance for movement */
-  }
 }
 
-/* Default styles */
-.astronaut1,
-.astronaut2 {
-  position: absolute;
-  display: none; /* Hide by default */
+.titleAnimation {
+  animation: fadeInUp 1s ease-out;
 }
 
-/* Media query for desktop screens */
-@media screen and (min-width: 1600px) {
-  .astronaut1 {
-    position: absolute;
-    top: 150px; /* Adjust top position as needed */
-    left: 80px; /* Adjust left position as needed */
-    max-width: 130px; /* Adjust size as needed */
-    display: block; /* Show on desktop screens */
-    animation: astronautUpAndDown 3s ease-in-out infinite; /* Apply animation */
-  }
+.subtitleAnimation {
+  animation: fadeInUp 1s ease-out;
 }
 
-  .astronaut2 {
-    position: absolute;
-    top: 680px; /* Adjust top position as needed */
-    right: 80px; /* Adjust right position as needed */
-    max-width: 130px; /* Adjust size as needed */
-    display: block; /* Show on desktop screens */
-    animation: astronautUpAndDown 3s ease-in-out infinite; /* Apply animation */
-  }
+.buttonAnimation {
+  animation: fadeInUp 1s ease-out;
+}
 
-
+.discordLogo {
+  height: 22px; /* Revert to previous height */
+  margin-bottom: -3.5px; /* Ensure alignment with text */
+  margin-right: 5px; /* Space between image and text */
+}
