@@ -34,8 +34,43 @@
   width: 100%;
   height: calc(100vh - 60px);
   background: url('/static/img/image.png') no-repeat center center / cover;
-  opacity: 0.05; /* Adjust opacity here */
+  opacity: 0.05; /* Initial opacity */
   z-index: 0; /* Ensure it is behind the content */
+  animation: fadeOutOpacity 10s ease-out infinite; /* Apply animation */
+}
+
+/* Pseudo-element for gradient effect */
+.heroBanner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: linear-gradient(145deg, rgba(18, 19, 26, 0.8), rgba(18, 19, 26, 0.2)); /* Gradient background */
+  opacity: 0.8; /* Initial gradient opacity */
+  z-index: 1; /* Ensure it is above the image but below the text */
+  animation: fadeOutGradient 10s ease-out infinite; /* Apply animation */
+}
+
+/* Keyframes for image opacity animation */
+@keyframes fadeOutOpacity {
+  0% {
+    opacity: 0.05;
+  }
+  100% {
+    opacity: 0.01; /* Final opacity */
+  }
+}
+
+/* Keyframes for gradient opacity animation */
+@keyframes fadeOutGradient {
+  0% {
+    opacity: 0.8; /* Initial gradient opacity */
+  }
+  100% {
+    opacity: 0.2; /* Final gradient opacity */
+  }
 }
 
 .newsBadgeContainer {
@@ -54,13 +89,17 @@
   font-weight: 700; /* Bold weight for news text */
   font-style: italic; /* Italic style for news text */
   margin-top: 1px;
-  transition: all 0.3s ease; /* Smooth transition for all properties */
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
   animation: fadeInUp 1.2s ease-out; /* Load animation */
+}
+
+.newsBadge:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
 }
 
 .heroContent {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* Ensure content is above the gradient and image */
   max-width: 800px;
   padding: 25px;
 }
