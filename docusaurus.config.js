@@ -43,7 +43,7 @@ const config = {
           sidebarPath: './sidebars.js',
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -56,7 +56,7 @@ const config = {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
-      respectPrefersColorScheme: false,
+      respectPrefersColorScheme: true,
     },
     announcementBar: {
       id: 'support_us',
@@ -70,7 +70,7 @@ const config = {
     navbar: {
       logo: {
         alt: 'Horizon Logo',
-        src: 'img/logo.png',
+        src: 'img/horizonimg.png',
       },
       items: [
         {
@@ -154,7 +154,7 @@ const config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Horizon. All rights reserved. Not affiliated with Discord Inc.`,
+      copyright: `<b>© ${new Date().getFullYear()} Horizon. All rights reserved. Not affiliated with Discord Inc.</b>`,
     },
     prism: {
       theme: prismThemes.github,
