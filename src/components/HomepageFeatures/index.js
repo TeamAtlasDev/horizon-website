@@ -68,39 +68,60 @@ import Alex from '@site/static/img/alex.png';
 import curious from '@site/static/img/curious.png';
 import michael from '@site/static/img/michael.png';
 import john from '@site/static/img/john.png';
+import Icon from '@site/static/img/rocket.png';
+
 
 function CallToAction() {
   return (
     <div className={clsx('col col--12', styles.callToActionContainer)}>
       {/* Star PNG image at bottom left */}
-      <img src={StarLeftBottom} alt="Star" className={styles.starLeftBottom} />
+
       
       <div className={clsx('text--center', styles.callToActionBox)}>
-        <Heading as="h3">Join the Adventure!</Heading>
-        <p>Add Horizon to your Discord server and start your astronomical journey today.</p>
-        <a
-          className={clsx('button', 'button--primary', 'button--lg', styles.zoomOnHover)}
-          href="https://invite.horizonbot.xyz"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Invite Horizon
-        </a>
+        {/* Icon to the left */}
+        <img src={Icon} alt="Icon" className={styles.ctaIcon} />
+        
+        <div className={styles.callToActionText}>
+          <Heading as="h3" className={styles.callToActionTitle}>Level up your server!</Heading>
+          <p className={styles.callToActionDescription}>
+            Add Horizon to your Discord server and start your astronomical journey today.
+          </p>
+          <a
+            className={clsx('button', 'button--primary', 'button--lg', styles.callToActionButton)}
+            href="https://invite.horizonbot.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          
+            Invite Horizon
+          </a> 
+          <a
+            className={clsx('button', 'button--primary', 'button--lg', styles.callToActionButton)}
+            href="https://support.horizonbot.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+          
+            Support Server
+          </a>
+        </div>
       </div>
 
       {/* Star PNG image at top right */}
-      <img src={StarRightTop} alt="Star" className={styles.starRightTop} />
     </div>
   );
 }
 
+
+
+
 function SpecialThanks() {
   const contributors = [
     { name: 'Fyber', role: 'Head Developer', image: Developer },
-    { name: 'Alexander', role: 'Server Administrator', image: Alex },
+    { name: 'Alexander', role: 'S. Administrator', image: Alex },
     { name: 'CuriousAnalyst', role: 'Graphics Designer', image: curious },
-    { name: 'JohnPapath', role: 'Developer & Tester', image: john },
-    { name: 'Michael', role: 'Developer & Tester', image: michael },
+    { name: 'JohnPapath', role: 'Contributor', image: john },
+    { name: 'Michael', role: 'Contributor', image: michael },
 
   ];
 
@@ -122,125 +143,6 @@ function SpecialThanks() {
   );
 }
 
-function NewsArticles() {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-  const [visibleArticles, setVisibleArticles] = useState(3);
-  const [expandedSummaries, setExpandedSummaries] = useState([]);
-
-  useEffect(() => {
-    fetch('https://api.spaceflightnewsapi.net/v4/articles/?limit=6&news_site_exclude=SpaceNews')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setArticles(data.results);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-        setError(true);
-        setLoading(false);
-      });
-  }, []);
-
-  const showMoreArticles = () => {
-    setVisibleArticles(prev => prev + 3);
-  };
-
-  const showLessArticles = () => {
-    setVisibleArticles(3);
-  };
-
-  const showFullSummary = (index) => {
-    if (!expandedSummaries.includes(index)) {
-      setExpandedSummaries([...expandedSummaries, index]);
-    }
-  };
-
-  if (loading) {
-    return (
-      <div className={styles.newsSection}>
-        <div className="text--center">
-          <h3 className={styles.newsTitle}>Latest Horizon News</h3>
-          <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
-        </div>
-        <div className={styles.loadingText}>
-          <h4>🕝 Preparing some things for you..</h4>
-          <p>We're loading the content now. Depending on your connection and device. <br></br>This may take a moment. Please be patient.</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className={styles.newsSection}>
-        <div className="text--center">
-          <h3 className={styles.newsTitle}>Latest Horizon News</h3>
-          <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
-        </div>
-        <div className={styles.errorText}>
-          <h4>⚠️ Something went wrong..</h4>
-          <p>We encountered issues while loading Horizon data, please try again later.</p>
-          <p>If the problem persists, contact us at <a href="mailto:info@teamatlas.dev">info@teamatlas.dev</a></p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className={styles.newsSection}>
-      <div className="text--center">
-        <h3 className={styles.newsTitle}>Latest Horizon News</h3>
-        <p className={styles.blogCategory}>Stay updated with the latest news in spaceflight.</p>
-      </div>
-      <div className={`newsContainer ${styles.newsContainer}`}>
-        {articles.slice(0, visibleArticles).map((article, idx) => (
-          <div key={idx} className={styles.articleBox}>
-            <div className={styles.imageContainer}>
-              <img src={article.image_url} alt={article.title} className={styles.articleImage} />
-            </div>
-            <div className={styles.articleContent}>
-              <h4 className={styles.articleTitle}>{article.title}</h4>
-              <p className={styles.articleDescription}>
-                {expandedSummaries.includes(idx) ? article.summary : (
-                  <>
-                    {`${article.summary.substring(0, 180)}... `}
-                    <span className={styles.showMoreLink} onClick={() => showFullSummary(idx)}>
-                      show more
-                    </span>
-                  </>
-                )}
-              </p>
-              <a href={article.url} target="_blank" rel="noopener noreferrer" className={styles.articleLink}>Learn More</a>
-            </div>
-          </div>
-        ))}
-      </div>
-      {visibleArticles <= articles.length && (
-        <div className="text--center">
-          {visibleArticles === 3 ? (
-            <button className={`${styles.showMoreButton} ${styles.blueButton}`} onClick={showMoreArticles}>More Articles</button>
-          ) : (
-            <>
-              <button className={`${styles.showMoreButton} ${styles.blueButton}`} onClick={showLessArticles}>Less Articles</button>
-              <p className={styles.showMoreText}>
-                Want to see more? Add Horizon! <br />
-                <a href="https://spaceflightnewsapi.net" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Data Credits</a> • <a href="https://horizonbot.xyz/web-policy" target="_blank" rel="noopener noreferrer" className={styles.showMoreLink}>Website Policy</a>
-              </p>
-            </>
-          )}
-        </div>
-      )}
-      <ExploreThinkLearn />
-    </div>
-  );
-}
 
 function ExploreThinkLearn() {
   const [blogs, setBlogs] = useState([]);
@@ -354,7 +256,7 @@ export default function Home() {
               <Feature key={idx} {...props} />
             ))}
           </div>
-          <NewsArticles />
+          <ExploreThinkLearn />
           <CallToAction />
           <SpecialThanks />
         </div>

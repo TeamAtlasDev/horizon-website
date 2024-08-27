@@ -1,32 +1,20 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #8684FF;
-  --ifm-color-primary-dark: #8684FF;
-  --ifm-color-primary-darker: #8684FF;
-  --ifm-color-primary-darkest: #8684FF;
-  --ifm-color-primary-light: #8684FF;
-  --ifm-color-primary-lighter: #8684FF;
-  --ifm-color-primary-lightest: #8684FF;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+/* Reset some default browser styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #14141A; /* Set background color for the entire page */
+  color: #ffffff; /* Set text color for readability */
+  overflow-x: hidden; /* Prevent horizontal scroll if unnecessary */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #8684FF;
-  --ifm-color-primary-dark: #8684FF;
-  --ifm-color-primary-darker: #8684FF;
-  --ifm-color-primary-darkest: #8684FF;
-  --ifm-color-primary-light: #8684FF;
-  --ifm-color-primary-lighter: #8684FF;
-  --ifm-color-primary-lightest: #8684FF;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Ensure body content starts below the fixed navbar */
+body {
+  padding-top: 0; /* Adjust this value based on navbar height if necessary */
 }
 
 .navbar {
@@ -63,30 +51,43 @@
   border-radius: 5px; /* Rounded corners for the hover effect */
 }
 
-/* Make the footer background gradient from site background color to black */
+
+/* Footer styling */
 .footer {
-  background: linear-gradient(to bottom, var(--ifm-background-color) 0%, #000000 100%); /* Gradient from site background color to black */
+  background: linear-gradient(to bottom, #14141A 0%, #000000 100%); /* Gradient from #14141A to black */
   color: #ffffff; /* White text color */
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to footer */
+  font-weight: 400; /* Regular weight */
+  padding: 20px; /* Add some padding */
+  text-align: center; /* Center the text */
+  position: relative; /* Ensure it stays at the bottom */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
 }
 
-.footer a {
-  color: #ffffff; /* White link color */
-}
-
-.footer a:hover {
-  color: #cccccc; /* Light gray link color on hover */
-}
-
-/* Dark mode adjustments (if needed) */
+/* Dark mode adjustments for the footer */
 [data-theme='dark'] .footer {
-  background: linear-gradient(to bottom, var(--ifm-background-color) 0%, #000000 100%); /* Gradient from site background color to black */
+  background: linear-gradient(to bottom, #14141A 0%, #000000 100%); /* Gradient from #14141A to black */
   color: #ffffff; /* White text color */
 }
 
-[data-theme='dark'] .footer a {
-  color: #ffffff; /* White link color */
+/* Header text styles for blog posts */
+.blog__container h1,
+.blog__container h2,
+.blog__container h3,
+.blog__container h4,
+.blog__container h5,
+.blog__container h6 {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to headers in blogs */
+  font-weight: 600; /* SemiBold weight for headers */
+  color: #ffffff; /* White text color for headers */
 }
 
-[data-theme='dark'] .footer a:hover {
+/* Link colors in various sections */
+a {
+  color: #8684FF; /* Primary link color */
+}
+
+a:hover {
   color: #cccccc; /* Light gray link color on hover */
 }

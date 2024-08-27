@@ -1,100 +1,149 @@
-/* General Styles */
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+.pageWrapper {
+  position: relative;
+  min-height: 100vh; /* Ensure it covers the entire viewport height */
+  margin-top: -60px; /* Adjust based on your navbar height */
+  padding-top: 60px; /* Adjust to accommodate fixed navbar */
+}
+
 .heroBanner {
   text-align: center;
-  padding: 0;
-  margin: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--header-background-color, #25C2A0);
+  height: calc(100vh - 60px);
   position: relative;
-  background: linear-gradient(
-              to bottom, 
-              rgba(0, 0, 0, 0.85) 0%, 
-              rgba(0, 0, 0, 0.85) 50%, 
-              var(--ifm-background-color, #282c34) 100%
-              ), 
-              url('/img/preview.jpg');
-  background-size: cover;
-  background-position: center;
-  height: calc(100vh - 60px); /* Adjust height to cover viewport minus navbar height */
+  overflow: hidden;
   margin-top: -60px; /* Overlap with navbar */
   min-height: 100vh; /* Ensure header covers the entire viewport height */
+
+  /* Gradient layer */
+  background: linear-gradient(145deg, rgba(18, 19, 26, 0.8), rgba(18, 19, 26, 0.8));
+  color: #ffffff;
 }
 
-.hero-content-container {
+/* Pseudo-element for background image with opacity */
+.heroBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background: url('/static/img/image.png') no-repeat center center / cover;
+  opacity: 0.05; /* Adjust opacity here */
+  z-index: 0; /* Ensure it is behind the content */
+}
+
+.newsBadgeContainer {
+  margin-bottom: 20px; /* Space below the button */
+}
+
+/* Updated Minimal News Badge Button Styles */
+.newsBadge {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  background-color: #e6e4eb; /* Background color */
+  color: #ff5733; /* Text color */
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700; /* Bold weight for news text */
+  font-style: italic; /* Italic style for news text */
+  margin-top: 1px;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  animation: fadeInUp 1.2s ease-out; /* Load animation */
+}
+
+.heroContent {
   position: relative;
   z-index: 1;
-  padding-bottom: 100px; /* Adjust padding to create space for the fade effect */
+  max-width: 800px;
+  padding: 25px;
 }
 
-main {
-  background-color: var(--ifm-background-color, #282c34); /* Set the main background color to match the end of the gradient */
-  padding-top: 0; /* Remove any top padding to ensure smooth transition */
-}
-
-/* Button Styles */
-.buttonZoom {
-  transition: transform 0.2s ease-in-out; /* Ensure smooth scaling */
-}
-
-/* Button Hover Animation */
-.buttonZoom:hover {
-  transform: scale(1.1); /* Scale up on hover */
-}
-
-/* Hero Content Styles */
-.hero-content {
-  text-align: center;
-  color: #fff; 
-  position: relative;
-  z-index: 1;
-}
-
-.hero__title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap; /* Allow wrapping */
+.heroTitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: bold;
   margin-bottom: 1rem;
-  gap: 10px; /* Add gap between elements */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out;
 }
 
-.hero__title_text {
-  color: #fff;
-  font-size: 2.5rem;
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.2rem; /* Slightly smaller font size on mobile */
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem; /* Adjusted text size for mobile */
+  }
+
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+    gap: 10px; /* Reduced space between buttons */
+  }
+}
+
+.heroSubtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem; /* Adjusted text size */
+  font-weight: 200; /* ExtraLight weight for subtitle text */
+  margin-bottom: 2rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.buttons {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  animation: fadeInUp 1.4s ease-out;
 }
 
-/* Badge Styles */
-.hero__badge {
-  height: 60px;
-  margin-left: 10px;
-  vertical-align: middle;
-  margin-bottom: -10px; /* Adjust this value to move the image down */
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ffffff; /* White border */
+  background-color: transparent; /* Transparent background */
+  color: #f0f0f0; /* Light gray text color */
+  box-shadow: inset 0 0 5px rgba(224, 221, 221, 0.2); /* Inner light effect */
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  animation: fadeInUp 1.4s ease-out; /* Load animation */
 }
 
-/* Responsive Styles */
-@media (max-width: 600px) {
-  .hero__title_text {
-    font-size: 1.5rem; /* Adjust font size for mobile */
-  }
-
-  .hero__badge {
-    height: 40px; /* Adjust icon size for mobile */
-    margin-left: 5px; /* Adjust margin for better alignment */
-    margin-bottom: -5px; /* Adjust this value to move the image down on mobile */
-  }
+/* Primary Button Styles */
+.button--primary {
+  background-color: #ffffff; /* White background color */
+  color: #000000; /* Black text color */
+  border: 1px solid #000000; /* Black border */
 }
 
-.hero__subtitle {
-  color: #fff;
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+.button--primary:hover {
+  color: #ffffff; /* White text color on hover */
+  background-color: #000000; /* Black background color on hover */
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4); /* Enhanced inner light effect on hover */
+  transform: scale(1.1); /* Zoom effect on hover */
 }
 
-/* Animation for Title, Subtitle, and Button */
+/* Secondary Button Styles */
+.button--secondary {
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* White text color */
+  border: 1px solid #ffffff; /* White border */
+}
+
+.button--secondary:hover {
+  color: #ffffff; /* White text color on hover */
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Keyframes for Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -104,22 +153,4 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.titleAnimation {
-  animation: fadeInUp 1s ease-out;
-}
-
-.subtitleAnimation {
-  animation: fadeInUp 1s ease-out;
-}
-
-.buttonAnimation {
-  animation: fadeInUp 1s ease-out;
-}
-
-.discordLogo {
-  height: 22px; /* Revert to previous height */
-  margin-bottom: -3.5px; /* Ensure alignment with text */
-  margin-right: 5px; /* Space between image and text */
 }

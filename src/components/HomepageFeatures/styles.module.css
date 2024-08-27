@@ -1,5 +1,4 @@
 /* General section styling */
-
 .newsSection {
   text-align: center;
   margin: 0 auto 3rem; /* Center horizontally and add bottom margin */
@@ -8,8 +7,6 @@
 }
 
 .newsTitle {
-  align-items: center;
-  text-align: center;
   margin-bottom: 1rem; /* Space below the News title */
 }
 
@@ -94,6 +91,7 @@
   color: #0056b3;
 }
 
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
   .newsContainer {
     grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
@@ -118,22 +116,14 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .articleBox {
     margin: 0 auto; /* Center the boxes when there are two columns */
-  }
-}
-
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .articleBox {
-    margin: 0 auto; /* Center the boxes when there are two columns */
     width: calc(100% - 3rem);
   }
 }
 
-
 /* Show more / Show less buttons */
 .showMoreButton,
 .showLessButton {
-  background-color: #007bff; /* Button background color */
+  background-color: #1c1e1f; /* Button background color */
   color: #ffffff; /* Button text color */
   border: none;
   padding: 0.75rem 1.5rem;
@@ -146,7 +136,229 @@
 
 .showMoreButton:hover,
 .showLessButton:hover {
-  background-color: #0056b3; /* Darker background color on hover */
+  background-color: #0057b3; /* Darker background color on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Text Styling for Show More / Show Less */
+.showMoreText {
+  color: #999999; /* Gray color */
+  font-size: 0.9rem; /* Smaller font size */
+  margin-top: 0.5rem; /* Space above the text */
+  margin-bottom: 1rem; /* Space below the text */
+}
+
+.showMoreLink {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.showMoreLink:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error and Loading Text */
+.errorText {
+  text-align: center; /* Center align the text */
+  margin-top: 1rem; /* Add some top margin for spacing */
+  color: #999999; /* Dark red text color */
+  padding: 0 1rem; /* Add padding left and right */
+}
+
+.loadingText {
+  text-align: center; /* Center align the text */
+  margin-top: 1rem; /* Add some top margin for spacing */
+  color: #cbcfcf; /* Dark red text color */
+  padding: 0 1rem; /* Add padding left and right */
+}
+
+/* Call To Action Section */
+.callToActionContainer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.callToActionBox {
+  position: relative;
+  z-index: 2; /* Ensure content is above stars */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  text-align: left; /* Align text to the left */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Stack emoji and text vertically on smaller screens */
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Space between emoji and text */
+  max-width: 1000px; /* Optional: limit the width of the call to action box */
+  margin: 0 auto; /* Center the box horizontally */
+}
+
+.callToActionTitle {
+  color: var(--cta-title-color, #f0efec); /* Allow for customization */
+  font-size: 2rem; /* Adjust font size */
+  margin-bottom: 0.5rem; /* Space below the title */
+  text-align: center; /* Center align text on smaller screens */
+}
+
+.callToActionDescription {
+  color: var(--cta-description-color, #E0E0E0); /* Allow for customization */
+  margin-bottom: 1.5rem; /* Space below the description */
+  text-align: center; /* Center align text on smaller screens */
+}
+
+.callToActionText {
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  gap: 10px; /* Space between the buttons */
+}
+
+.callToActionButton {
+  background-color: var(--cta-button-bg, #1251da); /* Allow for customization */
+  color: var(--cta-button-text, #ffffff); /* Allow for customization */
+  border: none; /* Remove the border */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.callToActionButton:hover {
+  background-color: var(--cta-button-bg-hover, #096df1); /* Allow for customization */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.starLeftBottom, .starRightTop {
+  position: absolute;
+  width: 80px;
+  opacity: 0.5; /* Slightly transparent */
+  pointer-events: none; /* Ensure clicks pass through stars */
+  z-index: 3; /* Ensure stars are above the callToActionBox */
+}
+
+.starLeftBottom {
+  bottom: 0;
+  left: 0;
+}
+
+.starRightTop {
+  top: 20px; /* Add some space from the top */
+  right: 20px; /* Add some space from the right */
+}
+
+.ctaIcon {
+  width: 128px; /* Adjusted size for responsive design */
+  height: 128px; /* Adjusted size for responsive design */
+  object-fit: contain; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it fits within its container */
+}
+
+@media (max-width: 768px) {
+  .callToActionBox {
+    flex-direction: column; /* Stack emoji and text vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Space between emoji and text */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .callToActionTitle, .callToActionDescription {
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+  .callToActionButton {
+    width: 100%; /* Full width buttons on smaller screens */
+  }
+}
+
+
+
+
+
+
+/* Blog Section */
+.blogSection {
+  padding: 40px 20px;
+  background-color: #00000000;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+
+.blogTitle {
+  margin-bottom: 10px;
+}
+
+.blogCategory {
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.blogContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogDescription {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #727171;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px;
+}
+
+.blogBox {
+  background-color: var(--ifm-background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative; /* Ensure relative positioning for absolute child */
+}
+
+.blogBox:hover {
+  transform: rotate(-2deg) scale(1.02); /* Rotate and slightly scale up the box */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Add a larger shadow effect */
+}
+
+.blogImage {
+  width: 100%;
+  height: 300px; /* Adjust this value to increase the height */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  transition: transform 0.5s ease;
+}
+
+.blogBox:hover .blogImage {
+  transform: translateY(-10px) scale(1.1); /* Parallax effect and zoom in the image */
+}
+
+.blogContent {
+  flex: 1; /* Allow the content to expand */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.blogLink {
+  position: absolute; /* Position the link absolutely within its container */
+  bottom: 10px; /* Adjust the distance from the bottom */
+  left: 50%; /* Center-align horizontally */
+  transform: translateX(-50%); /* Center the link properly */
+  color: #007bff;
+  text-decoration: none;
+}
+
+.blogLink:hover {
+  text-decoration: underline;
+}
+
+.DescshowMore {
+  color: #02264d;
+  cursor: pointer;
 }
 
 /* Updated header styling */
@@ -246,20 +458,7 @@
   transform: scale(1.1); /* Zoom in by 10% on hover */
 }
 
-/* Adjust the callToActionBox container */
-.callToActionContainer {
-  position: relative;
-  overflow: hidden; /* Ensure children don't overflow */
-  padding-top: 40px; /* Add some padding to the top */
-  padding-bottom: 40px; /* Add some padding to the bottom */
-}
-
-.callToActionBox {
-  position: relative;
-  z-index: 2; /* Ensure content is above stars */
-  margin-top: 4rem;
-}
-
+/* Special Thanks Section */
 .specialThanksContainer {
   display: flex;
   justify-content: center;
@@ -309,7 +508,6 @@
 
 @media (max-width: 768px) {
   .callToActionBox {
-    width: 100%; /* Full width for smaller screens */
     text-align: center; /* Center align text for smaller screens */
   }
 
@@ -342,158 +540,3 @@
 .contributorImage {
   animation: pulse 2s infinite; /* Apply pulse effect */
 }
-
-/* Show more / Show less buttons */
-.showMoreButton,
-.showLessButton {
-  background-color: #1c1e1ffa; /* Button background color */
-  color: #ffffff; /* Button text color */
-  border: none;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
-  background-color: #121213ef; /* Initial background color */
-  border-color: #007bff00; /* Initial border color */
-}
-
-.showMoreButton:hover,
-.showLessButton:hover {
-  background-color: #0057b300; /* Darker background color on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #0057b300; /* Darker background color */
-  border-color: #0057b300; /* Darker border color */
-  transform: scale(1.05); /* Optional: Scale up button slightly */
-}
-
-.showMoreText {
-  color: #999999; /* Gray color */
-  font-size: 0.9rem; /* Smaller font size */
-  margin-top: 0.5rem; /* Space above the text */
-  margin-bottom: 1rem; /* Space below the text */
-}
-
-.showMoreLink {
-  color: #007bff; /* Blue link color */
-  text-decoration: none; /* Remove default underline */
-  transition: color 0.3s ease; /* Smooth transition for color change */
-}
-
-.showMoreLink:hover {
-  color: #0056b3; /* Darker blue on hover */
-}
-
-/* styles.module.css */
-
-.errorText {
-  text-align: center; /* Center align the text */
-  margin-top: 1rem; /* Add some top margin for spacing */
-  color: #999999; /* Dark red text color */
-  padding: 0 1rem; /* Add padding left and right */
-}
-
-.loadingText {
-  text-align: center; /* Center align the text */
-  margin-top: 1rem; /* Add some top margin for spacing */
-  color: #cbcfcf; /* Dark red text color */
-  padding: 0 1rem; /* Add padding left and right */
-}
-
-.blogSection {
-  padding: 40px 20px;
-  background-color: #00000000;
-  border-radius: 10px;
-  margin: 40px 0;
-
-}
-
-.blogTitle {
-  margin-bottom: 10px;
-}
-
-.blogCategory {
-  margin-bottom: 20px;
-  color: #888;
-}
-
-.blogContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-
-.blogDescription {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #727171;
-}
-
-.blogGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.blogBox {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #8d8989ea;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  position: relative; /* Ensure relative positioning for absolute child */
-}
-
-.blogBox:hover {
-  transform: rotate(-2deg) scale(1.02); /* Rotate and slightly scale up the box */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* Add a larger shadow effect */
-}
-
-.blogImage {
-  width: 100%;
-  height: 300px; /* Adjust this value to increase the height */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  transition: transform 0.5s ease;
-}
-
-.blogBox:hover .blogImage {
-  transform: translateY(-10px) scale(1.1); /* Parallax effect and zoom in the image */
-}
-
-.blogContent {
-  flex: 1; /* Allow the content to expand */
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.blogContent {
-  flex: 1; /* Allow the content to expand */
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-}
-
-.blogLink {
-  position: absolute; /* Position the link absolutely within its container */
-  bottom: 10px; /* Adjust the distance from the bottom */
-  left: 50%; /* Center-align horizontally */
-  transform: translateX(-50%); /* Center the link properly */
-  color: #007bff;
-  text-decoration: none;
-}
-
-.blogLink:hover {
-  text-decoration: underline;
-}
-
-.DescshowMore {
-  color: #02264d;
-  cursor: pointer;
-}
-
-

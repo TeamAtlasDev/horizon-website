@@ -1,59 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import styles from './index.module.css';
-import appBadgeImage from '@site/static/img/appbadge.png';
-import discordLogo from '@site/static/img/discord.png'; // Import the Discord logo image
+import styles from './index.module.css'; // Ensure this imports your updated CSS
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1600); // Set breakpoint for larger desktop view
-    };
-
-    // Initial check
-    handleResize();
-
-    // Event listener for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="hero-content-container">
-        <div className="hero-content">
-          <div className={styles.hero__title}>
-            <Heading as="h1" className={clsx(styles.hero__title_text, styles.responsiveTitle, styles.titleAnimation)}>
-              Welcome to Horizon{' '}
-              <img src={appBadgeImage} alt="Horizon Badge" className={styles.hero__badge} />
-            </Heading>
-          </div>
-          <p className={clsx(styles.hero__subtitle, styles.subtitleAnimation)}>{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx('button', 'button--secondary', 'button--lg', styles.buttonZoom, styles.buttonAnimation)}
-              href="https://invite.horizonbot.xyz"
-            >
-              <img
-                src={discordLogo}
-                alt="Discord Logo"
-                className={styles.discordLogo}
-              />{' '}
-              <span style={{ marginLeft: '4px', marginBottom: '-3.5px' }}>Start exploring the unknown</span>
-            </Link>
-          </div>
+    <header className={clsx(styles.heroBanner)}>
+      <div className={styles.heroContent}>
+        <div className={styles.newsBadgeContainer}>
+          <Link
+            className={clsx('button', 'button--secondary', styles.newsBadge)}
+            href="https://horizonbot.xyz/blog/v2.3-update"
+          >
+            New: Version v2.3 is now available!
+          </Link>
+        </div>
+        <Heading as="h1" className={clsx(styles.heroTitle)}>
+          Explore New Galaxies <br /> and Stellar Horizons!
+        </Heading>
+        <p className={clsx(styles.heroSubtitle)}>
+          Horizon offers a variety of space-related commands for your server using real-time data.
+        </p>
+        <div className={clsx(styles.buttons)}>
+          <Link className={clsx(styles.button, styles.buttonPrimary)} href="https://invite.horizonbot.xyz">
+            Add To Discord
+          </Link>
+          <Link className={clsx(styles.button, styles.buttonSecondary)} href="https://vote.horizonbot.xyz">
+            Vote Horizon
+          </Link>
         </div>
       </div>
     </header>
