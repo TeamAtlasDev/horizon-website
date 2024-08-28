@@ -32,6 +32,8 @@ Your use of the Application is at your own risk. The Horizon Astronomy Applicati
 ## Limitation of Liability
 In no event will we or our team and partners be liable for any damages whatsoever arising out of or related to your use or inability to use the Application. This includes any direct, indirect, incidental, consequential, special, exemplary, punitive, or other indirect damages, even if we have been advised of the possibility of such damages.
 
+Automations Posts, including articles and blog data, are received from third-party APIs and use only trusted sources with official announcements as proof. Although misinformation is not expected, Atlas may take actions such as deleting or blocking sources that do not provide quality content. However, Atlas is not responsible for the content provided by these sources. We also implement filters to manage posts on your server, but please be aware that some articles may not be filtered.
+
 These Terms of Service constitute the entire agreement between you and Atlas with respect to the Application and supersede all prior communications, promises, and proposals, whether oral, written, or electronic, between you and Atlas. If any part of these Terms of Service is determined by a court to be invalid or unenforceable, it will not impact any other provision, all of which will remain in full force and effect. Our failure to enforce any portion of these Terms of Service is not a waiver of such portion. The proprietary rights, disclaimer of warranties, representations made by you, indemnities, and limitations of liability shall survive the termination of these Terms of Service. We reserve the right to take down or terminate the Application at any time without notice. 
 
 ## Contact Us
