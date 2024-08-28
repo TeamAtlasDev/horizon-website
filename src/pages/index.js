@@ -31,7 +31,7 @@ function HomepageHeader() {
           <Link className={clsx(styles.button, styles.buttonPrimary)} href="https://invite.horizonbot.xyz">
             Add To Discord
           </Link>
-          <Link className={clsx(styles.button, styles.buttonSecondary)} href="https://vote.horizonbot.xyz">
+          <Link className={clsx(styles.button, styles.buttonSecondary)} href="https://top.gg/bot/1183177251316047983/vote">
             Vote Horizon
           </Link>
         </div>
