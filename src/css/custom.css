@@ -54,7 +54,7 @@ body {
 
 /* Footer styling */
 .footer {
-  background: linear-gradient(to bottom, #14141A 0%, #000000 100%); /* Gradient from #14141A to black */
+  background: linear-gradient(to bottom, #12131A 0%, #000000 100%); /* Gradient from #14141A to black */
   color: #ffffff; /* White text color */
   font-family: 'Poppins', sans-serif; /* Apply Poppins font to footer */
   font-weight: 400; /* Regular weight */

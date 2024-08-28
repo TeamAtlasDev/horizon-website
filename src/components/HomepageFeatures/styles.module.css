@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
 /* General section styling */
 .newsSection {
   text-align: center;
@@ -69,11 +71,15 @@
   justify-content: space-between; /* Space evenly between elements */
 }
 
-.articleTitle {
-  margin-bottom: 1rem;
-  font-size: 1.5rem; /* Smaller font size for the title */
-  color: #ffffff;
+.callToActionTitle {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 700; /* Ensure bold weight */
+  color: var(--cta-title-color, #f0efec); /* Allow for customization */
+  font-size: 2rem; /* Adjust font size */
+  margin-bottom: 0.5rem; /* Space below the title */
+  text-align: center; /* Center align text on smaller screens */
 }
+
 
 .articleDescription {
   margin-bottom: 1.5rem;
@@ -357,7 +363,7 @@
 }
 
 .DescshowMore {
-  color: #02264d;
+  color: #02264d00;
   cursor: pointer;
 }
 
@@ -380,71 +386,74 @@
   margin-bottom: 1rem; /* Space below the title */
 }
 
+.featureTitle {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600; /* SemiBold weight */
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  color: var(--ifm-font-color-base); /* Use a color variable for consistency */
+  margin-bottom: 1rem; /* Add some space below the title */
+  text-align: center; /* Center align text */
+}
+
 /* Add styles for features */
 .features {
   padding: 4rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; /* Center items horizontally */
-  min-height: 100vh;
 }
 
 .feature {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
+.imageBlock,
+.textBlock {
+  flex: 1;
+  text-align: center;
+}
+
+/* Feature SVG styling */
 .featureSvg {
-  /* Ensure the image displays at its intrinsic size */
-  width: auto;
+  max-width: 100%;
   height: auto;
-  max-width: 100%; /* Ensure it doesn't exceed its container's width */
-  max-height: 100%; /* Ensure it doesn't exceed its container's height */
-  margin-bottom: 1rem; /* Space between image and text */
-  transition: transform 0.3s ease-in-out; /* Transition for smooth effect */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .feature {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+
+  /* Ensure images are always on top on mobile */
+  .imageBlock {
+    order: 1; /* Ensure image comes first */
+    margin-bottom: 1rem; /* Add space below the image */
+  }
+
+  .textBlock {
+    order: 2; /* Ensure text comes after the image */
+    text-align: center;
+  }
+}
+
+@keyframes rotateZoom {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(15deg); /* Adjust rotation angle as needed */
+  }
+}
+
+.featureSvg {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease; /* Smooth transition for transform */
 }
 
 .featureSvg:hover {
-  transform: scale(1.1); /* Zoom in slightly on hover */
-}
-
-.newFeatureImage {
-  height: 55px; /* Increased height of the badge */
-  margin-left: 10px; /* Adjust spacing between badge and text */
-  vertical-align: middle;
-}
-
-@keyframes floatUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* Apply the animation to the stars */
-.starLeftBottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80px;
-  /* Ensure stars are behind content */
-  animation: floatUpDown 4s ease-in-out infinite; /* Add animation */
-}
-
-.starRightTop {
-  position: absolute;
-  top: 20px; /* Add some space from the top */
-  right: 20px; /* Add some space from the right */
-  width: 80px;
-  /* Ensure stars are behind content */
-  animation: floatUpDown 4s ease-in-out infinite; /* Add animation */
-  animation-delay: 2s; /* Delay the animation for the second star */
+  animation: rotateZoom 0.5s forwards; /* Apply combined animation on hover */
 }
 
 /* Adjust the zoomOnHover class */
@@ -540,3 +549,4 @@
 .contributorImage {
   animation: pulse 2s infinite; /* Apply pulse effect */
 }
+
