@@ -1,135 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 
 /* General section styling */
-.newsSection {
-  text-align: center;
-  margin: 0 auto 3rem; /* Center horizontally and add bottom margin */
-  width: 100%; /* Ensure full width */
-  max-width: 1200px; /* Optional max-width */
-}
-
-.newsTitle {
-  margin-bottom: 1rem; /* Space below the News title */
-}
-
-.newsCategory {
-  font-size: 1.2rem; /* Font size for the category/subtitle */
-  margin-bottom: 20px;
-  color: #888;
-}
-
-/* Container holding articles */
-.newsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Ensure three columns */
-  gap: 1.3rem; /* Space between articles */
-  padding: 0 1rem; /* Add padding on the sides */
-}
-
-/* Styles for each article box */
-.articleBox {
-  background-color: var(--ifm-background-color);
-  border: 1px solid #8d8989ea;
-  border-radius: 10px;
-  overflow: hidden; /* Ensure image covers the full width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  height: 100%; /* Ensure all article boxes are the same height */
-  display: flex;
-  flex-direction: column; /* Ensure content stacks properly */
-  max-width: 100%; /* Ensure box doesn't exceed container width */
-  position: relative; /* Position relative for child elements */
-}
-
-.articleBox:hover {
-  transform: translateY(-10px); /* Move article up slightly on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adjust shadow on hover */
-}
-
-.articleBox:hover .articleImage {
-  transform: scale(1.05); /* Zoom image on hover */
-}
-
-.imageContainer {
-  width: 100%;
-  height: 300px; /* Fixed image height */
-  overflow: hidden; /* Ensure image covers the full width */
-}
-
-.articleImage {
-  width: 100%; /* Full width of the container */
-  height: 100%; /* Full height of the container */
-  object-fit: cover; /* Cover the container with the image */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-.articleContent {
-  padding: 1.5rem;
-  flex: 1; /* Ensure content area expands to fill articleBox */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Space evenly between elements */
-}
-
-.callToActionTitle {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  font-weight: 700; /* Ensure bold weight */
-  color: var(--cta-title-color, #f0efec); /* Allow for customization */
-  font-size: 2rem; /* Adjust font size */
-  margin-bottom: 0.5rem; /* Space below the title */
-  text-align: center; /* Center align text on smaller screens */
-}
-
-
-.articleDescription {
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-  color: #727171;
-}
-
-.articleLink {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.articleLink:hover {
-  color: #0056b3;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .newsContainer {
-    grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .newsContainer {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
-    gap: 1.5rem; /* Increase the gap between articles */
-    padding: 0 0.5rem; /* Reduce padding on the sides */
-    margin: 0 auto; /* Center the container horizontally */
-  }
-
-  .articleBox {
-    margin: 0 0.5rem; /* Reduce horizontal margin */
-    width: calc(100% - 1rem); /* Increase the width of the boxes */
-    box-sizing: border-box; /* Ensure padding and borders are included in width calculation */
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .articleBox {
-    margin: 0 auto; /* Center the boxes when there are two columns */
-    width: calc(100% - 3rem);
-  }
-}
 
 /* Show more / Show less buttons */
 .showMoreButton,
 .showLessButton {
-  background-color: #1c1e1f; /* Button background color */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  background-color: #1c1e1fb0; /* Button background color */
   color: #ffffff; /* Button text color */
   border: none;
   padding: 0.75rem 1.5rem;
@@ -142,8 +19,7 @@
 
 .showMoreButton:hover,
 .showLessButton:hover {
-  background-color: #0057b3; /* Darker background color on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #020a1300; /* Darker background color on hover */
 }
 
 /* Additional Text Styling for Show More / Show Less */
@@ -179,6 +55,7 @@
   padding: 0 1rem; /* Add padding left and right */
 }
 
+
 /* Call To Action Section */
 .callToActionContainer {
   position: relative;
@@ -187,32 +64,43 @@
   padding-bottom: 40px;
 }
 
-.callToActionBox {
-  position: relative;
-  z-index: 2; /* Ensure content is above stars */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  text-align: left; /* Align text to the left */
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column; /* Stack emoji and text vertically on smaller screens */
-  align-items: center; /* Center items horizontally */
-  gap: 20px; /* Space between emoji and text */
-  max-width: 1000px; /* Optional: limit the width of the call to action box */
-  margin: 0 auto; /* Center the box horizontally */
-}
-
 .callToActionTitle {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 700; /* Ensure bold weight */
   color: var(--cta-title-color, #f0efec); /* Allow for customization */
   font-size: 2rem; /* Adjust font size */
   margin-bottom: 0.5rem; /* Space below the title */
   text-align: center; /* Center align text on smaller screens */
 }
 
+.callToActionBox {
+  position: relative;
+  z-index: 2; /* Ensure content is above stars */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  text-align: left; /* Align text to the left */
+  padding: 40px; /* Increased padding for a bigger box */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; /* Stack emoji and text vertically on smaller screens */
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Space between emoji and text */
+  max-width: 1200px; /* Increased max-width for a larger box */
+  margin: 0 auto; /* Center the box horizontally */
+}
+
 .callToActionDescription {
   color: var(--cta-description-color, #E0E0E0); /* Allow for customization */
   margin-bottom: 1.5rem; /* Space below the description */
   text-align: center; /* Center align text on smaller screens */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the image and text */
+}
+
+.discordIcon {
+  width: 24px; /* Size of the Discord icon */
+  height: 24px; /* Size of the Discord icon */
+  object-fit: contain; /* Maintain aspect ratio */
 }
 
 .callToActionText {
@@ -221,38 +109,29 @@
   gap: 10px; /* Space between the buttons */
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* Center align buttons */
+  gap: 10px; /* Space between buttons */
+}
+
 .callToActionButton {
-  background-color: var(--cta-button-bg, #1251da); /* Allow for customization */
-  color: var(--cta-button-text, #ffffff); /* Allow for customization */
-  border: none; /* Remove the border */
+  background-color: transparent; /* No background */
+  color: var(--cta-button-text, #ffffff); /* Text color */
+  border: 2px solid var(--cta-button-text, #ffffff); /* White border */
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .callToActionButton:hover {
-  background-color: var(--cta-button-bg-hover, #096df1); /* Allow for customization */
+  color: var(--cta-button-bg-hover, #0952f1fd); /* Text color on hover */
+  border-color: var(--cta-button-bg-hover, #096df1); /* Border color on hover */
   transform: scale(1.05); /* Slightly scale up on hover */
 }
 
-.starLeftBottom, .starRightTop {
-  position: absolute;
-  width: 80px;
-  opacity: 0.5; /* Slightly transparent */
-  pointer-events: none; /* Ensure clicks pass through stars */
-  z-index: 3; /* Ensure stars are above the callToActionBox */
-}
 
-.starLeftBottom {
-  bottom: 0;
-  left: 0;
-}
-
-.starRightTop {
-  top: 20px; /* Add some space from the top */
-  right: 20px; /* Add some space from the right */
-}
 
 .ctaIcon {
   width: 128px; /* Adjusted size for responsive design */
@@ -293,6 +172,7 @@
 
 .blogTitle {
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .blogCategory {
@@ -387,48 +267,46 @@
 }
 
 .featureTitle {
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  font-weight: 600; /* SemiBold weight */
-  font-size: 1.5rem; /* Adjust the font size as needed */
-  color: var(--ifm-font-color-base); /* Use a color variable for consistency */
-  margin-bottom: 1rem; /* Add some space below the title */
-  text-align: center; /* Center align text */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem; /* Larger title size */
+  color: var(--ifm-font-color-base);
+  margin-bottom: 1rem;
+  text-align: left; /* Align text to the left */
 }
 
-/* Add styles for features */
-.features {
-  padding: 4rem 0;
+.featureDescription {
+  color: #727171; /* Make description text more gray */
+  font-size: 1rem; /* Adjust as needed */
+  text-align: left; /* Align text to the left */
 }
 
 .feature {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Adjust layout if necessary */
   margin-bottom: 2rem;
 }
 
 .imageBlock,
 .textBlock {
   flex: 1;
-  text-align: center;
+  text-align: left; /* Left-align text block */
 }
 
-/* Feature SVG styling */
-.featureSvg {
-  max-width: 100%;
-  height: auto;
-}
 
-/* Responsive Styles for Mobile */
+/* Responsive styling for mobile */
 @media (max-width: 768px) {
   .feature {
-    flex-direction: column; /* Stack items vertically on mobile */
+    flex-direction: column;
   }
 
-  /* Ensure images are always on top on mobile */
   .imageBlock {
-    order: 1; /* Ensure image comes first */
-    margin-bottom: 1rem; /* Add space below the image */
+    margin-bottom: 1rem;
+  }
+
+  .featureTitle, .featureDescription {
+    text-align: center; /* Center-align feature title on smaller screens */
   }
 
   .textBlock {
@@ -447,15 +325,14 @@
 }
 
 .featureSvg {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  transition: transform 0.5s ease; /* Smooth transition for transform */
+  transition: transform 0.5s ease-out; /* Smooth transition for transform property */
 }
 
 .featureSvg:hover {
-  animation: rotateZoom 0.5s forwards; /* Apply combined animation on hover */
+  transform: scale(1.1); /* Example hover effect, scales image up */
 }
-
 /* Adjust the zoomOnHover class */
 .zoomOnHover {
   transition: transform 0.3s ease; /* Smooth transition for transform */
@@ -484,6 +361,7 @@
 
 .specialThanksTitle {
   margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
 }
 
 .contributorsContainer {
@@ -520,9 +398,6 @@
     text-align: center; /* Center align text for smaller screens */
   }
 
-  .specialThanksTitle {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
 
   .contributorsContainer {
     flex-direction: column;
@@ -537,6 +412,27 @@
   }
 }
 
+.contributorName {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 500; /* Medium weight */
+  color: #fffcfc; /* Dark gray color for text */
+  font-size: 1rem; /* Adjust font size as needed */
+  margin-top: 0.5rem; /* Space above the name */
+  margin-bottom: 0.25rem; /* Space below the name */
+  text-align: center; /* Center align the text */
+  font-weight: bold; /* Make the text bold */
+}
+
+/* Contributor Roles Styling */
+.contributorRole {
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 500; /* Medium weight */
+  color: #f1eded; /* Lighter gray color for role text */
+  font-size: 0.875rem; /* Slightly smaller font size for roles */
+  margin: 0; /* Remove extra margin */
+  text-align: center; /* Center align the text */
+}
+
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -549,4 +445,5 @@
 .contributorImage {
   animation: pulse 2s infinite; /* Apply pulse effect */
 }
+
 
