@@ -47,12 +47,14 @@ function Feature({ image, title, description, isImageRight }) {
     <div className={clsx('col col--12', styles.feature)}>
       {isImageRight ? (
         <>
-          {/* Text on the left, image on the right */}
-          <div className={clsx(styles.textBlock, 'text--center')}>
-            <Heading as="h3" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>
+          <div className={clsx(styles.textBlock, 'text--left')}>
+            <Heading
+              as="h3"
+              className={styles.featureTitle} // Use CSS class to control the title style
+            >
               {title}
             </Heading>
-            <p>{description}</p>
+            <p className={styles.featureDescription}>{description}</p> {/* Use CSS class for description */}
           </div>
           <div className={clsx(styles.imageBlock, 'text--center')}>
             <img src={image} alt={title} className={styles.featureSvg} />
@@ -60,15 +62,17 @@ function Feature({ image, title, description, isImageRight }) {
         </>
       ) : (
         <>
-          {/* Image on the left, text on the right */}
           <div className={clsx(styles.imageBlock, 'text--center')}>
             <img src={image} alt={title} className={styles.featureSvg} />
           </div>
-          <div className={clsx(styles.textBlock, 'text--center')}>
-            <Heading as="h3" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>
+          <div className={clsx(styles.textBlock, 'text--left')}>
+            <Heading
+              as="h3"
+              className={styles.featureTitle} // Use CSS class to control the title style
+            >
               {title}
             </Heading>
-            <p>{description}</p>
+            <p className={styles.featureDescription}>{description}</p> {/* Use CSS class for description */}
           </div>
         </>
       )}
@@ -85,12 +89,10 @@ import michael from '@site/static/img/michael.png';
 import john from '@site/static/img/john.png';
 import Icon from '@site/static/img/rocket.png';
 
-
 function CallToAction() {
   return (
     <div className={clsx('col col--12', styles.callToActionContainer)}>
       {/* Star PNG image at bottom left */}
-
       
       <div className={clsx('text--center', styles.callToActionBox)}>
         {/* Icon to the left */}
@@ -98,27 +100,19 @@ function CallToAction() {
         
         <div className={styles.callToActionText}>
           <Heading as="h3" className={styles.callToActionTitle}>Level up your server!</Heading>
-          <p className={styles.callToActionDescription}>
-            Add Horizon to your Discord server and start your astronomical journey today.
+          <p className={styles.callToActionDescription}>     
+          Over 100,000 users trust Horizon, add it to your Discord server and start your astronomical journey today.
           </p>
-          <a
-            className={clsx('button', 'button--primary', 'button--lg', styles.callToActionButton)}
-            href="https://invite.horizonbot.xyz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          
-            Invite Horizon
-          </a> 
-          <a
-            className={clsx('button', 'button--primary', 'button--lg', styles.callToActionButton)}
-            href="https://support.horizonbot.xyz"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          
-            Support Server
-          </a>
+          <div className={styles.buttonContainer}>
+            <a
+              className={clsx('button', styles.callToActionButton)}
+              href="https://invite.horizonbot.xyz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Invite Horizon
+            </a>
+          </div>
         </div>
       </div>
 
@@ -128,8 +122,6 @@ function CallToAction() {
 }
 
 
-
-
 function SpecialThanks() {
   const contributors = [
     { name: 'Fyber', role: 'Head Developer', image: Developer },
@@ -137,7 +129,6 @@ function SpecialThanks() {
     { name: 'CuriousAnalyst', role: 'Graphics Designer', image: curious },
     { name: 'JohnPapath', role: 'Contributor', image: john },
     { name: 'Michael', role: 'Contributor', image: michael },
-
   ];
 
   return (
@@ -148,8 +139,8 @@ function SpecialThanks() {
           {contributors.map((contributor, idx) => (
             <div key={idx} className={styles.contributorBox}>
               <img src={contributor.image} alt={contributor.name} className={styles.contributorImage} />
-              <h4>{contributor.name}</h4>
-              <p>{contributor.role}</p>
+              <p className={styles.contributorName}>{contributor.name}</p>
+              <p className={styles.contributorRole}>{contributor.role}</p>
             </div>
           ))}
         </div>
