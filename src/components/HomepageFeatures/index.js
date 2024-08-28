@@ -9,7 +9,7 @@ const FeatureList = [
     image: require('@site/static/img/automations.png').default,
     description: (
       <>
-        Get notified about upcoming launches, events and many more. Never miss an astronomical event again!
+        Get notified about upcoming launches, events, and many more. Never miss an astronomical event again!
       </>
     ),
   },
@@ -18,8 +18,7 @@ const FeatureList = [
     image: require('@site/static/img/apod.png').default,
     description: (
       <>
-        New space pictures, Mars rover snapshots, and more directly on your server. 
-        Explore the universe with your community!
+        New space pictures, Mars rover snapshots, and more directly on your server. Explore the universe with your community!
       </>
     ),
   },
@@ -43,24 +42,40 @@ const FeatureList = [
   },
 ];
 
-
-function Feature({ image, title, description }) {
+function Feature({ image, title, description, isImageRight }) {
   return (
     <div className={clsx('col col--12', styles.feature)}>
-      <div className="text--center">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-      <div className="text--center">
-        <img src={image} alt={title} className={styles.featureSvg} />
-      </div>
+      {isImageRight ? (
+        <>
+          {/* Text on the left, image on the right */}
+          <div className={clsx(styles.textBlock, 'text--center')}>
+            <Heading as="h3" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>
+              {title}
+            </Heading>
+            <p>{description}</p>
+          </div>
+          <div className={clsx(styles.imageBlock, 'text--center')}>
+            <img src={image} alt={title} className={styles.featureSvg} />
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Image on the left, text on the right */}
+          <div className={clsx(styles.imageBlock, 'text--center')}>
+            <img src={image} alt={title} className={styles.featureSvg} />
+          </div>
+          <div className={clsx(styles.textBlock, 'text--center')}>
+            <Heading as="h3" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 600 }}>
+              {title}
+            </Heading>
+            <p>{description}</p>
+          </div>
+        </>
+      )}
     </div>
   );
 }
 
-// Import star SVG images
-import StarLeftBottom from '@site/static/img/star.png';
-import StarRightTop from '@site/static/img/star.png';
 
 // Import logo image for special thanks section
 import Developer from '@site/static/img/developer.png';
@@ -252,9 +267,13 @@ export default function Home() {
       <main>
         <div className="container">
           <div className="row">
-            {FeatureList.map((props, idx) => (
-              <Feature key={idx} {...props} />
-            ))}
+          {FeatureList.map((feature, index) => (
+            <Feature
+              key={index}
+              {...feature}
+              isImageRight={index === 1 || index === FeatureList.length - 1} // Second and last feature have images on the right
+            />
+          ))}
           </div>
           <ExploreThinkLearn />
           <CallToAction />
