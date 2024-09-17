@@ -12,7 +12,6 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scroll if unnecessary */
 }
 
-/* Ensure body content starts below the fixed navbar */
 body {
   padding-top: 0; /* Adjust this value based on navbar height if necessary */
 }
