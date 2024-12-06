@@ -20,7 +20,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'AtlasDevGroup', // Usually your GitHub org/user name.
+  organizationName: 'TeamAtlasDev', // Usually your GitHub org/user name.
   projectName: 'horizon-website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
