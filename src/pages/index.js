@@ -16,9 +16,9 @@ function HomepageHeader() {
         <div className={styles.newsBadgeContainer}>
           <Link
             className={clsx('button', 'button--secondary', styles.newsBadge)}
-            href="https://horizonbot.xyz/blog/v2.3-update"
+            href="https://horizonbot.xyz/blog/horizon-2024-progress"
           >
-            New: Version v2.3 is now available!
+            New: Horizon 2024 Progress
           </Link>
         </div>
         <Heading as="h1" className={clsx(styles.heroTitle)}>
