@@ -23,3 +23,5 @@ And of course, thank you to all the users who continue to use and support Horizo
 🎉 To celebrate Horizon’s 1st anniversary, we’re sharing some exciting updates on the rewrite! More details are available on our Discord server. Feel free to join and share your thoughts. The invite link is in the website’s footer!
 
 **Happy Birthday, Horizon! :rocket::birthday:**
+
+![hrz-anniversary](https://github.com/atlasfyber/atlas-images/blob/main/oneyear_hrzatlas_page1.jpg?raw=true)
