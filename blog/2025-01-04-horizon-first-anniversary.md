@@ -14,7 +14,7 @@ On January 4th, I released version v1.0.0, the first public release of the bot. 
 ### **As one year has passed, I’d like to thank these teams and users:**
 
 - Alexander; He’s been here since the beginning as a server administrator and a great friend.
-- CuriousAnaLyst; An friend who created Horizon's branding. Yes, you heard right, it’s not from Google, LOL.
+- Comfy; An friend who created Horizon's branding. Yes, you heard right, it’s not from Google, LOL.
 - Michael & JohnPapath; Friends, contributors and testers who gave me amazing feedback and reviews, which I truly appreciated.
 - The Space Devs (thespacedevs.com); This non-organizational team has been essential to Horizon's success. Without them, 60% of the bot's features wouldn’t exist, and possibly the bot itself. They’ve done an amazing job, and I’m really thankful for their help. Horizon uses 5 different APIs, but Space Devs is definitely the most important.
 
