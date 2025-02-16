@@ -126,7 +126,7 @@ function SpecialThanks() {
   const contributors = [
     { name: 'Fyber', role: 'Head Developer', image: Developer },
     { name: 'Alexander', role: 'S. Administrator', image: Alex },
-    { name: 'CuriousAnalyst', role: 'Graphics Designer', image: curious },
+    { name: 'Comfy', role: 'Graphics Designer', image: curious },
     { name: 'JohnPapath', role: 'Contributor', image: john },
     { name: 'Michael', role: 'Contributor', image: michael },
   ];
