@@ -15,7 +15,7 @@ Want to bring Horizon into your server? It's easier than spotting the Moon on a 
 
 ## Getting Support
 
-Stuck in a black hole and need some help? The Atlas & Horizon Support Team is ready to beam you up! For assistance, hop into our [Support Server](https://support.teamatlas.dev) or shoot us an email at hello@horizonbot.xyz.
+Stuck in a black hole and need some help? The Atlas & Horizon Support Team is ready to beam you up! For assistance, hop into our [Support Server](https://support.teamatlas.dev).
 
 :::note
 Email responses may take up to 7 business days. For faster-than-light assistance, especially if you need immediate help, we recommend reaching out via Discord.
