@@ -31,4 +31,4 @@ Certain features of our site may integrate with third-party APIs, which may coll
 We may update this Privacy Policy periodically to reflect changes in our practices or in response to regulatory requirements. Any updates will be posted on this page, and your continued use of Horizon Site following any updates signifies your acceptance of these changes.
 
 ## Contact Us
-If you have any questions or concerns regarding our Privacy Policy or our data handling practices, please reach out to us at info@teamatlas.dev.
+If you have any questions or concerns regarding our Privacy Policy or our data handling practices, please reach out to us at via Discord.
