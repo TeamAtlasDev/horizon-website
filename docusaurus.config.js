@@ -37,6 +37,7 @@ const config = {
         },
         blog: {
           showReadingTime: false,
+          blogPostsPerPage: 50,
         },
         theme: {
           customCss: './src/css/custom.css',
