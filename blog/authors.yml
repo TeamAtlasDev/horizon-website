@@ -9,7 +9,7 @@ fyber:
 horizon:
   name: Horizon
   title: Astronomy Discord APP
-  image_url: https://cdn.discordapp.com/avatars/1183177251316047983/d3a699ec71bb0cd10718a61010a9fdc2.webp?size=4096
+  image_url: https://cdn.discordapp.com/app-icons/1183177251316047983/d3a699ec71bb0cd10718a61010a9fdc2.png?size=96
   socials:
     x: AtlasHorizonAPP
     newsletter: https://support.teamatlas.dev
