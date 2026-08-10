@@ -1,9 +1,4 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
@@ -12,7 +7,6 @@ const config = {
   tagline: 'Horizon offers a variety of space-related commands for your server using real-time data.',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
   url: 'https://horizonbot.xyz',
   baseUrl: '/',
 
@@ -37,7 +31,7 @@ const config = {
         },
         blog: {
           showReadingTime: false,
-          blogPostsPerPage: 50,
+          postsPerPage: 50, 
         },
         theme: {
           customCss: './src/css/custom.css',
