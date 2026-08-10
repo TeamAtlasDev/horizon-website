@@ -32,6 +32,8 @@ const config = {
         blog: {
           showReadingTime: false,
           postsPerPage: 50, 
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: './src/css/custom.css',
