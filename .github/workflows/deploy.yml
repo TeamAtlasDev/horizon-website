@@ -19,12 +19,14 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
       - name: Clear Docusaurus cache
         run: npm run clear
 
       - name: Build website
+        env:
+          DISABLE_WEBPACKBAR: "true"
         run: npm run build
 
       - name: Upload Build Artifact
