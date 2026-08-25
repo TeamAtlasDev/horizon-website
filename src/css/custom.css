@@ -1568,3 +1568,11 @@ html[class*="blog-tags-"] main section {
     justify-content: center !important;
   }
 }
+
+/* Fix for flex basis overriding width */
+@media (max-width: 996px) {
+  .footer__col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
