@@ -1479,7 +1479,6 @@ html[class*="blog-tags-"] main section {
 }
 
 @media (max-width: 996px) {
-  div[class*="epicHeader"], div[class*="discordMockup"], div[class*="massiveBgText"] {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

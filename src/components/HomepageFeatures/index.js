@@ -293,7 +293,7 @@ const ref = useRef(null);
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.2 }
+      { threshold: 0, rootMargin: '200px' }
     );
     
     if (ref.current) {
@@ -362,7 +362,7 @@ function PremiumAccess() {
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: '200px' }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
