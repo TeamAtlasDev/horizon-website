@@ -289,20 +289,20 @@ const ref = useRef(null);
   useEffect(() => {
     if (loading || error) return;
     
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0, rootMargin: '200px' }
-    );
-    
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      observer.disconnect();
+    const handleScroll = () => {
+      if (ref.current) {
+        const top = ref.current.getBoundingClientRect().top;
+        if (top < window.innerHeight + 200) {
+          setIsVisible(true);
+          window.removeEventListener('scroll', handleScroll);
+        }
+      }
     };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [loading, error]);
 
   if (loading || error) return null;
@@ -399,14 +399,19 @@ function PremiumAccess() {
   const ref = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0, rootMargin: '200px' }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (ref.current) {
+        const top = ref.current.getBoundingClientRect().top;
+        // Trigger when the element is within 200px of the bottom of the viewport
+        if (top < window.innerHeight + 200) {
+          setIsVisible(true);
+          window.removeEventListener('scroll', handleScroll);
+        }
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Trigger immediately if already in view on mount
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
