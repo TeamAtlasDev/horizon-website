@@ -231,8 +231,6 @@ html, body {
 }
 
 /* Link colors in various sections */
-a {
-}
 
 a:hover {
   color: #7983f5;
@@ -612,6 +610,7 @@ body[class*="docs-"] .main-wrapper,
   margin-bottom: 2rem;
   background: linear-gradient(135deg, #ffffff 0%, #5865F2 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -764,6 +763,7 @@ pre code {
 .plugin-blog article header h2 a:hover {
   background: linear-gradient(135deg, #ffffff 0%, #bcc1fa 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -867,6 +867,7 @@ pre code {
   line-height: 1.1;
   background: linear-gradient(135deg, #ffffff 0%, #5865F2 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -1391,6 +1392,7 @@ html[class*="blog-tags-"] main section {
 .navbar-blog-dropdown > a.navbar__link {
   background: linear-gradient(135deg, #ffffff 0%, #5865F2 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
   display: inline-flex !important;
@@ -1478,12 +1480,6 @@ html[class*="blog-tags-"] main section {
   }
 }
 
-@media (max-width: 996px) {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
-  }
-}
 
 .footer-atlas-logo {
   transition: filter 0.2s ease;
