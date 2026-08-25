@@ -330,7 +330,39 @@ const ref = useRef(null);
         </div>
       </div>
       
-      <div className={styles.blogMarqueeWrapper}>
+      <div 
+        className={styles.blogMarqueeWrapper}
+        ref={(el) => {
+          if (el) {
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+            
+            el.onmousedown = (e) => {
+              isDown = true;
+              el.style.cursor = 'grabbing';
+              startX = e.pageX - el.offsetLeft;
+              scrollLeft = el.scrollLeft;
+            };
+            el.onmouseleave = () => {
+              isDown = false;
+              el.style.cursor = 'grab';
+            };
+            el.onmouseup = () => {
+              isDown = false;
+              el.style.cursor = 'grab';
+            };
+            el.onmousemove = (e) => {
+              if (!isDown) return;
+              e.preventDefault();
+              const x = e.pageX - el.offsetLeft;
+              const walk = (x - startX) * 2;
+              el.scrollLeft = scrollLeft - walk;
+            };
+          }
+        }}
+        style={{ cursor: 'grab' }}
+      >
         <div className={styles.blogMarqueeTrack}>
           {marqueeBlogs.map((blog, idx) => (
             <a key={idx} href={blog.url} target="_blank" rel="noopener noreferrer" className={styles.sleekArticleCard}>
