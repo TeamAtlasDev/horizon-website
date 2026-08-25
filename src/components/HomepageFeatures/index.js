@@ -308,7 +308,7 @@ const ref = useRef(null);
   if (loading || error) return null;
 
   // Duplicate blogs for seamless infinite marquee loop
-  const marqueeBlogs = [...blogs, ...blogs];
+  const marqueeBlogs = [...blogs, ...blogs, ...blogs, ...blogs];
 
   return (
     <div className={styles.blogSection}>
@@ -358,6 +358,15 @@ const ref = useRef(null);
               const x = e.pageX - el.offsetLeft;
               const walk = (x - startX) * 2;
               el.scrollLeft = scrollLeft - walk;
+            };
+            el.onscroll = () => {
+              const halfWidth = el.scrollWidth / 4;
+              if (el.scrollLeft >= halfWidth) {
+                el.scrollLeft -= halfWidth;
+              } else if (el.scrollLeft <= 0 && isDown) {
+                // Only bump forward if they are actively dragging left past 0
+                el.scrollLeft += halfWidth;
+              }
             };
           }
         }}
