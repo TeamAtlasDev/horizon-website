@@ -1575,3 +1575,25 @@ html[class*="blog-tags-"] main section {
     max-width: 100% !important;
   }
 }
+
+@media (max-width: 996px) {
+  div[class*="buttonContainer"] {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+}
+
+/* Hide scrollbar for marquee */
+div[class*="blogMarqueeWrapper"]::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  div[class*="buttonContainer"] a {
+    margin: 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
