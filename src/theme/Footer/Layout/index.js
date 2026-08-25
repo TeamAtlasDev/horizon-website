@@ -118,6 +118,7 @@ export default function FooterLayout({style, links, logo, copyright}) {
                 return (
                   <div 
                     key={c.name}
+                    className="contributor-card"
                     style={{ 
                       display: 'flex', alignItems: 'center', gap: '1.25rem', padding: '1.25rem', 
                       background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.04)', 

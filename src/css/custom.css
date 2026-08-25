@@ -1461,3 +1461,61 @@ html[class*="blog-tags-"] main section {
 .custom-glass-modal::-webkit-scrollbar-thumb:hover {
   background: #7983f5;
 }
+
+/* Fixes for mobile */
+@media (max-width: 996px) {
+  .custom-footer-links-only {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .contributor-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .contributor-card img {
+    margin: 0 auto;
+  }
+  .contributor-card > div:last-child {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 996px) {
+  div[class*="epicHeader"], div[class*="discordMockup"], div[class*="massiveBgText"] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.footer-atlas-logo {
+  transition: filter 0.2s ease;
+}
+
+.footer-atlas-credit:hover .footer-atlas-logo {
+  filter: brightness(0) saturate(100%) invert(35%) sepia(93%) saturate(2719%) hue-rotate(219deg) brightness(99%) contrast(97%) !important;
+}
+
+@media (max-width: 996px) {
+  div[class*="learnPerksBox"] {
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
+
+.footer-atlas-credit:hover {
+  color: #5865F2 !important;
+}
+
+/* Scale entire site down to 90% on desktop to match user's preferred viewport zoom */
+@media (min-width: 997px) {
+  html {
+    font-size: 90% !important;
+  }
+}

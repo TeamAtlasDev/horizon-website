@@ -182,7 +182,7 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
-      image: 'img/horizonimg.png',
+      image: 'img/header.jpg',
       navbar: {
         logo: {
           alt: 'Horizon Logo',

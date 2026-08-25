@@ -28,7 +28,7 @@ const FeatureList = [
   },
   {
     badge: 'COMMANDS',
-    title: 'Powerful Slash Commands',
+    title: 'Powerful Interactions',
     image: require('@site/static/img/interactions.png').default,
     description: (
       <>
@@ -171,6 +171,10 @@ function HorizonAIReveal() {
   const fullText = translations[currentLang.code].desc;
   
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth <= 996) {
+      setDisplayedDesc(fullText);
+      return;
+    }
     let i = 0;
     setDisplayedDesc('');
     const typingInterval = setInterval(() => {
@@ -180,7 +184,7 @@ function HorizonAIReveal() {
       } else {
         clearInterval(typingInterval);
       }
-    }, 15);
+    }, 30);
     return () => clearInterval(typingInterval);
   }, [fullText]);
 
