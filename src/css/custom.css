@@ -1543,3 +1543,28 @@ html[class*="blog-tags-"] main section {
     width: 100% !important;
   }
 }
+
+/* ABSOLUTE FORCE CENTER FOOTER LINKS ON MOBILE */
+@media (max-width: 996px) {
+  div[class*="custom-footer-links-only"] * {
+    text-align: center !important;
+  }
+  div[class*="custom-footer-links-only"] ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+  div[class*="custom-footer-links-only"] li {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  div[class*="custom-footer-links-only"] a {
+    display: inline-flex !important;
+    justify-content: center !important;
+  }
+}
