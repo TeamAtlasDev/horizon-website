@@ -70,7 +70,7 @@ function FeatureCard({ image, badge, title, description, index }) {
           <p className={styles.featureDescription}>{description}</p>
         </div>
         <div className={styles.imageBlock} onClick={() => setIsLightboxOpen(true)}>
-          <img src={image} alt={title} className={styles.featureSvg} width="1500" height="800" />
+          <img loading="lazy" decoding="async" src={image} alt={title} className={styles.featureSvg} width="1500" height="800" />
           <div className={styles.magnifyingGlass}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"></circle>
@@ -83,7 +83,7 @@ function FeatureCard({ image, badge, title, description, index }) {
       {isLightboxOpen && typeof document !== 'undefined' && createPortal(
         <div className={styles.lightboxOverlay} onClick={() => setIsLightboxOpen(false)}>
           <span className={styles.lightboxClose} onClick={() => setIsLightboxOpen(false)}>✕</span>
-          <img src={image} alt={title} className={styles.lightboxImage} onClick={(e) => e.stopPropagation()} />
+          <img loading="lazy" decoding="async" src={image} alt={title} className={styles.lightboxImage} onClick={(e) => e.stopPropagation()} />
         </div>,
         document.body
       )}
@@ -376,7 +376,7 @@ const ref = useRef(null);
           {marqueeBlogs.map((blog, idx) => (
             <a key={idx} href={blog.url} target="_blank" rel="noopener noreferrer" className={styles.sleekArticleCard}>
               <div className={styles.sleekArticleImage}>
-                <img src={blog.image_url?.replace(/^http:\/\//i, 'https://')} alt={blog.title} />
+                <img loading="lazy" decoding="async" src={blog.image_url?.replace(/^http:\/\//i, 'https://')} alt={blog.title} />
               </div>
               <div className={styles.sleekArticleContent}>
                 <div className={styles.sleekArticleSource}>{blog.news_site || 'Trusted Source'}</div>
@@ -483,13 +483,13 @@ function PremiumAccess() {
                              </div>
                              <div className={styles.discordText}><span className={styles.discordMention}>@Horizon</span> Can you analyze this capture from our university telescope?</div>
                              <div className={styles.discordAttachment}>
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS29bKqOPVg5AAuYq1I3lSFA-7OKJXz0Y-PVgkDFMVWw&s" alt="Saturn Capture" className={styles.discordImage} />
+                                <img loading="lazy" decoding="async" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS29bKqOPVg5AAuYq1I3lSFA-7OKJXz0Y-PVgkDFMVWw&s" alt="Saturn Capture" className={styles.discordImage} />
                              </div>
                           </div>
                        </div>
 
                        <div className={styles.discordMessage}>
-                          <img src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
+                          <img loading="lazy" decoding="async" src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
                           <div className={styles.discordMessageContent}>
                              <div className={styles.discordMsgHeader}>
                                 <span className={styles.discordUsernameBot}>Horizon</span>
@@ -517,7 +517,7 @@ function PremiumAccess() {
                              <span className={styles.discordCommandText}>&nbsp;used&nbsp;<span className={styles.discordCommandName}>⠿ apod</span></span>
                            </div>
                            <div className={styles.discordMessage}>
-                             <img src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
+                             <img loading="lazy" decoding="async" src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
                              <div className={styles.discordMessageContent}>
                                <div className={styles.discordMsgHeader}>
                                  <span className={styles.discordUsernameBot}>Horizon</span>
@@ -528,7 +528,7 @@ function PremiumAccess() {
                                  <div className={styles.discordEmbedAuthor}>🌌 Astronomy Picture of the Day</div>
                                  <div className={styles.discordEmbedTitle}><strong>Title:</strong> Comet 220P in Outburst</div>
                                  <div className={styles.discordEmbedImageWrapper}>
-                                   <img src="https://apod.nasa.gov/apod/image/2608/Comet220P_SA_4104.jpg" alt="Comet 220P in Outburst" className={styles.discordEmbedImage} />
+                                   <img loading="lazy" decoding="async" src="https://apod.nasa.gov/apod/image/2608/Comet220P_SA_4104.jpg" alt="Comet 220P in Outburst" className={styles.discordEmbedImage} />
                                  </div>
                                  <div className={styles.discordEmbedFooter}>© Horizon Dev v2.4</div>
                                </div>
@@ -587,7 +587,7 @@ function PremiumAccess() {
                              <span className={styles.discordCommandText}>&nbsp;used&nbsp;<span className={styles.discordCommandName}>⠿ nextlaunch</span></span>
                            </div>
                            <div className={styles.discordMessage}>
-                             <img src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
+                             <img loading="lazy" decoding="async" src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
                              <div className={styles.discordMessageContent}>
                                <div className={styles.discordMsgHeader}>
                                  <span className={styles.discordUsernameBot}>Horizon</span>
@@ -611,7 +611,7 @@ function PremiumAccess() {
                                    <li className={styles.discordEmbedListItem}>Launching at, <strong>Guiana Space Centre, French Guiana</strong></li>
                                  </ul>
                                  <div className={styles.discordEmbedImageWrapper}>
-                                   <img src="https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_62_lifto_image_20240711132056.jpeg" alt="Rocket Launch" className={styles.discordEmbedImage} />
+                                   <img loading="lazy" decoding="async" src="https://thespacedevs-prod.nyc3.digitaloceanspaces.com/media/images/ariane_62_lifto_image_20240711132056.jpeg" alt="Rocket Launch" className={styles.discordEmbedImage} />
                                  </div>
                                  <div className={styles.discordEmbedFooter}>© Horizon Dev v2.4 • Result 4 of 10</div>
                                </div>
@@ -630,13 +630,13 @@ function PremiumAccess() {
 
                            <div className={styles.discordSlashSpine}></div>
                            <div className={styles.discordSlashInvocation}>
-                             <img src="/img/hrz.png" className={styles.discordAvatarMicro} alt="Horizon" width="1000" height="1000" />
+                             <img loading="lazy" decoding="async" src="/img/hrz.png" className={styles.discordAvatarMicro} alt="Horizon" width="1000" height="1000" />
                              <span className={styles.discordBotTagMicro}>APP</span>
                              <span className={styles.discordCommandUser} style={{color: '#c9cdfb'}}>&nbsp;Horizon</span>
                              <span className={styles.discordCommandText}>&nbsp;<i>Click to see command</i></span>
                            </div>
                            <div className={`${styles.discordMessage} ${styles.discordMessageEphemeral}`}>
-                             <img src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
+                             <img loading="lazy" decoding="async" src="/img/hrz.png" alt="Horizon AI" className={styles.discordAvatarBot} width="1000" height="1000" />
                              <div className={styles.discordMessageContent}>
                                <div className={styles.discordMsgHeader}>
                                  <span className={styles.discordUsernameBot}>Horizon</span>
@@ -751,7 +751,7 @@ export function CallToAction() {
       
       <div className={clsx('text--center', styles.callToActionBox)}>
 
-        <img src={Icon} alt="Icon" className={styles.ctaIcon} width="512" height="512" />
+        <img loading="lazy" decoding="async" src={Icon} alt="Icon" className={styles.ctaIcon} width="512" height="512" />
         
         <div className={styles.callToActionText}>
           <Heading as="h3" className={styles.callToActionTitle}>Level up your server!</Heading>
@@ -792,7 +792,7 @@ function SpecialThanks() {
         <div className={styles.contributorsContainer}>
           {contributors.map((contributor, idx) => (
             <div key={idx} className={styles.contributorBox}>
-              <img src={contributor.image} alt={contributor.name} className={styles.contributorImage} />
+              <img loading="lazy" decoding="async" src={contributor.image} alt={contributor.name} className={styles.contributorImage} />
               <p className={styles.contributorName}>{contributor.name}</p>
               <p className={styles.contributorRole}>{contributor.role}</p>
             </div>

@@ -26,7 +26,7 @@ export default function FooterLayout({style, links, logo, copyright}) {
           
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '3rem' }}>
             <a href="https://teamatlas.dev" target="_blank" rel="noopener noreferrer" className="footer-atlas-credit">
-              Developed by <img src="/img/atlas.png" alt="Atlas" className="footer-atlas-logo" /> Atlas Team
+              Developed by <img loading="lazy" decoding="async" src="/img/atlas.png" alt="Atlas" className="footer-atlas-logo" /> Atlas Team
             </a>
           </div>
 
@@ -44,7 +44,7 @@ export default function FooterLayout({style, links, logo, copyright}) {
             >
               <div style={{ display: 'flex' }}>
                 {contributors.slice(0, 4).map((c, i) => (
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     key={c.name}
                     src={c.image} 
                     style={{ 
@@ -140,7 +140,7 @@ export default function FooterLayout({style, links, logo, copyright}) {
                   >
                     <div style={{ position: 'relative', display: 'flex' }}>
                       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: roleColor, filter: 'blur(15px)', opacity: 0.2, zIndex: 0 }} />
-                      <img src={c.image} alt={c.name} style={{ width: 64, height: 64, borderRadius: '50%', objectFit: 'cover', border: `2px solid rgba(255,255,255,0.1)`, zIndex: 1 }} />
+                      <img loading="lazy" decoding="async" loading="lazy" decoding="async" src={c.image} alt={c.name} style={{ width: 64, height: 64, borderRadius: '50%', objectFit: 'cover', border: `2px solid rgba(255,255,255,0.1)`, zIndex: 1 }} />
                     </div>
                     <div style={{ flex: 1, zIndex: 1 }}>
                       <div style={{ color: '#ffffff', fontWeight: 800, fontSize: '1.15rem', letterSpacing: '-0.01em' }}>{c.name}</div>

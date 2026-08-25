@@ -134,10 +134,7 @@
     linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   background-size: 20px 20px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -576,10 +573,7 @@
   width: 100%;
   height: 200px;
   border-radius: 16px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   margin-bottom: 1.5rem;
   position: relative;
 }
@@ -626,10 +620,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 
@@ -658,10 +649,7 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 4rem 4rem;
   position: relative;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -860,10 +848,7 @@
   background: linear-gradient(135deg, #16171d 0%, #0c0d10 100%);
   border: 1px solid rgba(168, 85, 247, 0.2);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 
@@ -1001,10 +986,7 @@
   top: 0;
   height: 100vh;
   width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1050,10 +1032,7 @@
   box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 50px rgba(168, 85, 247, 0.15) inset;
   display: flex;
   flex-direction: column;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 
@@ -1184,10 +1163,7 @@
   transform: translateX(-50%);
   padding: 8rem 0;
   background-color: transparent;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 
@@ -1253,10 +1229,7 @@
   transform: perspective(1200px) rotateX(15deg) scale(0.95) translateY(50px);
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 
@@ -1467,10 +1440,7 @@
 .discordAttachment {
   margin-top: 0.5rem;
   border-radius: 8px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   max-width: 400px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1494,10 +1464,7 @@
   transform: perspective(1200px) rotateX(10deg) scale(0.95) translateY(50px);
   opacity: 0;
   transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 
@@ -1841,10 +1808,7 @@
     rgba(20, 15, 40, 0.4) 85%, 
     rgba(11, 15, 25, 0) 100%
   );
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -1926,10 +1890,7 @@
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.15);
   position: relative;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   cursor: pointer;
   transition: background 0.3s ease;
   z-index: 2;
@@ -2024,10 +1985,7 @@
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 40px rgba(168, 85, 247, 0.1) inset;
   position: relative;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -2068,10 +2026,7 @@
   background: #09090b;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   margin-bottom: 2rem;
 }
@@ -2120,10 +2075,7 @@
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 .bentoLangPill:hover {
@@ -2358,10 +2310,7 @@
 
 .discordEmbedImageWrapper {
   border-radius: 4px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
   margin-bottom: 12px;
 }
 
@@ -2679,10 +2628,7 @@
   position: relative;
   cursor: pointer;
   border-radius: 12px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
 .imageBlock img {
