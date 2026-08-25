@@ -1,0 +1,183 @@
+.notFoundContainer {
+  position: relative;
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Completely transparent so it inherits the body's #101114 color */
+  background-color: transparent;
+  overflow: hidden;
+  text-align: center;
+  padding: 2rem;
+}
+
+.notFoundGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(139, 92, 246, 0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.notFoundContent {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.errorCode {
+  font-family: 'Inter', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: floatUp 0.8s ease-out;
+}
+
+.errorTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  animation: floatUp 0.8s ease-out 0.1s backwards;
+}
+
+.errorDesc {
+  font-size: 1.15rem;
+  color: #a1a1aa;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  animation: floatUp 0.8s ease-out 0.2s backwards;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  animation: floatUp 0.8s ease-out 0.3s backwards;
+}
+
+.homeButton {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  border-radius: 100px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none !important;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  background: #ffffff;
+  color: #5865F2 !important;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.homeButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(88, 101, 242, 0.15) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: homeButtonShimmer 3s infinite;
+  z-index: -1;
+}
+
+@keyframes homeButtonShimmer {
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
+}
+
+.homeButton:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.3);
+  color: #5865F2 !important;
+  text-decoration: none !important;
+}
+
+.supportButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.supportButton:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.floatingStar {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+  animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes nebulaShine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+  .errorCode { font-size: 6rem; }
+  .errorTitle { font-size: 2rem; }
+  .actions { 
+    flex-direction: column; 
+    gap: 1rem; 
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .homeButton, .supportButton {
+    width: 100%;
+  }
+}

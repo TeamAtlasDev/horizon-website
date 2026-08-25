@@ -1,92 +1,1463 @@
-/* Import Poppins font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Desktop Floating Navbar */
+@media (min-width: 997px) {
+  .navbar {
+    background-color: rgba(22, 23, 29, 0.7) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1.5rem;
+    margin: 1.5rem auto;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 24px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .navbar--fixed-top {
+    position: fixed;
+    top: 0;
+    margin: 1rem auto;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navbar__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile Navbar (Floating Pill & Dropdown Menu) */
+@media (max-width: 996px) {
+  .navbar {
+    background-color: rgba(22, 23, 29, 0.6) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    margin: 1rem auto;
+    width: 92%;
+    position: absolute; /* ensure it is the containing block */
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  /* Override Docusaurus native sidebar to act as a dropdown */
+  .navbar-sidebar {
+    position: absolute !important; /* position relative to the rounded navbar */
+    top: 100% !important; /* start right below the navbar */
+    left: 0 !important;
+    right: 0 !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 80vh !important;
+    background-color: rgba(22, 23, 29, 0.95) !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    margin-top: 10px !important;
+    overflow-y: auto !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6) !important;
+    
+    /* Animation overrides */
+    transform: translateY(-10px) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s !important;
+  }
+  
+  .navbar-sidebar--show .navbar-sidebar {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
+  .navbar-sidebar__backdrop {
+    display: none !important; /* Hide backdrop so we just see the floating dropdown */
+  }
+}
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* Reset some default browser styles */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Poppins', sans-serif;
-  background-color: #12131A; /* Set background color for the entire page */
-  color: #ffffff; /* Set text color for readability */
-  overflow-x: hidden; /* Prevent horizontal scroll if unnecessary */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #101114; /* Match Probot Dark */
+  color: #e4e4e7; 
+  overflow-x: hidden; 
 }
 
-body {
-  padding-top: 0; /* Adjust this value based on navbar height if necessary */
+/* --- PREMIUM NAVBAR --- */
+
+.navbar__brand {
+  margin-right: 2rem;
 }
 
-.navbar {
-  background-color: transparent; /* Transparent background */
-  box-shadow: none; /* Remove shadow */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+.navbar__title {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  font-size: 1.25rem;
 }
 
-/* Navbar link styles */
 .navbar__link {
-  color: #ffffff; /* White text color for light mode */
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for color changes */
+  color: #a1a1aa !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: color 0.2s, background-color 0.2s;
 }
 
-.navbar__link:hover {
-  color: #ccc; /* Change link color on hover */
-  background-color: rgba(0, 0, 0, 0.1); /* Subtle background color on hover */
-  border-radius: 5px; /* Rounded corners for the hover effect */
+.navbar__link:hover, .navbar__link--active {
+  color: #ffffff !important;
+  background-color: transparent !important;
 }
 
-/* Dark mode adjustments */
-[data-theme='dark'] .navbar {
-  background-color: transparent; /* Transparent background */
-  box-shadow: none; /* Remove shadow */
+/* Make the "Donate" button stand out with text color */
+.navbar__item:last-child {
+  background-color: transparent;
+  border: none;
+  margin-left: 0.5rem;
 }
 
-[data-theme='dark'] .navbar__link {
-  color: #ffffff; /* White text color for dark mode */
+.navbar__item:last-child .navbar__link {
+  color: #5865F2 !important; /* Premium purple/blue */
+  font-weight: 700;
 }
 
-[data-theme='dark'] .navbar__link:hover {
-  color: #bbb; /* Change link color on hover in dark mode */
-  background-color: rgba(255, 255, 255, 0.1); /* Subtle background color on hover in dark mode */
-  border-radius: 5px; /* Rounded corners for the hover effect */
+.navbar__item:last-child:hover .navbar__link {
+  color: #7983f5 !important;
 }
 
-
-/* Footer styling */
-.footer {
-  background: linear-gradient(to bottom, #12131A 0%, #000000 100%); /* Gradient from #14141A to black */
-  color: #ffffff; /* White text color */
-  font-family: 'Poppins', sans-serif; /* Apply Poppins font to footer */
-  font-weight: 400; /* Regular weight */
-  padding: 20px; /* Add some padding */
-  text-align: center; /* Center the text */
-  position: relative; /* Ensure it stays at the bottom */
-  bottom: 0; /* Align to bottom */
-  width: 100%; /* Full width */
+/* --- DROPDOWN MENUS (Probot Style) --- */
+.dropdown__menu {
+  background-color: #1a1b23 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+  padding: 1rem !important;
+  min-width: 380px;
 }
 
-/* Dark mode adjustments for the footer */
-[data-theme='dark'] .footer {
-  background: linear-gradient(to bottom, #12131A 0%, #000000 100%); /* Gradient from #14141A to black */
-  color: #ffffff; /* White text color */
+/* Custom HTML dropdown items */
+.dropdown-custom-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: background-color 0.2s;
 }
 
-/* Header text styles for blog posts */
-.blog__container h1,
-.blog__container h2,
-.blog__container h3,
-.blog__container h4,
-.blog__container h5,
-.blog__container h6 {
-  font-family: 'Poppins', sans-serif; /* Apply Poppins font to headers in blogs */
-  font-weight: 600; /* SemiBold weight for headers */
-  color: #ffffff; /* White text color for headers */
+.dropdown-custom-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-custom-item svg {
+  width: 24px;
+  height: 24px;
+  color: #a1a1aa;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.dropdown-custom-item:hover svg {
+  color: #ffffff;
+}
+
+.dropdown-custom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dropdown-custom-title {
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.dropdown-custom-subtitle {
+  color: #8a8f98;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Hide default docusaurus link styling inside our custom items */
+.dropdown__menu > li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dropdown__menu .navbar__link {
+  display: none;
+}
+
+/* --- FOOTER --- */
+
+.footer__title {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.footer__link-item {
+  color: #a1a1aa;
+  transition: color 0.2s;
+}
+
+.footer__link-item:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* Link colors in various sections */
 a {
-  color: #8684FF; /* Primary link color */
 }
 
 a:hover {
-  color: #cccccc; /* Light gray link color on hover */
+  color: #7983f5;
+}
+
+:root {
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Global Docusaurus variable overrides for dark theme */
+[data-theme='dark'] {
+  --ifm-color-primary: #5865F2;
+  --ifm-color-primary-dark: #4f5bd9;
+  --ifm-color-primary-darker: #4a56cc;
+  --ifm-color-primary-darkest: #3d47a8;
+  --ifm-color-primary-light: #7983f5;
+  --ifm-color-primary-lighter: #8a93f6;
+  --ifm-color-primary-lightest: #bcc1fa;
+  --ifm-background-color: #101114;
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ifm-heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Premium Footer Design */
+.footer {
+  position: relative;
+  background: linear-gradient(180deg, #101114 0%, #030406 100%) !important;
+  color: #a1a1aa;
+  padding: 8rem 0 3rem 0;
+  border-top: none;
+  overflow: hidden;
+}
+
+.footer-glow-overlay {
+  display: none;
+}
+
+.custom-footer-row {
+  display: flex;
+  gap: 6rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.custom-footer-brand {
+  flex: 0 0 350px;
+}
+
+.footer-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-glow {
+  position: relative;
+}
+
+.footer-logo-glow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: rgba(88, 101, 242, 0.4);
+  filter: blur(15px);
+  z-index: -1;
+}
+
+.footer-brand-header img {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.footer-brand-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+}
+
+.footer-brand-desc {
+  font-size: 1.05rem;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: #d1d5db;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: rgba(88, 101, 242, 0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.custom-footer-links {
+  flex: 1;
+}
+
+/* Docusaurus standard links */
+.footer__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer__link-item {
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.footer__link-item:hover {
+  text-decoration: none;
+  transform: translateX(4px);
+}
+
+.footer-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+@media (max-width: 996px) {
+  .custom-footer-row {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Custom Scrollbar for entire site and dropdown */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(88, 101, 242, 0.3);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(88, 101, 242, 0.6);
+}
+
+/* Hide logo and back button from mobile dropdown */
+@media (max-width: 996px) {
+  .navbar-sidebar__brand .navbar__brand {
+    display: none !important;
+  }
+  
+  .navbar-sidebar__back {
+    display: none !important;
+  }
+  
+  /* Make the close 'X' button align properly if logo is gone */
+  .navbar-sidebar__brand {
+    justify-content: flex-end !important;
+  }
+}
+
+@media (max-width: 996px) {
+  .navbar-sidebar__brand {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/* Center footer on mobile */
+@media (max-width: 996px) {
+  .footer {
+    text-align: center;
+  }
+  .footer__links {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer__col {
+    align-items: center;
+    text-align: center;
+  }
+  .footer__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .footer__item {
+    text-align: center;
+    width: 100%;
+  }
+  .footer__link-item {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer__item img {
+    margin: 0 auto;
+  }
+}
+
+/* Fix for documentation content being hidden under the floating navbar */
+.main-wrapper, .docsWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module {
+  padding-top: 100px;
+}
+
+/* --- Horizon Docs UI Improvements --- */
+
+/* Sidebar Styling */
+[data-theme='dark'] .menu {
+  padding: 1rem;
+}
+
+[data-theme='dark'] .menu__link {
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+}
+
+[data-theme='dark'] .menu__link--active {
+  background: rgba(88, 101, 242, 0.15) !important;
+  color: #5865F2 !important;
+  font-weight: 600;
+}
+
+[data-theme='dark'] .menu__link:hover:not(.menu__link--active) {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+/* Page Content Styling */
+.theme-doc-markdown {
+  background: transparent;
+  padding: 1rem 0;
+}
+
+@media (max-width: 996px) {
+  .theme-doc-markdown {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
+  
+}
+
+/* Pagination (Next/Previous buttons) */
+.pagination-nav__link {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pagination-nav__link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(88, 101, 242, 0.2);
+}
+
+/* Code blocks */
+[data-theme='dark'] .theme-code-block {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* TOC (Table of Contents) sidebar on the right */
+.theme-doc-toc-desktop {
+  background: transparent;
+  border-left: 1px solid rgba(255,255,255,0.05);
+  padding-left: 1rem;
+}
+
+.table-of-contents__link--active {
+  color: #5865F2 !important;
+}
+
+/* Force the padding on the main docs layout to push past the absolute navbar */
+.main-wrapper {
+  padding-top: 100px !important;
+}
+
+/* On the homepage, we don't want the big padding if it messes with the hero.
+   But actually, Docusaurus wraps the whole body. Let's just target the docs wrapper. */
+.docsWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module,
+.docPage_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module {
+  padding-top: 100px !important;
+}
+
+/* Better scoping for docs padding */
+html[class*="docs-"] .main-wrapper,
+body[class*="docs-"] .main-wrapper,
+.plugin-docs .main-wrapper {
+  padding-top: 100px !important;
+}
+
+/* Also for the blog if there is one */
+.plugin-blog .main-wrapper {
+  padding-top: 100px !important;
+}
+
+/* ====== SUPER PREMIUM DOCS UI ====== */
+
+/* Typography enhancements */
+.theme-doc-markdown h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #5865F2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.theme-doc-markdown h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding-bottom: 0.5rem;
+}
+
+.theme-doc-markdown p, 
+.theme-doc-markdown li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #949ba4;
+}
+
+.theme-doc-markdown strong {
+  color: #e3e5e8;
+  font-weight: 600;
+}
+
+/* Beautiful Inline Code */
+code {
+  background-color: rgba(88, 101, 242, 0.1);
+  color: #bcc1fa;
+  border: 1px solid rgba(88, 101, 242, 0.2);
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+  font-size: 0.9em;
+}
+
+/* Admonitions (Alerts) Modernization */
+.theme-admonition {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(10px);
+  margin: 2rem 0;
+}
+
+.theme-admonition-heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+/* Refined TOC Sidebar */
+.table-of-contents {
+  border-left: 2px solid rgba(255, 255, 255, 0.05);
+  padding-left: 1rem;
+}
+
+.table-of-contents__link {
+  color: #80848e;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.table-of-contents__link:hover {
+  color: #7983f5;
+  text-decoration: none;
+}
+
+.table-of-contents__link--active {
+  color: #5865F2 !important;
+  font-weight: 600;
+  border-left: 2px solid #5865F2;
+  margin-left: -17px;
+  padding-left: 15px;
+}
+
+/* Sleeker Code Blocks */
+.theme-code-block {
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin: 2rem 0;
+}
+
+/* Fix mobile padding issue that was left over */
+@media (max-width: 996px) {
+  .theme-doc-markdown h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Fix code block issue where inline code styles bleed into pre>code */
+pre code {
+  background-color: transparent !important;
+  color: inherit !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Make sure links inside docs are purple and animated */
+.theme-doc-markdown a:not(.pagination-nav__link) {
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(88, 101, 242, 0.4);
+  transition: all 0.2s ease;
+}
+
+.theme-doc-markdown a:not(.pagination-nav__link):hover {
+  color: #bcc1fa;
+  border-bottom-color: #bcc1fa;
+  background-color: rgba(88, 101, 242, 0.1);
+}
+
+/* ====== SUPER PREMIUM BLOG UI ====== */
+
+/* Blog List View: Sleek Floating Cards */
+.blog-list-page article {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-list-page article:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 50px rgba(88, 101, 242, 0.15);
+}
+
+
+
+/* Blog Headers */
+.plugin-blog article header h2,
+.plugin-blog article header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.plugin-blog article header h2 a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.plugin-blog article header h2 a:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #bcc1fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Date and Reading Time */
+.plugin-blog article time {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Tag Pills */
+.plugin-blog .margin-top--md a[class*="tag"] {
+  background: rgba(88, 101, 242, 0.1) !important;
+  color: #5865F2 !important;
+  border: 1px solid rgba(88, 101, 242, 0.2) !important;
+  border-radius: 20px !important;
+  padding: 0.4rem 1rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+  margin-right: 0.5rem;
+}
+
+.plugin-blog .margin-top--md a[class*="tag"]:hover {
+  background: rgba(88, 101, 242, 0.25) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.2);
+}
+
+/* "Read More" Button */
+.plugin-blog .button--secondary {
+  background: transparent !important;
+  color: #bcc1fa !important;
+  border: 1px solid rgba(88, 101, 242, 0.4) !important;
+  border-radius: 12px !important;
+  padding: 0.75rem 2rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  margin-top: 1rem;
+}
+
+.plugin-blog .button--secondary:hover {
+  background: rgba(88, 101, 242, 0.15) !important;
+  border-color: #5865F2 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(88, 101, 242, 0.2) !important;
+}
+
+/* Authors List */
+.plugin-blog .avatar {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.plugin-blog .avatar__photo {
+  border-radius: 50%;
+  border: 2px solid rgba(88, 101, 242, 0.4);
+  padding: 2px;
+}
+
+.plugin-blog .avatar__name {
+  color: #f2f3f5;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.plugin-blog .avatar__subtitle {
+  color: #949ba4;
+  font-size: 0.9rem;
+}
+
+/* Let docs typography inherit into blog body */
+.plugin-blog .markdown {
+  color: #949ba4;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Reset single post page so it doesn't look like a card */
+.blog-post-page article {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.blog-post-page article:hover {
+  transform: none !important;
+}
+
+.blog-post-page article::before {
+  display: none !important;
+}
+
+/* Make single post header massive */
+.blog-post-page article header h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff 0%, #5865F2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 996px) {
+  .blog-list-page article {
+    padding: 1.5rem;
+  }
+  .plugin-blog article header h2,
+  .plugin-blog article header h1 {
+    font-size: 2rem;
+  }
+  .blog-post-page article header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Smooth out blog images */
+.plugin-blog .markdown img {
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  margin: 2rem 0;
+}
+
+/* Specific styling for the pagination component at the bottom of blog lists */
+.plugin-blog .pagination-nav__link {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.plugin-blog .pagination-nav__link:hover {
+  background: rgba(88, 101, 242, 0.05);
+  border-color: rgba(88, 101, 242, 0.3);
+}
+
+/* ====== ULTRA PREMIUM BLOG CARDS ====== */
+
+/* Glassmorphism Cards */
+.blog-list-page article {
+  background: rgba(20, 20, 25, 0.4) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.blog-list-page article:hover {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: rgba(20, 20, 25, 0.4) !important;
+}
+
+/* Entire card is clickable trick */
+.plugin-blog .button--secondary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+/* Make sure links inside the card (like tags/authors) sit above the click area */
+.plugin-blog article header h2 a,
+.plugin-blog .tags .tag,
+.plugin-blog .avatar {
+  position: relative;
+  z-index: 10;
+}
+
+/* ====== NEW TRUE FULL-BLEED BANNER ====== */
+/* If the article has an image in the markdown excerpt, add padding to the top of the entire article card */
+.blog-list-page article:has(.markdown img) {
+  padding-top: 290px !important; /* 250px for the image + 40px standard padding */
+}
+
+@media (max-width: 996px) {
+  .blog-list-page article:has(.markdown img) {
+    padding-top: 200px !important; /* 180px for image + 20px padding */
+  }
+}
+
+/* Absolutely position the image at the very top of the article card */
+.blog-list-page article .markdown img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  border-radius: 24px 24px 0 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  display: block !important;
+  max-width: none !important;
+}
+
+@media (max-width: 996px) {
+  .blog-list-page article .markdown img {
+    height: 180px !important;
+  }
+}
+
+/* Collapse the empty paragraph that contained the image so it doesn't leave a gap in the text */
+.blog-list-page article .markdown p:has(img) {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide any images after the first one in the summary just to be safe */
+.blog-list-page article .markdown img ~ img {
+  display: none !important;
+}
+
+/* ====== BANNER FOR SINGLE POST PAGE ====== */
+
+/* In the single post page, make the article relative so the absolute banner is positioned to it */
+.blog-post-page article {
+  position: relative !important;
+  padding-top: 450px !important; /* Huge banner for single post */
+  margin-top: -2rem; /* Pull it up a bit if needed */
+}
+
+@media (max-width: 996px) {
+  .blog-post-page article {
+    padding-top: 300px !important;
+  }
+}
+
+/* Grab the LAST image (or any image) in the markdown and force it to be the top banner */
+.blog-post-page article .markdown img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 400px !important;
+  object-fit: cover !important;
+  border-radius: 24px !important;
+  margin: 0 !important;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4) !important;
+  display: block !important;
+  max-width: none !important;
+}
+
+@media (max-width: 996px) {
+  .blog-post-page article .markdown img {
+    height: 250px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* Hide the empty paragraph that contained the image */
+.blog-post-page article .markdown p:has(img) {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Just in case they have multiple images, only the first one found acts as the banner, hide the rest? 
+   Or maybe we just let all images be banners and stack? No, hide all but first. */
+.blog-post-page article .markdown img ~ img {
+  display: none !important;
+}
+
+/* Legal Pages */
+
+.legal-page-wrapper {
+  padding-top: 100px !important;
+}
+
+.legal-page-wrapper .container .row {
+  justify-content: center;
+}
+
+.legal-page-wrapper .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-page-wrapper article,
+.legal-page-wrapper .markdown {
+  background: transparent;
+  padding: 2rem 0 5rem 0;
+}
+
+/* Lead paragraph styling */
+.legal-page-wrapper main p:first-of-type {
+  font-size: 1.25rem;
+  color: #a1a1aa;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.legal-page-wrapper main h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.04em;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legal-page-wrapper main h2 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-left: 4px solid #5865F2;
+  padding-left: 1rem;
+  line-height: 1.2;
+}
+
+.legal-page-wrapper main h3 {
+  font-size: 1.4rem;
+  color: #f2f3f5;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.legal-page-wrapper main p,
+.legal-page-wrapper main li {
+  font-size: 1.1rem;
+  color: #949ba4;
+  line-height: 1.85;
+}
+
+.legal-page-wrapper main strong {
+  color: #e3e5e8;
+}
+
+.legal-page-wrapper main a {
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(88, 101, 242, 0.4);
+  transition: all 0.2s ease;
+}
+
+.legal-page-wrapper main a:hover {
+  color: #7289da;
+  border-bottom-color: #7289da;
+  background-color: rgba(88, 101, 242, 0.1);
+}
+
+.legal-page-wrapper .theme-doc-toc-desktop {
+  margin-top: 5rem;
+}
+
+.legal-page-wrapper .container {
+  max-width: 1300px !important;
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+}
+
+@media (max-width: 996px) {
+  .legal-page-wrapper .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+}
+
+.legal-page-wrapper {
+  padding-top: 50px !important;
+}
+.legal-page-wrapper article,
+.legal-page-wrapper .markdown {
+  padding: 0 0 5rem 0;
+}
+
+.legal-page-wrapper {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background glow */
+.legal-page-wrapper::before {
+  content: '';
+  position: fixed;
+  top: -10%;
+  right: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle at center, rgba(88, 101, 242, 0.08) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+.legal-page-wrapper .theme-doc-toc-desktop {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.legal-page-wrapper .row > [class*="col--"] {
+  min-width: 250px;
+}
+
+.legal-page-wrapper .row {
+  column-gap: 3rem; 
+}
+
+/* Page Transitions */
+
+@keyframes smoothPageLoad {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.theme-doc-markdown,
+.blog-list-page .container,
+.blog-post-page article,
+.legal-page-wrapper .container,
+.heroBanner,
+.ExploreThinkLearn,
+.features-section {
+  animation: smoothPageLoad 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes smoothPageBlur {
+  0% { 
+    opacity: 0; 
+    filter: blur(8px);
+  }
+  100% { 
+    opacity: 1; 
+    filter: blur(0px);
+  }
+}
+
+.markdown img,
+.blog-list-page article .markdown img {
+  animation: smoothPageBlur 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.main-wrapper > * {
+  animation: smoothPageLoad 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.theme-doc-toc-desktop {
+  animation: smoothPageLoad 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Fix footer CTA stacking context */
+.main-wrapper {
+  position: relative;
+  z-index: 20;
+}
+
+.footer {
+  z-index: 10;
+}
+
+/* Hyperdrive Easter Egg */
+body.hyperdrive [class*="star_"] {
+  animation: hyperdrive 0.2s infinite linear !important;
+  width: 2px !important;
+  height: 200px !important;
+  background: linear-gradient(180deg, transparent, #fff, transparent) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 0 20px #5865F2, 0 0 40px #5865F2 !important;
+}
+
+@keyframes hyperdrive {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* ====== BLOG TAGS PAGE UI ====== */
+html[class*="blog-tags-"] main > header,
+.blog-tags-page header,
+.blog-tags-post-page header {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3.5rem 2rem;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  margin-bottom: 4rem;
+}
+
+html[class*="blog-tags-"] main > header h1,
+.blog-tags-page header h1,
+.blog-tags-post-page header h1 {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #ffffff 0%, #5865F2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  margin-bottom: 1.5rem !important;
+}
+
+html[class*="blog-tags-"] main > header a,
+.blog-tags-page header a,
+.blog-tags-post-page header a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(88, 101, 242, 0.15);
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+html[class*="blog-tags-"] main > header a:hover,
+.blog-tags-page header a:hover,
+.blog-tags-post-page header a:hover {
+  background: #5865F2;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(88, 101, 242, 0.3);
+}
+
+html[class*="blog-tags-"] main section {
+  margin-top: 3rem;
+}
+
+/* Footer Atlas Team Credit */
+.footer-atlas-credit {
+  text-decoration: none !important;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-atlas-credit:hover {
+  text-decoration: none !important;
+  transform: translateY(-2px);
+}
+
+.footer-atlas-logo {
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+}
+
+/* Modal Animations */
+@keyframes modalOverlayFade {
+  from { opacity: 0; backdrop-filter: blur(0px); }
+  to { opacity: 1; backdrop-filter: blur(10px); }
+}
+
+@keyframes modalContentPop {
+  0% { opacity: 0; transform: scale(0.92) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Ensure all hyperlinks in markdown docs are blurple */
+.markdown a:not(.button) {
+  color: #5865F2 !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(88, 101, 242, 0.4);
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: color 0.2s, text-shadow 0.2s, text-decoration-color 0.2s;
+}
+
+.markdown a:not(.button):hover {
+  color: #7983f5 !important;
+  text-decoration: underline;
+  text-shadow: 0 0 10px rgba(88, 101, 242, 0.3);
+}
+
+/* Make inline code blocks blurple */
+.markdown code {
+  background-color: rgba(88, 101, 242, 0.12) !important;
+  color: #bcc1fa !important; /* Lighter blurple text */
+  border: 1px solid rgba(88, 101, 242, 0.3);
+  border-radius: 6px;
+  padding: 0.15rem 0.4rem;
+}
+
+/* Make multi-line code blocks have a blurple border */
+[class*='codeBlockContainer_'] {
+  border: 1px solid rgba(88, 101, 242, 0.25) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(88, 101, 242, 0.05) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+}
+
+/* ====== Navbar Polish & Animations ====== */
+
+/* Rotate dropdown arrows on hover */
+.dropdown > .navbar__link::after {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.dropdown:hover > .navbar__link::after,
+.dropdown--show > .navbar__link::after {
+  transform: rotate(180deg) translateY(2px) !important;
+}
+
+/* Blog Link Gradient & Icon */
+.navbar-blog-dropdown > a.navbar__link {
+  background: linear-gradient(135deg, #ffffff 0%, #5865F2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  display: inline-flex !important;
+  align-items: center;
+}
+
+/* We use a mask for the book/blog icon so it can be colored correctly */
+.navbar-blog-dropdown > a.navbar__link::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #fff; /* Start white to match gradient start */
+  mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>');
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  margin-right: 6px;
+  margin-top: -2px;
+}
+
+
+/* Responsive Modals */
+.custom-glass-modal {
+  background: #13141a;
+  padding: 3rem;
+  border-radius: 24px;
+  width: 90%;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), 0 0 40px rgba(88, 101, 242, 0.1);
+  position: relative;
+  animation: modalContentPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .custom-glass-modal {
+    padding: 1.5rem 1rem !important;
+  }
+  .custom-glass-modal h3 {
+    font-size: 1.8rem !important;
+  }
+  .custom-glass-modal p {
+    font-size: 0.95rem !important;
+  }
+  .custom-glass-modal > div > div {
+    flex-direction: column;
+  }
+  .custom-glass-modal a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Modal Scrollbar */
+.custom-glass-modal::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-glass-modal::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 10px 0;
+}
+.custom-glass-modal::-webkit-scrollbar-thumb {
+  background: #5865F2;
+  border-radius: 4px;
+}
+.custom-glass-modal::-webkit-scrollbar-thumb:hover {
+  background: #7983f5;
 }

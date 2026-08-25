@@ -1,10 +1,15 @@
 ---
-id: privacy-policy
-title: Terms of Service
+id: privacy
+title: Privacy Policy
 description: Discover how we handle your information with our Privacy Policy for Horizon by Atlas.
+wrapperClassName: legal-page-wrapper
 ---
 
 # Privacy Policy
+
+:::info 🛡️ TL;DR for the Non-Nerds
+**Your data is safe with us.** We only collect the bare minimum data required to make Horizon function (like server IDs, configuration preferences, and command usage). We **never** sell your data, we **never** read your personal messages, and we don't track you across the web. You can request to have your data deleted at any time.
+:::
 
 This is our "Privacy Policy" which sets out the policy governing our use of information you provide in connection with the Horizon Application by Atlas ("Application"). The terms "you" and "your" refer to all individuals or entities using the Application. The terms "we," "us," "our," refer to Atlas and "Application" refers to our Horizon Application itself.
 
@@ -15,59 +20,41 @@ We may update this Privacy Policy from time to time. Changes in our Privacy Poli
 We respect the privacy of your information. We provide this explanation about our information practices as a demonstration of our commitment to protecting your privacy. This policy describes the types of information we may collect from you or that you may provide when using the Horizon Application and our practices for collecting, using, maintaining, protecting, and disclosing that information.
 
 This policy applies to information we collect:
-
-### Via the Horizon Application:
-
-- When you interact directly with the Application by executing commands or performing actions on your server (e.g., using the `/settings` command).
-- When you set up or edit automated notifications for each guild and each notification.
+- When you interact directly with the Application by executing slash commands or clicking interactive buttons.
+- When you set up or edit automated notifications and preferences for your server.
 - When the Application detects the device (computer, mobile) you are logged into for providing the corresponding interface for certain commands.
 
-### It does not apply to information collected by:
-
+It does not apply to information collected by:
 - Us offline or through any other means, including on any other website operated by Atlas or any third party.
 - Any third party, including through any application or content (including advertising) that may link to or be accessible from or on the Application.
 
-Please read this policy carefully to understand our policies and practices regarding your information and how we treat it. If you do not agree with our policies and practices, your choice is not to use our Application. By accessing or using the Application, you agree to this Privacy Policy. This policy may change from time to time (see Changes to Our Privacy Policy). Your continued use of the Application after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.
+## What Data We Save
 
-## The Information We Collect and How We Collect It
+To make Horizon function seamlessly and provide automated space news, we only collect the data strictly necessary for our operations:
 
-### Personally Identifiable Information
+- **Server Configuration Data:** We store Discord Server IDs (Guild IDs), Channel IDs, selected Role IDs (for pinging), and preferred server settings (configured via the `/settings` command) to deliver and format automated space news correctly.
+- **Message Tracking:** We temporarily store the Message IDs of the automated embeds we send, allowing the bot to edit its own messages when a space event or launch status updates.
+- **Temporary Session Caching:** When a user interacts with a command, we temporarily cache their Discord User ID in memory for up to 15 minutes to ensure interactive buttons work correctly.
+- **Click Tracking & Link Redirects:** When users click "Read More" or "Live Stream" links on our embeds, our redirect system logs the source Server ID (Guild ID) and broad geographical data (such as your country or region) to calculate aggregated popularity and demographic statistics. **We do not track which specific Discord user clicked the link.** While we process IP addresses temporarily to determine your country for these analytics, the raw IP addresses are not permanently stored or linked to your personal Discord identity.
+- **Global Anonymized Stats:** We collect anonymous, aggregated statistics to monitor bot performance and generate community stats (like "Horizon Wrapped"). **No individual user data is tied to these metrics.**
+- **No Personal Chat Logging:** **To respect your server's privacy, the bot does NOT log, record, or store the contents of personal user messages, server chat history, or media.** Horizon only listens for its specific Slash Commands and Button interactions.
 
-We collect personally identifiable information from individuals through interactions with the Application. This information is necessary to make our features work and helps us provide a better user experience for all users.
+## Data Retention & Deletion Policies
 
-The information we collect when you use a Horizon Application commands includes:
+We are committed to ensuring your data is handled responsibly and have clear automated processes for data removal:
 
-- Your Discord user ID (for example: `491002268401926145`).
-- Your guild ID (for example: `675991746856878082`).
-- The command you used including any arguments (for example: `/help`).
-- The date and time at which you used the command.
-- The device you are logged into (computer, mobile), which is detected but not stored, to provide the corresponding interface for certain commands.
-
-We also collect logs for error logging and statistical purposes, including:
-
-- Commands executed.
-- Successful executions.
-- Automations posted in the server.
-
-To respect your server's privacy, we NEVER collect any content of other messages, only commands and interactions with the Application in dedicated channels chosen by your admins.
-
-Server admins can limit and choose the channels where the Application will collect this information by restricting the bot to specific Discord channels. This will only allow the Application to collect this data in those channels and will make it physically impossible for the Application to collect this data through any other channels in that server.
-
-## Data Removal
-
-We are committed to ensuring your data is handled responsibly and have clear processes for data removal.
-
-- Data from the `/settings` command will be removed after 3 days if the Application leaves the server. If the Application is not re-invited within this timeframe, all data, including automation settings and messages, will be deleted. Users will have to re-configure them upon the Application's re-invitation.
-- If the Application rejoins the server before the end of the 3-day timeframe, this deletion process will be canceled, and the user's data will remain intact.
-- To remove data, you can use the `/settings` command or contact us directly. Additionally, if you remove the Application from your server for 3 or more days, it will also trigger the deletion process.
-- Statistics data collected, including commands executed, successful executions, and automations posted in the server visible to server administrators with the command `/settings` will be deleted after 7 days when the Application leaves the server. If the Application is not re-invited within this timeframe, all statistics visible to the server owners will be deleted. Horizon may retain a minimal package of statistics data to improve their systems. For data deletion requests regarding this information, please contact us via Discord.
+- **7-Day Grace Period:** If Horizon is removed from a server, we do not delete the server's data immediately in case it was an accidental kick. Instead, all data is marked for "pending deletion" with a 7-day countdown.
+- **Total Deletion:** If the bot is not re-invited within exactly 7 days, a background cleanup script permanently and completely purges all data associated with that server, including configuration settings, channel preferences, and server-specific statistics.
+- **Cancellation of Deletion:** If Horizon rejoins the server before the 7-day grace period expires, the deletion process is automatically canceled, and all data remains intact.
+- **Global Anonymized Stats:** Horizon retains a minimal package of global, fully anonymized metrics (e.g., total global messages sent, overall latency) across all servers strictly to monitor system health and improve performance.
+- **Manual Deletion:** Server administrators can manually wipe their server's configuration data at any time using the `/settings` command, or by contacting our support.
 
 ## Third-Party Websites
 
-The Application or messages distributed by our Application may contain links to third-party websites. These linked websites are not under our control, and we are not responsible for the privacy practices or the contents of any such linked website or any link contained in any linked website. We provide such links only as a convenience, and the inclusion of a link on the website does not imply endorsement of the linked website by Atlas. If you provide any personal data through any such third-party website, your transaction will occur on the third party’s website (not this website) and the personal data you provide will be collected by and controlled by the privacy policy of that third party. We recommend that you familiarize yourself with the privacy policies and practices of any third parties. **PLEASE NOTE THAT THIS PRIVACY POLICY DOES NOT ADDRESS THE PRIVACY OR INFORMATION PRACTICES OF ANY THIRD PARTIES.**
+The Application or messages distributed by our Application may contain links to third-party websites (e.g., NASA, YouTube, SpaceDevs). These linked websites are not under our control, and we are not responsible for the privacy practices or the contents of any such linked website. If you provide any personal data through any such third-party website, your transaction will occur on the third party’s website, and the personal data you provide will be collected by and controlled by the privacy policy of that third party. 
 
 ## Contact Us
 
-By using the Application, you acknowledge that you have read, understood, and agreed to be bound by this Privacy Policy. If you do not agree with any part of these terms, please do not use the Application. If you have any questions or concerns, please contact us via Discord.
+By using the Application, you acknowledge that you have read, understood, and agreed to be bound by this Privacy Policy. If you do not agree with any part of these terms, please do not use the Application. 
 
-Atlas is not a registered company but a team of individuals and developers of Horizon, owning the domains teamatlas.dev and horizonbot.xyz. We are not associated with any registered entity under the name "Atlas." Any use of our services, such as the Horizon Application, is subject to our Terms of Service & Privacy Policy. Please note that while we strive to provide a reliable and enjoyable experience, Atlas does not claim ownership of any names, brands, or intellectual properties beyond those explicitly mentioned. Therefore, actions related to our services should not be construed as affecting any other entities. For any questions or concerns, please contact us at via Discord.
+Atlas is not a registered company but a team of individuals and developers of Horizon, owning the domains teamatlas.dev and horizonbot.xyz. We are not associated with any registered entity under the name "Atlas." Any use of our services is subject to our Terms of Service & Privacy Policy. For any questions, data deletion requests, or concerns, please contact us via Discord or email us at <a href="#" onClick={(e) => { e.preventDefault(); const b = atob("aW5mb0B0ZWFtYXRsYXMuZGV2"); setTimeout(() => { window.location.href = "mailto:" + b; }, Math.floor(Math.random() * 300) + 100); }}>info [at] teamatlas.dev</a>.
