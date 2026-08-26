@@ -107,7 +107,7 @@ function ScrollHero() {
               <h1 className={styles.heroTitle} style={{ marginBottom: '1.5rem' }}>
                 Meet the ultimate AI for
                 <br />
-                <span className={styles.scrollWordWrapper}>
+                <span className={styles.scrollWordWrapper} style={{ display: 'inline-block', position: 'relative', width: '100%', minWidth: '300px', height: '1.2em', verticalAlign: 'bottom', textAlign: 'inherit' }}>
                   {words.map((word, i) => (
                     <span 
                       key={word} 
@@ -115,6 +115,19 @@ function ScrollHero() {
                         [styles.scrollWordActive]: i === wordIndex,
                         [styles.scrollWordPast]: i < wordIndex
                       })}
+                      style={{
+                        position: 'absolute',
+                        left: 0,
+                        right: 0,
+                        textAlign: 'inherit',
+                        opacity: i === wordIndex ? 1 : 0,
+                        transform: i === wordIndex ? 'translateY(0)' : (i < wordIndex ? 'translateY(-20px)' : 'translateY(20px)'),
+                        transition: 'all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)',
+                        color: '#a855f7',
+                        fontWeight: '700',
+                        pointerEvents: i === wordIndex ? 'auto' : 'none',
+                        visibility: i === wordIndex ? 'visible' : 'hidden'
+                      }}
                     >
                       {word}.
                     </span>
