@@ -22,14 +22,22 @@
 
   .navbar--fixed-top {
     position: fixed;
-    top: 0;
-    margin: 1rem auto;
+    top: 1rem;
+    margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.03) !important;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   }
+
+  /* When announcement bar is dismissed or scrolled past, navbar returns to top */
+  body[data-bar-hidden] .navbar--fixed-top {
+    top: 0;
+  }
+
+
 
   .navbar__inner {
     max-width: 1100px;
@@ -47,7 +55,7 @@
     border-radius: 24px;
     margin: 1rem auto;
     width: 92%;
-    position: absolute; /* ensure it is the containing block */
+    position: absolute;
     left: 0;
     right: 0;
     z-index: 9999;
@@ -88,7 +96,7 @@
   }
 }
 /* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;500;600;700&display=swap');
 
 /* Reset some default browser styles */
 html, body {
@@ -152,6 +160,7 @@ html, body {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
   padding: 1rem !important;
   min-width: 380px;
+  z-index: 99999 !important;
 }
 
 /* Custom HTML dropdown items */

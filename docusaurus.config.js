@@ -96,6 +96,13 @@ const config = {
     locales: ['en'],
   },
 
+  scripts: [
+    {
+      src: '/js/navbar-offset.js',
+      defer: true,
+    },
+  ],
+
   headTags: [
     {
       tagName: 'link',
@@ -126,6 +133,10 @@ const config = {
         content: '#5865F2',
       },
     },
+  ],
+
+  clientModules: [
+    require.resolve('./src/clientModules/announcementBar.js'),
   ],
 
   presets: [
