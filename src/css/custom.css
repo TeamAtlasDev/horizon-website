@@ -32,10 +32,7 @@
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  /* When announcement bar is dismissed or scrolled past, navbar returns to top */
-  body[data-bar-hidden] .navbar--fixed-top {
-    top: 0;
-  }
+
 
 
 

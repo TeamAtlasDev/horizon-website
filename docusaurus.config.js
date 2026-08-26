@@ -96,12 +96,7 @@ const config = {
     locales: ['en'],
   },
 
-  scripts: [
-    {
-      src: '/js/navbar-offset.js',
-      defer: true,
-    },
-  ],
+    /* scripts array removed since it only had navbar-offset */
 
   headTags: [
     {
