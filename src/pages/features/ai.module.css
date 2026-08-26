@@ -1432,7 +1432,7 @@
     gap: 8rem;
   }
   .premiumRowReverse {
-    flex-direction: row-reverse;
+    flex-direction: row-reverse !important;
   }
 }
 
