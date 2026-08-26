@@ -1417,8 +1417,12 @@
 .premiumRow {
   display: flex;
   flex-direction: column;
-
   gap: 4rem;
+}
+
+.premiumRowReverse {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 996px) {
