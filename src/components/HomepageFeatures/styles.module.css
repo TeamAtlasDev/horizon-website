@@ -352,7 +352,7 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto 4rem auto;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(40px);
   filter: blur(10px);
   transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
@@ -1050,7 +1050,7 @@
   font-family: 'Inter', sans-serif;
   max-width: 80%;
   font-size: 1.25rem;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20px);
   transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1184,8 +1184,8 @@
   text-align: center;
   max-width: 800px;
   margin: 0 auto 3rem auto;
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 1;
+  transform: translateY(0);
   transition: all 1s ease;
 }
 
@@ -1229,7 +1229,7 @@
     0 0 80px rgba(168, 85, 247, 0.2) inset,
     0 0 0 1px rgba(255, 255, 255, 0.05) inset;
   transform: perspective(1200px) rotateX(15deg) scale(0.95) translateY(50px);
-  opacity: 0;
+  opacity: 1;
   transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   overflow: hidden;
 }
@@ -1463,8 +1463,8 @@
   border-radius: 12px;
   height: 600px;
   box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
-  transform: perspective(1200px) rotateX(10deg) scale(0.95) translateY(50px);
-  opacity: 0;
+  transform: perspective(1200px) rotateX(4deg) scale(1) translateY(0);
+  opacity: 1;
   transition: opacity 1.5s ease, transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   overflow: hidden;
 }
@@ -1646,7 +1646,7 @@
   max-width: 700px;
   margin: 0 auto 3rem auto;
   text-align: center;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(20px);
   transition: all 1s ease;
 }
@@ -1695,7 +1695,7 @@
 .massiveBgText {
   position: absolute;
   top: 50%; left: 50%;
-  transform: translate(-50%, -50%) scale(0.95);
+  transform: translate(-50%, -50%) scale(1);
   font-size: 15vw;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.04);
@@ -1704,7 +1704,7 @@
   filter: blur(4px);
   z-index: 1;
   font-family: 'Inter', -apple-system, sans-serif;
-  opacity: 0;
+  opacity: 1;
   transition: all 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   letter-spacing: -0.05em;
 }
@@ -1852,7 +1852,7 @@
 }
 
 @keyframes fadeInText {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 1; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -1970,7 +1970,7 @@
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 .aiOrbCore {
@@ -2186,7 +2186,7 @@
     text-align: center;
   }
   .aiImageSide {
-    display: flex;
+    display: none;
   }
   .aiOrbCore {
     width: 80px;
@@ -2656,7 +2656,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(10px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
@@ -2685,7 +2685,7 @@
 }
 
 @keyframes fadeInLightbox {
-  from { opacity: 0; }
+  from { opacity: 1; }
   to { opacity: 1; }
 }
 
@@ -2699,7 +2699,7 @@
 }
 
 @keyframes scaleInLightbox {
-  from { transform: scale(0.95); opacity: 0; }
+  from { transform: scale(0.95); opacity: 1; }
   to { transform: scale(1); opacity: 1; }
 }
 

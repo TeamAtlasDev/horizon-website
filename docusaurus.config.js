@@ -201,11 +201,11 @@ const config = {
               },
               {
                 type: 'html',
-                value: '<a href="/#features-section" class="dropdown-custom-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><div class="dropdown-custom-text"><span class="dropdown-custom-title">Core Features</span><span class="dropdown-custom-subtitle">Explore everything Horizon can do</span></div></a>',
+                value: '<a href="/features/ai" class="dropdown-custom-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L14.5 8.5L20 11L14.5 13.5L12 19L9.5 13.5L4 11L9.5 8.5L12 3Z"></path></svg><div class="dropdown-custom-text"><span class="dropdown-custom-title">Horizon AI</span><span class="dropdown-custom-subtitle">Meet the ultimate AI for aerospace</span></div></a>',
               },
               {
                 type: 'html',
-                value: '<a href="/#discord-demo-section" class="dropdown-custom-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line></svg><div class="dropdown-custom-text"><span class="dropdown-custom-title">Interactive Demo</span><span class="dropdown-custom-subtitle">Try out the Discord UI in your browser</span></div></a>',
+                value: '<a href="/#discord-demo-section" onclick="setTimeout(() => { document.getElementById(`discord-demo-section`)?.scrollIntoView({behavior: `smooth`}); }, 500);" class="dropdown-custom-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg><div class="dropdown-custom-text"><span class="dropdown-custom-title">Interactive Demo</span><span class="dropdown-custom-subtitle">Try out the Discord UI in your browser</span></div></a>',
               },
             ],
           },
