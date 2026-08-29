@@ -314,6 +314,12 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
                     <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
                     <div>
+                      <strong>Horizon Document Analysis</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
                       <strong>Horizon Voice Analysis</strong>
                     </div>
                   </div>
@@ -369,6 +375,12 @@ export default function AIPlansPage() {
                     <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
                     <div>
                       <strong>Horizon Deep Scan</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Horizon Document Analysis</strong>
                     </div>
                   </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
@@ -434,7 +446,13 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Horizon Voice Analysis:</strong> Upload and analyze PDFs, TXT files, and even hear/respond to voice messages.
+                      <strong>Horizon Document Analysis:</strong> Upload and analyze PDFs and TXT files.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
+                    <div>
+                      <strong>Horizon Voice Analysis:</strong> The AI can read and respond to your voice messages instead of just text.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
