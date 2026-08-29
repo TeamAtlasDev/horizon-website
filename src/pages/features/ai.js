@@ -272,13 +272,13 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Live Aerospace DB:</strong> Real-time access to launches, weather, and APOD.
+                      <strong>Live Aerospace DB:</strong> Real-time access to live space data and events.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Smart Memory:</strong> Retains context for your last 10 messages.
+                      <strong>Smart Memory:</strong> Retains your last 10 messages, with continuous summarization of past history.
                     </div>
                   </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
@@ -332,7 +332,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Double Memory (x2):</strong> Advanced compression retains your last 20 messages.
+                      <strong>Double Memory (x2):</strong> Retains your last 20 messages, with continuous summarization of past history.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
@@ -398,7 +398,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Extended Memory (x5):</strong> Pro-grade compression retains your last 50 messages.
+                      <strong>Extended Memory (x5):</strong> Retains your last 50 messages, with continuous summarization of past history.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
