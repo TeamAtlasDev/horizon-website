@@ -311,6 +311,12 @@ export default function AIPlansPage() {
                       <strong>Custom Server Persona</strong>
                     </div>
                   </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Horizon Voice Analysis</strong>
+                    </div>
+                  </div>
                 </div>
               </FadeIn>
 
@@ -347,6 +353,12 @@ export default function AIPlansPage() {
                       <strong>Includes Core Features:</strong> Horizon AI V2 and Live Horizon DB.
                     </div>
                   </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
+                    <div>
+                      <strong>Autonomous Web Search:</strong> AI breaks out to the live internet for breaking news and off-database queries.
+                    </div>
+                  </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
                     <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
                     <div>
@@ -362,7 +374,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
                     <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
                     <div>
-                      <strong>Autonomous Web Search</strong>
+                      <strong>Horizon Voice Analysis</strong>
                     </div>
                   </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
@@ -417,6 +429,12 @@ export default function AIPlansPage() {
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
                       <strong>Custom Server Persona:</strong> Server admins can rewrite the AI's core personality and speaking rules.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
+                    <div>
+                      <strong>Horizon Voice Analysis:</strong> Upload and analyze PDFs, TXT files, and even hear/respond to voice messages.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
