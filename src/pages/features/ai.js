@@ -250,8 +250,8 @@ export default function AIPlansPage() {
                 <div className={styles.planHeader}>
                   <div className={styles.planBadge} style={{ background: 'rgba(34, 197, 94, 0.1)', color: '#22c55e', border: '1px solid rgba(34, 197, 94, 0.2)' }}>Free</div>
                   <h3 style={{ fontSize: '2rem', marginTop: '1rem', color: '#fff' }}>Core Edition</h3>
-                  <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"Instant Aerospace Knowledge for Everyone."</p>
-                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>The daily, lightning-fast guide to space. Offers direct access to Horizon's database, covering the basic needs of every server.</p>
+                  <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"The ideal package to launch your space exploration."</p>
+                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>Everything you need to start exploring the cosmos. Get instant answers and real-time space data right in your server.</p>
                   <a href="https://invite.horizonbot.xyz" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%', padding: '0.75rem', background: 'rgba(34, 197, 94, 0.1)', color: '#22c55e', border: '1px solid rgba(34, 197, 94, 0.3)', borderRadius: '8px', fontWeight: '600', textDecoration: 'none', transition: 'all 0.2s', marginTop: '0.5rem' }}>
                     Start Free Now →
                   </a>
@@ -260,91 +260,163 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Horizon AI V1:</strong> Lightning-fast answers (~1.5s) focused on facts (e.g., "What time is the SpaceX launch?").
+                      <strong>150 Daily AI Credits:</strong> Generous limits (~30 messages/day).
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Live Database Access:</strong> Horizon DB with real-time data on upcoming launches, Breaking News, Space Weather, and the ISS crew.
+                      <strong>Horizon AI V2:</strong> Next-generation conversational model.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Multilingual & Secure:</strong> Speaks your language fluently and is strictly locked to astrophysics topics.
+                      <strong>Live Aerospace DB:</strong> Real-time access to launches, weather, and APOD.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon}>✓</span>
+                    <div>
+                      <strong>Smart Memory:</strong> Retains context for your last 10 messages.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Horizon Lens V2</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Zero-Lag Priority Routing</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Horizon Deep Scan</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Autonomous Web Search</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Custom Server Persona</strong>
                     </div>
                   </div>
                 </div>
               </FadeIn>
 
               {/* PLUS PLAN */}
-              <FadeIn delay={0.15} className={clsx(styles.bentoCard, styles.bentoAIGlow)} style={{ borderColor: 'rgba(88, 101, 242, 0.4)' }}>
+              <FadeIn delay={0.15} className={clsx(styles.bentoCard, styles.bentoPlusGlow)}>
                 <div className={styles.planHeader}>
-                  <div className={styles.planBadge} style={{ background: 'rgba(168, 85, 247, 0.1)', color: '#a855f7', border: '1px solid rgba(168, 85, 247, 0.2)' }}>Partner Access</div>
+                  <div className={styles.planBadge} style={{ background: 'rgba(88, 101, 242, 0.1)', color: '#5865F2', border: '1px solid rgba(88, 101, 242, 0.2)' }}>Partner Access</div>
                   <h3 style={{ fontSize: '2rem', marginTop: '1rem', color: '#fff' }}>Plus Edition</h3>
-                  <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"Deep Scientific Reasoning Unleashed."</p>
-                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>Upgrade your server with advanced memory architecture and visual recognition.</p>
+                  <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"Enhanced memory and visual intelligence."</p>
+                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>For active communities that need deep visual analysis and a longer conversation memory.</p>
                 </div>
                 <div className={styles.planFeatures}>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Horizon Lens V1:</strong> The simple but powerful "eye" of Horizon. Upload an image and Lens V1 will recognize the rocket, celestial body, or equipment.
+                      <strong>750 Daily AI Credits:</strong> Elevated limits (~150 messages/day).
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Smart Memory Compression:</strong> Instead of forgetting, it summarizes past conversations. It always remembers your name, preferences, and history for up to the past 10 messages, and older ones through summarization.
+                      <strong>Double Memory (x2):</strong> Advanced compression retains your last 20 messages.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Includes Core Features:</strong> Everything included in the Core Edition.
+                      <strong>Horizon Lens V2:</strong> Upload and analyze images of rockets, planets, and phenomena.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
+                    <div>
+                      <strong>Includes Core Features:</strong> Horizon AI V2 and Live Aerospace DB.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Zero-Lag Priority Routing</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Horizon Deep Scan</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Autonomous Web Search</strong>
+                    </div>
+                  </div>
+                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
+                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
+                    <div>
+                      <strong>Custom Server Persona</strong>
                     </div>
                   </div>
                 </div>
               </FadeIn>
 
               {/* PRO PLAN */}
-              <FadeIn delay={0.3} className={styles.bentoCard} style={{ borderColor: 'rgba(168, 85, 247, 0.3)' }}>
+              <FadeIn delay={0.3} className={clsx(styles.bentoCard, styles.bentoProGlow)}>
                 <div className={styles.planHeader}>
                   <div className={styles.planBadge} style={{ background: 'rgba(168, 85, 247, 0.1)', color: '#a855f7', border: '1px solid rgba(168, 85, 247, 0.2)' }}>Partner Access</div>
                   <h3 style={{ fontSize: '2rem', marginTop: '1rem', color: '#fff' }}>Pro Edition</h3>
-                  <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"The Ultimate Horizon AI Suite."</p>
-                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>The ultimate package. Combines V2's deep analysis with autonomous internet browsing and advanced visual recognition.</p>
+                  <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"The ultimate aerospace AI experience."</p>
+                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>For massive communities and space nerds. Unlock autonomous internet browsing, vision-to-web analysis, and zero-lag performance.</p>
                 </div>
                 <div className={styles.planFeatures}>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Horizon AI V2 (Deep Reasoning):</strong> The V1 upgrade. Silently analyzes data on complex questions to give you flawless answers with a captivating narrative.
+                      <strong>2500 Daily AI Credits:</strong> Massive limits (~500 messages/day).
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Horizon Web Search (Autonomous):</strong> If you ask about something breaking, V2 goes out to the internet autonomously, scans top articles, and cites sources.
+                      <strong>Zero-Lag Priority Routing:</strong> Get blazing fast responses with dedicated high-priority capacity.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Horizon Lens V2:</strong> Combinatorial Analysis combines image context with the Live Database.
+                      <strong>Extended Memory (x5):</strong> Pro-grade compression retains your last 50 messages.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Smart Suggestions:</strong> Recognizes extremely complex anomalies and suggests ready, smart questions to continue exploring.
+                      <strong>Autonomous Web Search:</strong> AI breaks out to the live internet for breaking news and off-database queries.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Extended Smart Memory:</strong> Up to 5x more memory capacity than the Plus Edition for deeper context retention.
+                      <strong>Horizon Deep Scan:</strong> Advanced Vision-to-Web system for meticulous, in-depth image analysis.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
+                    <div>
+                      <strong>Custom Server Persona:</strong> Server admins can rewrite the AI's core personality and speaking rules.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
