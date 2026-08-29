@@ -272,7 +272,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Live Aerospace DB:</strong> Real-time access to live space data and events.
+                      <strong>Live Horizon DB:</strong> Real-time access to live space data and events.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
@@ -344,7 +344,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Includes Core Features:</strong> Horizon AI V2 and Live Aerospace DB.
+                      <strong>Includes Core Features:</strong> Horizon AI V2 and Live Horizon DB.
                     </div>
                   </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
