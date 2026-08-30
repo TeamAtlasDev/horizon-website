@@ -260,7 +260,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>150 Daily AI Credits:</strong> Generous limits (~30 messages/day).
+                      <strong>60 Daily AI Credits:</strong> Optimized limits for daily space inquiries and live data lookups.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
@@ -272,13 +272,13 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Live Horizon DB:</strong> Real-time access to live space data and events.
+                      <strong>Live Horizon DB:</strong> Real-time access to live space weather, rocket launches, and APOD.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Smart Memory:</strong> Retains your last 10 messages, with continuous summarization of past history.
+                      <strong>Focused Memory:</strong> Retains your recent conversational context for seamless short-term interactions.
                     </div>
                   </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
@@ -314,13 +314,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
                     <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
                     <div>
-                      <strong>Horizon Document Analysis</strong>
-                    </div>
-                  </div>
-                  <div className={styles.featureItem} style={{ opacity: 0.4 }}>
-                    <span className={styles.checkIcon} style={{ color: '#a1a1aa' }}>✕</span>
-                    <div>
-                      <strong>Horizon Voice Analysis</strong>
+                      <strong>Horizon Document & Voice Analysis</strong>
                     </div>
                   </div>
                 </div>
@@ -329,7 +323,7 @@ export default function AIPlansPage() {
               {/* PLUS PLAN */}
               <FadeIn delay={0.15} className={clsx(styles.bentoCard, styles.bentoPlusGlow)}>
                 <div className={styles.planHeader}>
-                  <div className={styles.planBadge} style={{ background: 'rgba(88, 101, 242, 0.1)', color: '#5865F2', border: '1px solid rgba(88, 101, 242, 0.2)' }}>Partner Access</div>
+                  <div className={styles.planBadge} style={{ background: 'rgba(88, 101, 242, 0.1)', color: '#5865F2', border: '1px solid rgba(88, 101, 242, 0.2)' }}>Popular</div>
                   <h3 style={{ fontSize: '2rem', marginTop: '1rem', color: '#fff' }}>Plus Edition</h3>
                   <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"Enhanced memory and visual intelligence."</p>
                   <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>For active communities that need deep visual analysis and a longer conversation memory.</p>
@@ -338,31 +332,31 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>750 Daily AI Credits:</strong> Elevated limits (~150 messages/day).
+                      <strong>500 Daily AI Credits:</strong> Generous limits for highly active space communities.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Double Memory (x2):</strong> Retains your last 20 messages, with continuous summarization of past history.
+                      <strong>Expanded Smart Memory:</strong> Extended context retention with continuous AI summarization of your past history.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Horizon Lens V2:</strong> Upload and analyze images of rockets, planets, and phenomena.
+                      <strong>Horizon Lens:</strong> Upload and analyze images of rockets, planets, and celestial phenomena.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
+                    <div>
+                      <strong>Autonomous Web Search:</strong> The AI breaks out to the live internet for breaking news and off-database queries.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
                       <strong>Includes Core Features:</strong> Horizon AI V2 and Live Horizon DB.
-                    </div>
-                  </div>
-                  <div className={styles.featureItem}>
-                    <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
-                    <div>
-                      <strong>Autonomous Web Search:</strong> AI breaks out to the live internet for breaking news and off-database queries.
                     </div>
                   </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
@@ -401,16 +395,22 @@ export default function AIPlansPage() {
               {/* PRO PLAN */}
               <FadeIn delay={0.3} className={clsx(styles.bentoCard, styles.bentoProGlow)}>
                 <div className={styles.planHeader}>
-                  <div className={styles.planBadge} style={{ background: 'rgba(168, 85, 247, 0.1)', color: '#a855f7', border: '1px solid rgba(168, 85, 247, 0.2)' }}>Partner Access</div>
+                  <div className={styles.planBadge} style={{ background: 'rgba(168, 85, 247, 0.1)', color: '#a855f7', border: '1px solid rgba(168, 85, 247, 0.2)' }}>Ultimate</div>
                   <h3 style={{ fontSize: '2rem', marginTop: '1rem', color: '#fff' }}>Pro Edition</h3>
                   <p style={{ color: '#a1a1aa', fontStyle: 'italic', fontSize: '0.9rem' }}>"The ultimate aerospace AI experience."</p>
-                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>For massive communities and space nerds. Unlock autonomous internet browsing, vision-to-web analysis, and zero-lag performance.</p>
+                  <p style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>For massive communities and space nerds. Unlock autonomous internet browsing, deep analysis, and zero-lag performance.</p>
                 </div>
                 <div className={styles.planFeatures}>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>2500 Daily AI Credits:</strong> Massive limits (~500 messages/day).
+                      <strong>1000 Daily AI Credits:</strong> Massive limits for power users and large servers.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
+                    <div>
+                      <strong>Extended Smart Memory:</strong> Maximum context retention for deep, continuous, and complex conversations.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
@@ -422,43 +422,31 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Extended Memory (x5):</strong> Retains your last 50 messages, with continuous summarization of past history.
-                    </div>
-                  </div>
-                  <div className={styles.featureItem}>
-                    <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
-                    <div>
-                      <strong>Autonomous Web Search:</strong> AI breaks out to the live internet for breaking news and off-database queries.
-                    </div>
-                  </div>
-                  <div className={styles.featureItem}>
-                    <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
-                    <div>
                       <strong>Horizon Deep Scan:</strong> Advanced Vision-to-Web system for meticulous, in-depth image analysis.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Custom Server Persona:</strong> Server admins can rewrite the AI's core personality and speaking rules.
+                      <strong>Custom Server Persona:</strong> Server admins can completely rewrite the AI's core personality and speaking rules.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Horizon Document Analysis:</strong> Upload and analyze PDFs and TXT files.
+                      <strong>Horizon Document Analysis:</strong> Upload and analyze complex PDFs and TXT files.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Horizon Voice Analysis:</strong> The AI can read and respond to your voice messages instead of just text.
+                      <strong>Horizon Voice Analysis:</strong> The AI can understand and analyze your voice messages.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
-                      <strong>Includes Plus Features:</strong> Everything included in the Plus Edition.
+                      <strong>Includes Plus Features:</strong> Everything included in the Plus Edition (Web Search, Lens, etc).
                     </div>
                   </div>
                 </div>
