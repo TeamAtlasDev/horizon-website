@@ -272,7 +272,7 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon}>✓</span>
                     <div>
-                      <strong>Live Horizon DB:</strong> Real-time access to live space weather, rocket launches, and APOD.
+                      <strong>Live Horizon DB:</strong> Limited access to real-time space weather, rocket launches, and APOD.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
@@ -356,7 +356,13 @@ export default function AIPlansPage() {
                   <div className={styles.featureItem}>
                     <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
                     <div>
-                      <strong>Includes Core Features:</strong> Horizon AI V2 and Live Horizon DB.
+                      <strong>Live Horizon DB:</strong> Enhanced access to real-time space weather, rocket launches, and APOD.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#5865F2'}}>✓</span>
+                    <div>
+                      <strong>Includes Core Features:</strong> Horizon AI V2 and basic capabilities.
                     </div>
                   </div>
                   <div className={styles.featureItem} style={{ opacity: 0.4 }}>
@@ -441,6 +447,12 @@ export default function AIPlansPage() {
                     <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
                     <div>
                       <strong>Horizon Voice Analysis:</strong> The AI can understand and analyze your voice messages.
+                    </div>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <span className={styles.checkIcon} style={{color: '#a855f7'}}>✓</span>
+                    <div>
+                      <strong>Live Horizon DB:</strong> Extended access to the latest live space data and endpoints.
                     </div>
                   </div>
                   <div className={styles.featureItem}>
