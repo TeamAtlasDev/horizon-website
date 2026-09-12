@@ -354,7 +354,7 @@ export default function AIPlansPage() {
 
                   </div>
                   
-                  <a href="https://plans.horizonbot.xyz" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'linear-gradient(90deg, #5865F2, #8b5cf6)', color: '#fff', padding: '1.2rem 3rem', borderRadius: '12px', fontWeight: 'bold', textDecoration: 'none', transition: 'all 0.2s', fontSize: '1.3rem', boxShadow: '0 4px 25px 0 rgba(88, 101, 242, 0.4)' }}>
+                  <a href="https://my.horizonbot.xyz" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'linear-gradient(90deg, #5865F2, #8b5cf6)', color: '#fff', padding: '1.2rem 3rem', borderRadius: '12px', fontWeight: 'bold', textDecoration: 'none', transition: 'all 0.2s', fontSize: '1.3rem', boxShadow: '0 4px 25px 0 rgba(88, 101, 242, 0.4)' }}>
                     Login via Discord
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ animation: 'slideRight 1.5s ease-in-out infinite' }}>
                       <path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path>

@@ -62,13 +62,13 @@ export default function Root({children}) {
                 Enjoying Horizon?
               </h3>
               <p style={{ position: 'relative', zIndex: 1, color: '#949ba4', fontSize: '1.1rem', margin: '1rem auto 0', lineHeight: 1.6 }}>
-                Help us keep running free! High-performance infrastructure costs real money, and your support allows us to continue providing the absolute best astronomy data to the community.
+                Support the team and take your community to the stars! Buy AI credits to supercharge your server, unlock exclusive capabilities, and get powerful features in return.
               </p>
             </div>
             
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a 
-                href="https://www.patreon.com/profile/creators?u=109763047" 
+                href="https://my.horizonbot.xyz" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={handleClose}
@@ -83,8 +83,8 @@ export default function Root({children}) {
                 onMouseOver={e => e.currentTarget.style.transform = 'translateY(-2px)'}
                 onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}
               >
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M15.386.524c-4.764 0-8.64 3.876-8.64 8.64 0 4.75 3.876 8.613 8.64 8.613 4.75 0 8.614-3.864 8.614-8.613C24 4.4 20.136.524 15.386.524M.003 23.537h4.22V.524H.003"/></svg>
-                Support on Patreon
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
+                Get AI Credits
               </a>
               <a 
                 href="https://top.gg/bot/1183177251316047983/vote" 

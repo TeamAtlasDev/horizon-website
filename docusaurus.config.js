@@ -142,6 +142,10 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
+        gtag: {
+          trackingID: 'G-Y9TXC2BNJB',
+          anonymizeIP: true,
+        },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -247,8 +251,8 @@ const config = {
           items: getRecentBlogPosts(),
         },
           {
-            href: 'https://donate.teamatlas.dev',
-            label: 'Donate',
+            href: 'https://my.horizonbot.xyz',
+            label: 'Space AI available! 🚀',
             position: 'right',
           },
         ],
