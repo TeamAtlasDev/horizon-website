@@ -252,7 +252,7 @@ const config = {
         },
           {
             href: 'https://my.horizonbot.xyz',
-            label: 'Space AI available! 🚀',
+            label: 'Get AI Credits',
             position: 'right',
           },
         ],
